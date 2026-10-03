@@ -1,0 +1,2 @@
+-r base.txt
+jax[cuda12]==0.4.38

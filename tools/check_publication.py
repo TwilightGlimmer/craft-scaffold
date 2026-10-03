@@ -6,6 +6,9 @@ def git(*args):
 entries=git('ls-files','--stage','-z').decode().split('\0')
 issues=[]; count=0; total=0
 patterns=[
+ ('personal server path',r'/root/gpufree-data/[A-Za-z0-9_-]+'),
+ ('fixed GPU UUID',r'GPU-[0-9a-f]{8}-[0-9a-f-]{27,}'),
+ ('Windows user path',r'C:[/\\]Users[/\\][^/\\\s]+'),
  ('private key',r'-----BEGIN (?:OPENSSH |RSA |EC |DSA |ENCRYPTED )?PRIVATE KEY-----'),
  ('GitHub token',r'\b(?:gh[pousr]_[A-Za-z0-9]{30,}|github_pat_[A-Za-z0-9_]{30,})\b'),
  ('AWS access key',r'\b(?:AKIA|ASIA)[A-Z0-9]{16}\b'),

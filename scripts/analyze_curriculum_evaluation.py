@@ -3,8 +3,9 @@ from pathlib import Path
 import argparse,json,collections,hashlib
 import numpy as np
 ROOT=Path(__file__).resolve().parents[1]
-ap=argparse.ArgumentParser();ap.add_argument('--directory',default=str(ROOT/'reports/curriculum-v1/evaluation'));args=ap.parse_args()
-OUT=Path(args.directory)
+ap=argparse.ArgumentParser();ap.add_argument('--directory',required=True);args=ap.parse_args()
+import project_runtime as rt
+OUT=rt.owned(args.directory)
 status=json.loads((OUT/'status.json').read_text())
 assert status['state']=='completed' and status['episodes_completed']==100
 records=json.loads((OUT/'episodes.json').read_text())

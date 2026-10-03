@@ -1,0 +1,84 @@
+{
+  "version": "portable-v2",
+  "state": "template",
+  "created": 1791010947.6456826,
+  "research_question": "At a fixed real interaction budget, does front-loading and then removing crafting practice improve original Crafter performance versus both natural-only training and the same amount of practice spread across training?",
+  "selection_evidence": {
+    "300k_opportunity_episodes": 24,
+    "300k_wood_pickaxe_episodes": 20,
+    "episodes": 50,
+    "interpretation": "Opportunity coverage is incomplete while most opportunity-bearing episodes succeed; prioritize practice exposure, not loss weighting. Does not establish causation."
+  },
+  "methods": {
+    "natural": "No assisted resets",
+    "fixed_mix": "Assisted blocks at indices modulo4=0",
+    "fading_mix": "Assisted blocks at even indices below60; all blocks60..119 natural"
+  },
+  "seeds": [
+    11,
+    23,
+    41
+  ],
+  "blocks": 120,
+  "actions_per_block": 2500,
+  "assisted_actions": {
+    "natural": 0,
+    "fixed_mix": 75000,
+    "fading_mix": 75000
+  },
+  "block_boundary": "All groups reset at each2500 actual actions. Mark truncation as is_last=True, is_terminal=False; natural deaths remain terminal. Reset observations counted separately and not charged as physical actions. Policy carry resets. Disclose training horizon intervention shared by all groups.",
+  "assisted_reset": "One practice scenario only: original generated map with one adjacent table and inventory wood=1. No granted tool, achievement, reward, stone, or invulnerability. Replace only chosen adjacent tile; remove its occupant if any and record. Returned image re-rendered after modification. Recipe, action space, rewards unchanged.",
+  "information": "Actor/world model/critic receive original image and public signals only. Scenario, inventory metadata and eligibility are audit logs only.",
+  "training": "Fresh unified JAX0.4.38 runtime, size12m, original Dreamer hyperparameters and train_ratio512; no development checkpoint initialization.",
+  "evaluation": {
+    "final_checkpoint": true,
+    "natural_only": true,
+    "episodes_per_run": 100,
+    "environment_namespace": 4003,
+    "development_namespace": 3003,
+    "policy": "Sampled eval with config seed4003 and n_actions reset to episode*10001",
+    "original_environment_horizon": true,
+    "primary": "make_wood_pickaxe episode success",
+    "secondary": [
+      "collect_stone success",
+      "mean distinct achievements",
+      "geometric achievement score",
+      "return",
+      "opportunity coverage",
+      "wall time",
+      "actual interaction and recovery cost"
+    ]
+  },
+  "comparison": "fading versus natural measures practical adaptation; fading versus fixed_mix isolates temporal allocation with identical assisted action counts. Report each paired seed; no strong statistical claim.",
+  "resume_gate": "400-action uninterrupted-versus-two-restarts equality passed for288 arrays. Exact replay and runtime snapshots preserve continuation. WAL fsync before and after every physical action reports completed and ambiguous calls separately. Further5100-step curriculum boundary/resource preflight required.",
+  "implementation_gates": [
+    "Natural wrapper reproduces original transitions",
+    "Assisted reset changes image but grants no achievement/reward",
+    "Fixed and fading exact75000 assisted actions",
+    "Truncation vs death flags correct",
+    "No metadata in agent inputs",
+    "Resume preserves schedules and independent RNG; replay restoration audited",
+    "Single-GPU smoke run passes before formal nine-run launch"
+  ],
+  "scope": "Only curriculum adaptation. No reward shaping, loss weighting, LLM, prioritized replay, or extra model.",
+  "environment_revision": "StableCrafterEnv sorts chunk objects by position and class before uniform despawn sampling. Apply to all formal training and evaluation groups. Transition distribution and rewards unchanged; seed-to-trajectory mapping differs from stock Crafter. Existing100k/200k/300k development results remain separate.",
+  "budget_revision": "v1.1: Each run targets300000 retained actions and identical retained auxiliary exposure. All physical re-execution and ambiguous begin-without-end records are separately charged and reported. Do not claim equal total physical compute or simulator-call budgets across recovered runs.",
+  "retained_environment_actions_per_run": 300000,
+  "frozen_at": 1791015882.4260144,
+  "formal_runs": 9,
+  "runtime_changes": [
+    "Synchronous sampling without prefetch for exact checkpoints",
+    "Training ratio512 per real action; reset observations separately logged",
+    "Snapshot model optimizer policy carry environment RNG replay sampler and pending updates",
+    "Stable object ordering applied to every group and evaluation",
+    "Profiler disabled; no changes to Dreamer losses or network"
+  ],
+  "resource_limits": {
+    "cpu_cores": 2,
+    "gpu_mib": 20480,
+    "rss_bytes": 17179869184,
+    "single_gpu_job": true
+  },
+  "results_interpretation": "Report all three paired training seeds and negative results.100 evaluation episodes are not100 independent training experiments. Retained interaction budget matched; physical recovery overhead separately disclosed.",
+  "engineering_revision": "Portable paths and runtime gates; same curriculum and learner. Must validate on target host."
+}

@@ -1,6 +1,6 @@
 {
   "python": "3.11.17",
-  "base_inventory": "reports/curriculum-v1/dependencies.json",
+  "base_inventory": "docs/legacy-v1/dependencies.json",
   "overlay_distributions": {
     "jax-cuda12-plugin": "0.4.38",
     "jaxlib": "0.4.38",

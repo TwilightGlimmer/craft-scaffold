@@ -1,0 +1,12 @@
+{
+  "version": "portable-v2",
+  "fresh_cpu_environment_install": true,
+  "pip_check": true,
+  "environment_checks": 6,
+  "unit_tests": 7,
+  "clean_export_cpu_checks": true,
+  "missing_target_host_gate_rejected": true,
+  "original_frozen_hashes_verified": 71,
+  "new_cuda_training_tested": false,
+  "second_physical_host_tested": false
+}

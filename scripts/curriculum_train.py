@@ -2,9 +2,10 @@
 import os,sys,resource,argparse,json,time,pickle,hashlib,fcntl,faulthandler
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
-sys.path[:0]=[str(ROOT/'.deps/jax0438'),str(ROOT/'dreamerv3')]
+sys.path.insert(0,str(ROOT/'dreamerv3'))
+import project_runtime as rt
 resource.setrlimit(resource.RLIMIT_CORE,(0,0))
-os.sched_setaffinity(0,sorted(os.sched_getaffinity(0))[:2])
+rt.affinity()
 import jax
 import numpy as np
 import elements,embodied
@@ -18,16 +19,18 @@ from training_runtime import TrainingRuntime
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--trace',action='store_true')
-    ap.add_argument('--method',required=True)
+    ap.add_argument('--method',choices=['natural','fixed_mix','fading_mix'],required=True)
     ap.add_argument('--seed',type=int,required=True)
     ap.add_argument('--target',type=int,required=True)
     ap.add_argument('--logdir',required=True)
     args=ap.parse_args()
-    log=Path(args.logdir).resolve()
-    assert log.is_relative_to(Path('/root/gpufree-data/hanzhuo/models/crafter-worldmodel'))
+    if not 1 <= args.target <= 300000: raise ValueError('target must be within 1..300000')
+    rt.freeze()
+    log=rt.owned(args.logdir)
+    assert log.is_relative_to(rt.MODELS)
     log.mkdir(parents=True,exist_ok=True)
     lock=(log/'training.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
-    cfg=yaml.YAML(typ='safe').load(Path('/root/gpufree-data/hanzhuo/models/crafter-worldmodel/recovery-v1/config.yaml').read_text())
+    cfg=yaml.YAML(typ='safe').load(rt.CONFIG.read_text())
     cfg['jax']['profiler']=False
     config=elements.Config(cfg).update(seed=args.seed,logdir=str(log))
     config.save(elements.Path(str(log/'config.yaml')))
@@ -131,7 +134,7 @@ if __name__=='__main__':
     except BaseException as error:
         if '--logdir' in sys.argv:
             folder=Path(sys.argv[sys.argv.index('--logdir')+1]).resolve()
-            if folder.is_relative_to(Path('/root/gpufree-data/hanzhuo/models/crafter-worldmodel')):
+            if folder.is_relative_to(rt.MODELS):
                 folder.mkdir(parents=True,exist_ok=True)
                 (folder/'last-error.json').write_text(json.dumps(dict(error=repr(error),time=time.time(),pid=os.getpid())))
         raise

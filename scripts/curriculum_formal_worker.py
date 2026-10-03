@@ -1,20 +1,18 @@
 """Sequential three-method three-seed runner; frozen release required."""
-import pathlib,json,time,subprocess,psutil,fcntl,os,signal,pickle,hashlib
-ROOT=pathlib.Path(__file__).resolve().parents[1]
-OUT=ROOT/'reports/curriculum-v1'
-BASE=pathlib.Path('/root/gpufree-data/hanzhuo/models/crafter-worldmodel/curriculum-v1')
-GPU='GPU-ef3ccc4b-3d93-2e67-ff68-fb64baf630d8'
+import json,time,subprocess,psutil,fcntl,pickle,hashlib
+import project_runtime as rt
+from resource_guard import run as guarded_run
+rt.initialize()
+gpu_lock=rt.gpu_lock()
+ROOT,OUT,BASE,GPU=rt.ROOT,rt.REPORTS,rt.MODELS,rt.GPU
 lock=(OUT/'formal-worker.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
 state=dict(state='starting',pid=os.getpid(),created=psutil.Process().create_time(),started=time.time())
-child=None
 def write(path,obj):
     tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(obj,indent=2));tmp.replace(path)
 def status():write(OUT/'formal-status.json',state)
 def append(path,obj):
     with path.open('a') as f:f.write(json.dumps(obj)+'\n')
-def check_sources():
-    for path,h in json.loads((OUT/'release-lock.json').read_text()).items():
-        assert hashlib.sha256(pathlib.Path(path).read_bytes()).hexdigest()==h,path
+def check_sources():rt.verify()
 def checkpoint(model):
     root=model/'ckpt'
     if not root.exists():return 0,None
@@ -24,40 +22,15 @@ def checkpoint(model):
             (root/'latest').write_text(cp.name)
             return step,cp
     return 0,None
-def stop():
-    if child and child.poll() is None:
-        os.killpg(child.pid,signal.SIGTERM)
-        try:child.wait(timeout=15)
-        except subprocess.TimeoutExpired:os.killpg(child.pid,signal.SIGKILL);child.wait()
 def run(cmd,tag,progress):
-    global child
     check_sources()
-    apps=subprocess.check_output(['nvidia-smi','-i',GPU,'--query-compute-apps=pid','--format=csv,noheader'],text=True).strip()
-    assert not apps,('GPU occupied',apps)
-    began=time.time();log=ROOT/f'logs/curriculum-v1/{tag}-{int(began)}.log';reason=None;peakrss=peakgpu=0
-    with log.open('w') as f:
-        child=subprocess.Popen(cmd,cwd=ROOT,stdout=f,stderr=subprocess.STDOUT,start_new_session=True)
-        state.update(child_pid=child.pid,child_created=psutil.Process(child.pid).create_time(),log=str(log));status()
-        while child.poll() is None:
-            time.sleep(5)
-            if child.poll() is not None:break
-            q=psutil.Process(child.pid)
-            rss=sum(x.memory_info().rss for x in [q]+q.children(recursive=True) if x.is_running())
-            mem=int(subprocess.check_output(['nvidia-smi','-i',GPU,'--query-gpu=memory.used','--format=csv,noheader,nounits'],text=True).strip())
-            peakrss=max(peakrss,rss);peakgpu=max(peakgpu,mem)
-            age=time.time()-max(began,progress.stat().st_mtime if progress.exists() else began)
-            state.update(heartbeat=time.time(),rss_bytes=rss,gpu_mib=mem,progress_age=age);status()
-            if rss>16*2**30 or mem>20480:reason='resource_limit'
-            elif age>360:reason='stalled'
-            elif time.time()-began>2400:reason='attempt_timeout'
-            if reason:stop();break
-    return dict(exit_code=child.returncode,reason=reason or 'exit',elapsed=time.time()-began,
-                peak_rss_bytes=peakrss,peak_gpu_mib=peakgpu,log=str(log))
+    def update(**values):
+        state.update(values);status()
+    return guarded_run(cmd,rt.LOGS/f'{tag}-{int(time.time())}.log',progress,update)
 try:
-    assert json.loads((OUT/'preflight-gate.json').read_text())['passed']
-    assert json.loads((OUT/'full-resume-gate.json').read_text())['passed']
-    assert json.loads((OUT/'development-evaluation/diagnostic-gate.json').read_text())['passed']
-    protocol=json.loads((OUT/'protocol-frozen.json').read_text());assert protocol['state']=='frozen'
+    gate=json.loads((OUT/'local-validation.json').read_text())
+    assert gate['passed'] and gate['source_hashes']==rt.sources() and gate['environment']==rt.environment()
+    protocol=json.loads((ROOT/'configs/protocol.json').read_text())
     check_sources();status()
     matrix=[(method,seed) for seed in [11,23,41] for method in ['natural','fixed_mix','fading_mix']]
     models=[]
@@ -99,4 +72,4 @@ try:
         else:raise RuntimeError('Five incomplete evaluations')
     check_sources();state.update(state='completed',finished=time.time());status()
 except BaseException as e:
-    stop();state.update(state='failed',error=repr(e),finished=time.time());status();raise
+    state.update(state='failed',error=repr(e),finished=time.time());status();raise

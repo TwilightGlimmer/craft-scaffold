@@ -4,6 +4,8 @@ import numpy as np
 import crafter
 from curriculum_env import CurriculumEnv,assisted_block,StableCrafterEnv
 ROOT=Path(__file__).resolve().parents[1]
+import project_runtime as rt
+rt.initialize()
 def equal(a,b):
     assert np.array_equal(a[0],b[0])
     assert a[1:3]==b[1:3]
@@ -52,5 +54,5 @@ out=env.step(crafter.constants.actions.index('noop'))
 assert out[2] and out[3]['discount']==0
 results['death_terminal']=True
 result=dict(passed=True,checks=results,scope='CPU environment wrapper only; not yet Dreamer integration or end-to-end checkpoint consistency')
-(ROOT/'reports/curriculum-v1/environment-tests.json').write_text(json.dumps(result,indent=2))
+(rt.REPORTS/'environment-tests.json').write_text(json.dumps(result,indent=2))
 print(json.dumps(result))

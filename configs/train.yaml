@@ -138,7 +138,7 @@ jax:
   policy_devices: [0]
   prealloc: false
   train_devices: [0]
-logdir: /root/gpufree-data/hanzhuo/models/crafter-worldmodel/recovery-v1
+logdir: ''
 logger:
   filter: score|length|fps|ratio|train/loss/|train/rand/
   fps: 15

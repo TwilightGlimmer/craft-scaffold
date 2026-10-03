@@ -3,21 +3,22 @@ import os,sys,json,time,hashlib,pickle,resource,fcntl
 from pathlib import Path
 import numpy as np,psutil
 ROOT=Path(__file__).resolve().parents[1]
+import project_runtime as rt
 import argparse
 ap=argparse.ArgumentParser();ap.add_argument('--model',required=True);ap.add_argument('--output',required=True);ap.add_argument('--step',type=int,required=True);ap.add_argument('--development',action='store_true');args=ap.parse_args()
 assert args.development or args.step==300000
 NAMESPACE=3003 if args.development else 4003
-OUT=Path(args.output);OUT.mkdir(parents=True,exist_ok=True)
-MODEL=Path(args.model)
+OUT=rt.owned(args.output);OUT.mkdir(parents=True,exist_ok=True)
+MODEL=rt.owned(args.model)
 resource.setrlimit(resource.RLIMIT_CORE,(0,0))
-os.sched_setaffinity(0,sorted(os.sched_getaffinity(0))[:2])
+rt.affinity()
 lock=(OUT/'worker.lock').open('w');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
 def save(path,data):
  tmp=path.with_suffix('.tmp');tmp.write_text(json.dumps(data,indent=2));tmp.replace(path)
 status=dict(state='starting',pid=os.getpid(),created=psutil.Process().create_time(),started=time.time())
 save(OUT/'status.json',status)
 try:
- sys.path.insert(0,str(ROOT/'.deps/jax0438'));sys.path.insert(0,str(ROOT/'dreamerv3'))
+ sys.path.insert(0,str(ROOT/'dreamerv3'))
  import crafter,elements,ruamel.yaml
  from curriculum_env import StableCrafterEnv
  from crafter import constants
