@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "trace_integrity": true,
+  "episodes": 100,
+  "unexpected_eligible_craft_failures": 0,
+  "scope": "Instrumentation and trajectory audit; does not certify model quality or select an adaptation"
+}

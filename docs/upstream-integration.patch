@@ -1,0 +1,23 @@
+diff --git a/dreamerv3/configs.yaml b/dreamerv3/configs.yaml
+index 786b67e..86ea3d5 100644
+--- a/dreamerv3/configs.yaml
++++ b/dreamerv3/configs.yaml
+@@ -29,7 +29,7 @@ defaults:
+   env:
+     atari: {size: [96, 96], repeat: 4, sticky: True, gray: True, actions: all, lives: unused, noops: 30, autostart: False, pooling: 2, aggregate: max, resize: pillow, clip_reward: False}
+     procgen: {size: [96, 96], resize: pillow}
+-    crafter: {size: [64, 64], logs: False}
++    crafter: {size: [64, 64], logs: True, use_seed: True, use_logdir: True}
+     atari100k: {size: [64, 64], repeat: 4, sticky: False, gray: False, actions: needed, lives: unused, noops: 30, autostart: False, resize: pillow, clip_reward: False}
+     dmlab: {size: [64, 64], repeat: 4, episodic: True, use_seed: True}
+     minecraft: {size: [64, 64], break_speed: 100.0, logs: False, length: 36000}
+diff --git a/embodied/run/train.py b/embodied/run/train.py
+index fc791ec..13f9ea2 100644
+--- a/embodied/run/train.py
++++ b/embodied/run/train.py
+@@ -116,4 +116,5 @@ def train(make_agent, make_replay, make_env, make_stream, make_logger, args):
+     if should_save(step):
+       cp.save()
+ 
++  cp.save()  # Stage-1 integration: preserve final state for resume verification.
+   logger.close()

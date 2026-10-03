@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+set -euo pipefail
+export PERSONAL_ROOT=/root/gpufree-data/hanzhuo
+export PROJECT_ROOT=$PERSONAL_ROOT/projects/crafter-worldmodel
+export TMPDIR=$PROJECT_ROOT/tmp
+export TMP=$TMPDIR
+export TEMP=$TMPDIR
+export XDG_CACHE_HOME=$PROJECT_ROOT/cache
+export XDG_CONFIG_HOME=$PROJECT_ROOT/config
+export PIP_CACHE_DIR=$PROJECT_ROOT/cache/pip
+export UV_CACHE_DIR=$PROJECT_ROOT/cache/uv
+export HF_HOME=$PROJECT_ROOT/cache/huggingface
+export TORCH_HOME=$PROJECT_ROOT/cache/torch
+export TRITON_CACHE_DIR=$PROJECT_ROOT/cache/triton
+export CUDA_CACHE_PATH=$PROJECT_ROOT/cache/cuda
+export MPLCONFIGDIR=$PROJECT_ROOT/cache/matplotlib
+export NUMBA_CACHE_DIR=$PROJECT_ROOT/cache/numba
+export JAX_COMPILATION_CACHE_DIR=$PROJECT_ROOT/cache/jax
+export PYTHONDONTWRITEBYTECODE=1
+export PYTHONNOUSERSITE=1
+export PYTHONUNBUFFERED=1
+export CUDA_VISIBLE_DEVICES=GPU-ef3ccc4b-3d93-2e67-ff68-fb64baf630d8
+export XLA_PYTHON_CLIENT_PREALLOCATE=false
+export XLA_PYTHON_CLIENT_MEM_FRACTION=0.75
+export OMP_NUM_THREADS=2
+export MKL_NUM_THREADS=2
+export OPENBLAS_NUM_THREADS=2
+export SDL_VIDEODRIVER=dummy
+export SDL_AUDIODRIVER=dummy
+cd "$PROJECT_ROOT"
+exec /root/gpufree-data/hanzhuo/envs/crafter-dreamer/bin/python -B "$@"

@@ -1,0 +1,12 @@
+{
+  "python": "3.11.17",
+  "base_inventory": "reports/curriculum-v1/dependencies.json",
+  "overlay_distributions": {
+    "jax-cuda12-plugin": "0.4.38",
+    "jaxlib": "0.4.38",
+    "jax": "0.4.38",
+    "jax-cuda12-pjrt": "0.4.38"
+  },
+  "effective_jax": "0.4.38",
+  "scope": "Package metadata snapshot; no GPU initialization; external-machine installation not tested"
+}

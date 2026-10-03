@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "retained_actions": 5100,
+  "retained_assisted_actions": 2500,
+  "physical_completed": 6083,
+  "physical_ambiguous": 0,
+  "reexecuted_completed_actions": 983,
+  "finite_parameters": true,
+  "updates": 9629,
+  "scope": "Single fixed_mix seed7 preflight; final three-group evaluation pending"
+}

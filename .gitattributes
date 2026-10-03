@@ -1,0 +1,2 @@
+* -text
+# Preserve exact frozen bytes and hashes; no checkout line-ending conversion.
