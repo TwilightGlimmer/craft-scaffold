@@ -22,7 +22,17 @@ for entry in filter(None,entries):
     data=git('cat-file','blob',oid);total+=len(data)
     if len(data)>2*1024*1024:issues.append((name,'larger than 2 MiB'))
     try:text=data.decode('utf-8')
-    except UnicodeDecodeError:issues.append((name,'binary file'));continue
+    except UnicodeDecodeError:
+        if name.startswith('docs/assets/') and name.endswith('.png') and data.startswith(b'\x89PNG\r\n\x1a\n'):
+            from PIL import Image
+            import io
+            try:
+                im=Image.open(io.BytesIO(data)); im.verify()
+            except Exception:
+                issues.append((name,'invalid PNG illustration'))
+        else:
+            issues.append((name,'unapproved binary file'))
+        continue
     if name!= 'tools/check_publication.py':
         for label,pattern in patterns:
             if re.search(pattern,text):issues.append((name,label))

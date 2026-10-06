@@ -1,0 +1,11 @@
+{
+  "method": "fixed_mix",
+  "training_seed": 11,
+  "checkpoint_sha256": "26d4180bbfa589e539d2333f4707ac89b6ea372cea947fd3e9580c168530d802",
+  "episode": 2,
+  "environment_seed": 885602160,
+  "selection_rule": "First evaluation episode with make_wood_pickaxe and collect_stone; illustrative success, not representative success frequency",
+  "trace_sha256": "376830417f897cebc9daede61a2eb43d63a1e16b26dc60eb00481a29acceb8a8",
+  "replay_validation": "All recorded actions replayed; reward, termination and all achievements match every step",
+  "starts": "Same deterministic map seed, natural vs fixed_mix wrapper; illustrative reset only"
+}

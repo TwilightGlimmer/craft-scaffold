@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "different_arrays": 0,
-  "total_arrays": 288,
-  "scope": "Uninterrupted400 versus300+2+98 continuation with two cross-process restarts",
-  "cause": "Cached process-specific UUID hash restored from pickle caused silent missing replay updates; reconstruct hash on load."
-}

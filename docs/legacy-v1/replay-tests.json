@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "restored_sampler_rng": true,
-  "matching_sample_batches": 20,
-  "coverage": "capacity eviction and partial current chunk",
-  "scope": "Replay snapshot only; end-to-end learner checkpoint pending"
-}

@@ -61,3 +61,12 @@ id_ed25519*
 *.npz
 *.log
 .DS_Store
+
+# Reviewed public evidence and PNG illustrations only.
+!/docs/assets/
+/docs/assets/*
+!/docs/assets/*.png
+!/docs/results/
+/docs/results/*
+!/docs/results/*.json
+!/docs/results/*.csv

@@ -1,7 +1,0 @@
-{
-  "passed": true,
-  "steps": 200,
-  "legal_observation_keys": true,
-  "mid_episode_resume": true,
-  "scope": "Dreamer environment adapter only; learner/replay/driver checkpoint not yet validated"
-}
