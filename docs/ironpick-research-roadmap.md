@@ -96,3 +96,27 @@ pickaxe requires a further recipe-availability/timing diagnosis: these totals
 do not tell whether its 163 commands occurred while crafting was feasible.
 No claim is made that those commands were all valid opportunities, or that
 CR fixes either bottleneck. Detailed counts: results/exploration-control-actions.json.
+
+### Corrected action alignment and full environment replay
+
+A reconstruction check caught a one-transition error in the earlier action
+join: Dreamer stores the next selected action with the current observation.
+The public action-count file is corrected. Target-command totals happened to
+remain 163 (stone) and 1 (iron), but movement/no-op totals changed. Commands
+are not necessarily executed while the player is sleeping.
+
+Replaying all 10k retained environment actions now exactly matches every stored
+image, reward, terminal flag and logged new achievement. This CPU diagnostic
+cost 10,000 replayed actions plus one failed alignment-check action; neither is
+new training data.
+
+There were 493 awake stone-pickaxe opportunities with required materials and
+nearby utilities, but only one target command under those conditions, yielding
+one unlock. Of 163 submitted stone-pickaxe commands, 138 occurred while sleeping,
+111 lacked materials and 136 lacked nearby utilities; these categories overlap.
+Iron-pickaxe scenes offered 99 feasible steps, but zero feasible target commands.
+The sole iron-pickaxe command lacked both materials and nearby utilities.
+
+This supports failure to act during valid opportunities, not a broken crafting
+recipe. It does not by itself identify the actor/value/world-model cause.
+See results/exploration-control-recipe-replay.json.

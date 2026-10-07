@@ -1,8 +1,19 @@
 {
-  "checkpoint_sha256": "4e862ea2d81dd872c302b92f4c66bf3f94ac201a1e78a061b46d3dfa1be55e28",
-  "retained_training_actions": 10000,
+  "valid": true,
+  "replayed_cpu_actions": 10000,
+  "first_mismatch": null,
+  "elapsed_seconds": 99.48473501205444,
   "groups": {
     "stonepick": {
+      "counts": {
+        "steps": 6765,
+        "feasible_steps": 493,
+        "target_attempts": 163,
+        "feasible_attempts": 1,
+        "attempt_missing_material": 111,
+        "attempt_missing_utility": 136,
+        "attempt_while_sleeping": 138
+      },
       "actions": {
         "sleep": 116,
         "move_up": 469,
@@ -21,7 +32,6 @@
         "make_iron_pickaxe": 2,
         "place_stone": 253
       },
-      "transitions": 6765,
       "new_unlocks": {
         "make_stone_sword": 2,
         "eat_cow": 6,
@@ -37,6 +47,15 @@
       }
     },
     "ironpick": {
+      "counts": {
+        "steps": 3235,
+        "feasible_steps": 99,
+        "target_attempts": 1,
+        "feasible_attempts": 0,
+        "attempt_missing_material": 1,
+        "attempt_missing_utility": 1,
+        "attempt_while_sleeping": 0
+      },
       "actions": {
         "move_up": 180,
         "do": 1022,
@@ -55,7 +74,6 @@
         "make_stone_sword": 2,
         "make_iron_pickaxe": 1
       },
-      "transitions": 3235,
       "new_unlocks": {
         "place_stone": 21,
         "wake_up": 25,
@@ -67,6 +85,6 @@
       }
     }
   },
-  "limitations": "Corrected action alignment: command preceding each non-reset observation, including reset policy decisions. Commands submitted while sleeping may be overridden by the simulator; these are not necessarily executed crafting actions. Verified by full 10k CPU replay.",
-  "supersedes": "Earlier same-entry action join was shifted by one transition; original target-attempt totals happened to be unchanged."
+  "alignment": "Executed action comes from previous replay entry, including reset observations.",
+  "limits": "Feasibility checked before environment step; non-first filtered only after pairing previous actions. CPU replay, no training."
 }
