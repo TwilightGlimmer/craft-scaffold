@@ -33,3 +33,14 @@
 源码中优先级回写只是注释，不能仅打开配置开关；注释中的losses也不是当前train作用域的可用变量。
 版本化改动应在聚合前保留模型损失，排除想象actor/value损失，并与应用replay context后的stepid准确对齐。需要检查重复ID和上下文裁剪，不能按原始batch位置猜测。
 本次仅审计，没有改动冻结agent。[源码审计](results/cr-agent-interface-review.json)。
+
+## 本地优先采样接口与CPU成本
+
+当前embodied.core.replay.Replay.update已有stepid/priority回写接口，selectors.Prioritized已有序列采样树；无需先引入Reverb才能试探。
+但ExactReplay尚未保存这种选择器的完整状态，agent也未输出逐样本模型损失，开配置开关仍然不够。
+优先更新应过滤已淘汰ID：现有默认字典可能重新创建无效stepid项，接入时须测试这一边界。
+
+纯CPU合成基准使用实际100000容量、33步序列、batch8和32步损失，100批次。
+平均每批均匀抽样0.038ms，优先抽样0.816ms、优先级更新5.521ms；进程RSS约268MiB。
+这些数字只说明已有采样树的基础开销，没有计入CR次数更新、GPU损失传回、真实回放读取或完整训练，不能直接当吞吐或收益预测。
+[基准记录](results/cr-priority-cpu-benchmark.json)。测试未使用GPU，未修改或启动任何CR训练。

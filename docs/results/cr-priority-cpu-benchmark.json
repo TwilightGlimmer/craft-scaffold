@@ -1,0 +1,33 @@
+{
+  "capacity_requested": 100000,
+  "items_inserted": 100000,
+  "sequence_length": 33,
+  "batch_size": 8,
+  "loss_steps": 32,
+  "completed_batches": 100,
+  "build_seconds": 1.4927113596349955,
+  "uniform_sample": {
+    "mean_ms": 0.03752455115318298,
+    "p95_ms": 0.05017584189772606
+  },
+  "priority_sample": {
+    "mean_ms": 0.8161501027643681,
+    "p95_ms": 0.9863937273621559
+  },
+  "priority_update": {
+    "mean_ms": 5.520608518272638,
+    "p95_ms": 6.24807346612215
+  },
+  "total_seconds": 2.1340241860598326,
+  "rss_bytes": 281305088,
+  "selectors_sha256": "b8cb69021e8f79888df88fb5c195e8ff19e3d54065bb08bd3586fd9cbe6655d3",
+  "gpu_used": false,
+  "limitations": "Synthetic priority updates on current selector, not complete CR. Excludes loss transfer, visit counters, replay data access and GPU learning. Microbenchmark cannot prove learning gains.",
+  "sampler_seed": 39791,
+  "loss_seed": 39793,
+  "synthetic_loss_range": [
+    0.01,
+    10
+  ],
+  "cpu_affinity_count": 2
+}
