@@ -1,0 +1,9 @@
+{
+  "cpu_tests": 4,
+  "passed": true,
+  "actual_source_environment_step": 600000,
+  "environment_only_final_step": 600002,
+  "training_performed": false,
+  "gpu_used": false,
+  "limits": "Two CPU environment actions only; no policy, replay or optimizer updates. Full GPU continuation remains unverified."
+}

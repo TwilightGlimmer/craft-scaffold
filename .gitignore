@@ -76,3 +76,5 @@ id_ed25519*
 !/scripts/bounded_exploration.py
 
 !/scripts/legacy_native_state.py
+
+!/scripts/continuation_env.py
