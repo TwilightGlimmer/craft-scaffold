@@ -85,3 +85,5 @@ id_ed25519*
 !/scripts/continuation_evaluate.py
 
 !/scripts/curiosity_selector.py
+
+!scripts/curiosity_replay.py

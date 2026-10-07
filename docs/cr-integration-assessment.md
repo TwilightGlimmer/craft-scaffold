@@ -53,3 +53,21 @@ scripts/curiosity_selector.py 实现CR启发的优先选择器，六项CPU测试
 采样前概率、计数、树结构、随机流及模型误差一并快照；旧600k历史次数不能恢复，迁移时必须明确从零累计。
 尚未接入ExactReplay或agent逐样本损失，也未用于任何训练。必须进一步完成回放与GPU完整恢复验收，不能以CPU测试通过宣称CR有效。
 测试命令：python -m unittest discover -s tests -p test_curiosity_selector.py。
+
+### Exact replay integration prototype
+
+The experimental curiosity_replay.py now wraps the existing in-memory replay.
+Five CPU integration tests verify batch/priority feedback after restore, pending
+streams and FIFO eviction, explicit uniform replay migration, and rejection of
+changed priority settings. It explicitly assigns the selector after construction
+because an empty selector is falsey in the upstream constructor.
+
+Migration retains old experience, sequence order, and pending streams, but starts
+new replay-use counts at zero, uses the configured initial model loss, and starts
+a new explicitly seeded sampling stream. It cannot reconstruct historic CR counts.
+Every sampling draw, including report/eval sampling, increments counts in this
+prototype. Callers must stop insertion/sampling before checkpointing or migration.
+
+This is not yet connected to per-step world-model losses or a GPU training run.
+Passing CPU tests does not establish learning improvement or end-to-end training
+recovery equivalence. Only trusted local pickle checkpoints are supported.
