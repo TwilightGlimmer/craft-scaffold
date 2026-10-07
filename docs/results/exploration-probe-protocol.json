@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "source": "natural-seed23/600000",
+  "arms": [
+    "control",
+    "explore"
+  ],
+  "per_arm_new_steps": 10000,
+  "total_new_steps": 20000,
+  "preflight": "explore200 vs100+100; exact agent/replay plus runtime semantic comparison",
+  "reward": "native all22 and health",
+  "replay": "inherited100000 uniform",
+  "pilot_only": true,
+  "training_mix": "2 stonepick blocks then1 ironpick; episode cap128; stone initial3wood3stone in both arms",
+  "intervention": "explore arm only: first32 steps each auxiliary episode uniform random action with probability0.5; no labels or masks; otherwise original actor",
+  "evaluation": "no override; source and both arms30stonepick+30ironpick+30natural; common namespace39721 policy39723; standard initialstone1+1",
+  "gate": "roadmap gates unchanged; no large training on frozen evaluation alone",
+  "wall_seconds": 3600,
+  "resources": {
+    "gpus": 1,
+    "cpu": [
+      2,
+      3
+    ],
+    "gpu_mib": 20480,
+    "tree_gib": 16
+  }
+}
