@@ -1,0 +1,44 @@
+{
+  "gpu_preflight": {
+    "passed": true,
+    "checks": {
+      "agent": true,
+      "policy_carry": true,
+      "train_carry": true,
+      "ratio_prev": true,
+      "stream_index": true,
+      "numpy_rng": true,
+      "policy_params": true,
+      "acts": true,
+      "replay_sizes": true,
+      "exploration_rng": true,
+      "environment_counters": true,
+      "inventory": true
+    },
+    "extra_actions": 400
+  },
+  "replay_semantic_checks": {
+    "items": true,
+    "refs": true,
+    "current": true,
+    "streams": true,
+    "fifo": true,
+    "signature": true,
+    "sampler_indices": true,
+    "sampler_keys": true,
+    "sampler_rng": true,
+    "valid_chunk_data": true
+  },
+  "replay_exclusions": [
+    "chunk timestamps",
+    "uninitialized tails",
+    "random UUID byte names; topology and item locations are compared"
+  ],
+  "analysis_selftests": [
+    "pass at24aux successes and3 natural prerequisite gain",
+    "fail below24",
+    "fail naturalScore below90percent",
+    "fail without natural chain gain"
+  ],
+  "status": "preflight_passed_not_performance_proof"
+}
