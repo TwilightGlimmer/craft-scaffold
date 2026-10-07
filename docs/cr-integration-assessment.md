@@ -164,3 +164,19 @@ Replay feedback was active: 160,000 sequence draws and exact agreement with the 
 Next research decision: diagnose predictions and policy probabilities on preserved feasible/success trajectories before spending on another long run. Do not alter the completed protocol or reinterpret the higher aggregate natural score as solving tool acquisition. This is one selected source and one short adaptation trial, not a general disproof of Curious Replay.
 
 Evidence: [paired audit](results/cr-exploration-matched-audit.json), [all 22 achievements](results/cr-exploration-matched-outcomes.csv), [replay feedback](results/cr-exploration-feedback-audit.json).
+
+
+### CR trajectory reconstruction
+
+All 10,000 retained actions were replayed on CPU; every stored image, reward, end flag and new-achievement event matched. This cost 10,000 CPU simulation actions (~100 seconds), no gradient updates or GPU evaluation.
+
+| Training scene | Actions | Feasible pre-action states | Target commands | Commands in feasible states | New target unlocks |
+|---|---:|---:|---:|---:|---:|
+| Stone pickaxe | 6,672 | 460 | 177 | 12 | 11 |
+| Iron pickaxe | 3,328 | 73 | 31 | 2 | 2 |
+
+The CR trajectory still rarely pairs a target command with its prerequisites. Among stone-pickaxe commands, 101 lacked materials, 150 lacked a required nearby utility, and 86 occurred during sleep; categories overlap. For iron these counts were 24, 27 and 5. These include exploration overrides, so they are not final-policy conditional success rates. Stateful exact replay confirms the recipe could succeed when valid commands occurred, but does not isolate a world-model/critic/actor cause.
+
+A competing-reward hypothesis also needs separation from prediction failure: native-reward training unlocked wood swords 56 times and placed stone 69 times versus iron pickaxes twice. Evaluation unlocked wood swords in 30/30 prepared iron scenes. Such behavior can earn legitimate first-time rewards while consuming resources; CR does not explicitly prefer the diagnostic target. Repeated commands and first-time rewards must remain distinct. This observation motivates checking value/action rankings and prerequisite-conditioned predictions before changing rewards or launching another training trial.
+
+Evidence: [exact recipe reconstruction](results/cr-exploration-recipe-replay.json).

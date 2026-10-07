@@ -1,0 +1,98 @@
+{
+  "arm": "cr",
+  "checkpoint_sha256": "11f405f70c7b70fc27e5a974f64b46a4f6a1a9657ed5990db9910e6b3cdc13ac",
+  "valid": true,
+  "replayed_cpu_actions": 10000,
+  "first_mismatch": null,
+  "elapsed_seconds": 100.01384925842285,
+  "groups": {
+    "stonepick": {
+      "counts": {
+        "steps": 6672,
+        "feasible_steps": 460,
+        "target_attempts": 177,
+        "feasible_attempts": 12,
+        "attempt_missing_material": 101,
+        "attempt_missing_utility": 150,
+        "attempt_while_sleeping": 86
+      },
+      "actions": {
+        "sleep": 155,
+        "make_stone_sword": 56,
+        "move_down": 1085,
+        "place_stone": 240,
+        "move_left": 864,
+        "noop": 208,
+        "make_iron_sword": 52,
+        "make_wood_pickaxe": 326,
+        "place_table": 87,
+        "place_plant": 172,
+        "move_up": 492,
+        "make_iron_pickaxe": 59,
+        "do": 1709,
+        "move_right": 560,
+        "make_stone_pickaxe": 177,
+        "make_wood_sword": 225,
+        "place_furnace": 205
+      },
+      "new_unlocks": {
+        "make_stone_sword": 13,
+        "collect_sapling": 46,
+        "place_plant": 44,
+        "place_stone": 47,
+        "wake_up": 50,
+        "make_wood_sword": 40,
+        "collect_drink": 29,
+        "place_furnace": 23,
+        "collect_coal": 1,
+        "eat_cow": 5,
+        "make_stone_pickaxe": 11,
+        "collect_iron": 1
+      }
+    },
+    "ironpick": {
+      "counts": {
+        "steps": 3328,
+        "feasible_steps": 73,
+        "target_attempts": 31,
+        "feasible_attempts": 2,
+        "attempt_missing_material": 24,
+        "attempt_missing_utility": 27,
+        "attempt_while_sleeping": 5
+      },
+      "actions": {
+        "make_stone_pickaxe": 74,
+        "move_up": 256,
+        "make_wood_sword": 135,
+        "do": 836,
+        "move_left": 528,
+        "place_stone": 83,
+        "place_plant": 104,
+        "move_right": 280,
+        "move_down": 471,
+        "make_wood_pickaxe": 150,
+        "sleep": 67,
+        "noop": 121,
+        "place_furnace": 88,
+        "place_table": 51,
+        "make_stone_sword": 28,
+        "make_iron_sword": 25,
+        "make_iron_pickaxe": 31
+      },
+      "new_unlocks": {
+        "make_wood_sword": 16,
+        "place_stone": 22,
+        "wake_up": 25,
+        "make_iron_sword": 1,
+        "collect_sapling": 22,
+        "place_plant": 21,
+        "collect_drink": 11,
+        "make_iron_pickaxe": 2,
+        "make_stone_sword": 1,
+        "eat_cow": 2
+      }
+    }
+  },
+  "alignment": "Executed action comes from previous replay entry, including reset observations.",
+  "limits": "Feasibility checked before environment step; non-first filtered only after pairing previous actions. CPU replay, no training."
+}
