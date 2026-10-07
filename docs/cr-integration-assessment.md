@@ -120,3 +120,27 @@ loss-derived priority differ. These choices, duplicate-step handling and reset
 visit counts on uniform migration must be resolved or explicitly frozen as
 adaptations before interpreting an efficacy test as CR-based evidence.
 [Replay](https://github.com/AutonomousAgentsLab/cr-dv3/blob/fd4342d95fca671082d9e60bd85a6730ee9e4f4d/dreamerv3/embodied/replay/base_prioritized_reverb.py)
+
+### Real-checkpoint GPU preflight result
+
+A versioned runtime wrapper corrected two launch-interface issues before any
+training: runpy import search paths and the migration wrapper's missing save()
+method. Frozen public scripts were retained; the temporary corrected trainer
+is not yet the public entry point.
+
+Starting from the selected real 600k checkpoint, 8 continuous actions and 4+4
+resumed actions produced identical agent checkpoints and checked runtime fields.
+Each branch made 16 optimizer updates and 128 replay draws; 3,555 resident
+per-step model-loss values were updated and finite. All replay content, topology,
+priority/count state, RNG and the following 100 tree samples matched.
+
+Raw environment pickle bytes differed. The initial failed byte-level audit is
+retained. A subsequent strict field comparison identified unordered world-object
+set serialization, paired objects unambiguously by type and position, and found
+no state difference. StableCrafterEnv already sorts those candidates before
+balancing. Both snapshots also produced identical 34-step native environment
+branches. Total GPU environment actions: 16; CPU branch actions: 68.
+
+This enables a bounded efficacy experiment, not a claim of better skill learning.
+Engineering parameters remain distinct from an efficacy protocol.
+See results/cr-gpu-preflight.json.

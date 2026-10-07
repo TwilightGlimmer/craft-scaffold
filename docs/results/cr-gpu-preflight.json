@@ -1,0 +1,131 @@
+{
+  "summary": {
+    "passed": true,
+    "agent_equal": true,
+    "runtime_equal": {
+      "acts": true,
+      "policy_carry": true,
+      "train_carry": true,
+      "stream_index": true,
+      "ratio_prev": true,
+      "policy_params": true,
+      "numpy_rng": true,
+      "episode_length": true,
+      "episode_return": true
+    },
+    "updated_loss_steps": [
+      3555,
+      3555
+    ],
+    "sampler_draws": [
+      128,
+      128
+    ],
+    "physical_actions": 16,
+    "limits": "Short-run check only; complete replay topology and environment equivalence need separate audit before efficacy trials."
+  },
+  "full-path-feedback": {
+    "checkpoint_step": 600008,
+    "training_actions": 8,
+    "new_updates": 16,
+    "sampler_draws": 128,
+    "losses_updated": 3555,
+    "losses_finite": true,
+    "loss_quantiles": [
+      1.0,
+      1.0,
+      1.0,
+      23.830702037811335,
+      100.1579818725586
+    ],
+    "resume_comparison_pending": true
+  },
+  "replay-equivalence-audit": {
+    "passed": true,
+    "checks": {
+      "items": true,
+      "refs": true,
+      "current": true,
+      "streams": true,
+      "fifo": true,
+      "signature": true,
+      "sampler_counts": true,
+      "sampler_model_losses": true,
+      "sampler_prios": true,
+      "sampler_stepitems": true,
+      "sampler_items": true,
+      "sampler_rng": true,
+      "sample_count": true,
+      "next_draws": true,
+      "valid_chunk_data": true
+    },
+    "full": {
+      "items": "25f189b781c3ace2595944dc80ee26bcd5129e17de5a4546e22888e4006b6d4e",
+      "refs": "5646ace437f9449096edbac46e9de243ac59e871c52eabf15f05ebe90ed4c328",
+      "current": "9d8657db9f5f5636bf6243345cef40ea32769da05ec62e657e0ac585450990e1",
+      "streams": "ddb43ceeb3e7de484d51f32210c26e9c7d5ad1bccefff718865253922412cb05",
+      "fifo": "389ec5f254a15a7b240903c242f7465b207f63af6e62700cc834125bafb4200e",
+      "signature": "9192521d05e2846be7c280f0091eec935cd93e1a7c48ed90c4bf4543d9f185fe",
+      "sampler_counts": "d67aa18998d6cd56996c1619d0484ec2a08b67aa295e8eb14c2fb8db11b40e91",
+      "sampler_model_losses": "6a13e92e71b8b143ae6b83f1ec75a295ebab9d941a885ba95ee2e46f62cb52aa",
+      "sampler_prios": "066f9777e03a0fb3126229666893e1038887861edc058dcb9226d3b1daf1b512",
+      "sampler_stepitems": "304b2e2b370bdaec4cddd5cecb36c90e3f5e7a0e0582a0181fea40a5a5da624f",
+      "sampler_items": "28d6e4c5b6eb58a1e60bf750321b43e265b85c594c52fcb8a0211234d6d92d9d",
+      "sampler_rng": "f00b3b36e90b8e25bde7336f7524cda864aa0e974b655dbeebbb01358dc325d9",
+      "sample_count": "128",
+      "next_draws": "d21bcbdbac24037a57083432188d59afc92e47e5dadd07029b9cbf3a0195d732",
+      "valid_chunk_data": "a15f349ae0ff273b2da7fc18a411172368714421c08ddf194058c9182a9d4ade"
+    },
+    "split": {
+      "items": "25f189b781c3ace2595944dc80ee26bcd5129e17de5a4546e22888e4006b6d4e",
+      "refs": "5646ace437f9449096edbac46e9de243ac59e871c52eabf15f05ebe90ed4c328",
+      "current": "9d8657db9f5f5636bf6243345cef40ea32769da05ec62e657e0ac585450990e1",
+      "streams": "ddb43ceeb3e7de484d51f32210c26e9c7d5ad1bccefff718865253922412cb05",
+      "fifo": "389ec5f254a15a7b240903c242f7465b207f63af6e62700cc834125bafb4200e",
+      "signature": "9192521d05e2846be7c280f0091eec935cd93e1a7c48ed90c4bf4543d9f185fe",
+      "sampler_counts": "d67aa18998d6cd56996c1619d0484ec2a08b67aa295e8eb14c2fb8db11b40e91",
+      "sampler_model_losses": "6a13e92e71b8b143ae6b83f1ec75a295ebab9d941a885ba95ee2e46f62cb52aa",
+      "sampler_prios": "066f9777e03a0fb3126229666893e1038887861edc058dcb9226d3b1daf1b512",
+      "sampler_stepitems": "304b2e2b370bdaec4cddd5cecb36c90e3f5e7a0e0582a0181fea40a5a5da624f",
+      "sampler_items": "28d6e4c5b6eb58a1e60bf750321b43e265b85c594c52fcb8a0211234d6d92d9d",
+      "sampler_rng": "f00b3b36e90b8e25bde7336f7524cda864aa0e974b655dbeebbb01358dc325d9",
+      "sample_count": "128",
+      "next_draws": "d21bcbdbac24037a57083432188d59afc92e47e5dadd07029b9cbf3a0195d732",
+      "valid_chunk_data": "a15f349ae0ff273b2da7fc18a411172368714421c08ddf194058c9182a9d4ade"
+    },
+    "excluded": [
+      "chunk timestamps",
+      "uninitialized tails",
+      "random UUID byte names; topology and item locations are compared"
+    ]
+  },
+  "environment-audit": {
+    "passed": false,
+    "environment_snapshot_exact": false,
+    "environment_sha256": [
+      "4948b35c8090d61b979ff6ba7b42ed2e0f479aca0b67b4b0c51bb9061451cb6e",
+      "9b0f079fcc7a359a809edc52ffeffa0c4c833e95873ebfc4a5c4baa63ea50299"
+    ],
+    "deterministic_branch_equal": true,
+    "branch_lengths": [
+      34,
+      34
+    ],
+    "cpu_diagnostic_actions": 68,
+    "model_training_actions": 0,
+    "limits": "Native environment branch only; does not establish training efficacy or long-run equivalence."
+  },
+  "environment-semantic-audit-v2": {
+    "passed": true,
+    "differences": [],
+    "objects_compared": 491,
+    "raw_pickle_equal": false,
+    "set_order_ignored": true,
+    "all_other_fields_compared": true,
+    "branch_equal": true,
+    "rationale": "World chunk membership uses sets of object references; pickle order varies. StableCrafterEnv explicitly sorts candidates for balancing. Compare all object fields after unambiguous type/position pairing.",
+    "original_byte_audit_retained": true,
+    "selftests_passed": true
+  },
+  "limitations": "Engineering test: 16 total GPU environment actions, 68 CPU branch actions; no learning efficacy claim. Original byte-level environment audit failed; full semantic comparison and future branch matched."
+}
