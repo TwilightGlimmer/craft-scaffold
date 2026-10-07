@@ -2,6 +2,7 @@
 import os,sys,resource,argparse,json,time,pickle,hashlib,fcntl,faulthandler
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0,str(ROOT/'scripts'))
 sys.path.insert(0,str(ROOT/'dreamerv3'))
 import project_runtime as rt
 resource.setrlimit(resource.RLIMIT_CORE,(0,0))
@@ -91,6 +92,8 @@ def main():
             if protocol.get("source_replay_kind")!="uniform":
                 raise ValueError("Initial CR migration requires explicit uniform source")
             class InitialReplayMigration:
+                def save(self):
+                    return replay.save()
                 def load(self,data):
                     migration_report.update(replay.migrate_uniform(data))
             cp.replay=InitialReplayMigration()
