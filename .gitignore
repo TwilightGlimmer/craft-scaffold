@@ -81,3 +81,5 @@ id_ed25519*
 
 !/scripts/continuation_adapter.py
 !/scripts/continuation_train.py
+
+!/scripts/continuation_evaluate.py
