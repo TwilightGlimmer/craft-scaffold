@@ -1,6 +1,6 @@
 # CraftScaffold｜从练习到独立生存
 
-> **当前策略更新（2026-10-07）**：同批与逐级两组均从零重训，统一使用当前自然baseline的seed23及网络配置，训练奖励统一为主线成就与生命变化。详见[当前训练策略](docs/current-training-strategy.md)。旧3×3结果和演示仍为历史协议证据；v5 runtime尚未移植到portable入口。
+> **当前状态（2026-10-08）**：旧辅助长训练已暂停，自然基线已完成800k。正在以选定的自然baseline seed23 **600k**为共同起点，先做铁镐学习与自然迁移的小成本验证，再将通过验收的辅助方案续训至1m。尚未开始本轮大规模训练。详见[研究计划](docs/ironpick-research-roadmap.md)与[能力诊断](docs/capability-diagnostics.md)。旧3×3属于历史协议。
 
 **基于DreamerV3 + Crafter的强化学习课程项目：在带帮助的场景中练习，再检验智能体能否在正常世界里独立生存和制作工具。**
 
