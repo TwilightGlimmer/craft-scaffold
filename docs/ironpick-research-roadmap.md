@@ -120,3 +120,21 @@ The sole iron-pickaxe command lacked both materials and nearby utilities.
 This supports failure to act during valid opportunities, not a broken crafting
 recipe. It does not by itself identify the actor/value/world-model cause.
 See results/exploration-control-recipe-replay.json.
+
+### Completed paired exploration screen
+
+Both arms completed 10k retained training actions, 20k updates, and the same
+90 evaluation episodes. Exploration generated 11 stone-pickaxe and 3
+iron-pickaxe unlocks during training, versus 1 and 0 for control. These are
+behavior-policy training events, not evaluation success rates.
+
+At evaluation without random overrides, both arms scored 0/30 on each prepared
+pickaxe task. Natural Score was 12.2298 for control and 11.0612 for exploration
+(source: 11.7612), with no new natural stone-pickaxe/iron/iron-pickaxe successes.
+Both failed the prespecified gate. No 1m continuation is approved by this screen.
+
+The next question is whether improved replay can turn newly encountered
+successful experiences into a learned policy. The CR integration remains an
+engineering prototype. Its first GPU launch failed on a missing import path
+before training; a separately versioned entry fix retains the original preflight
+deadline. This software failure is not a negative CR learning result.

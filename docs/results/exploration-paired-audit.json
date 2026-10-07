@@ -1,0 +1,94 @@
+{
+  "audit_version": 3,
+  "complete": true,
+  "screening": {
+    "control": {
+      "passed": false,
+      "checks": {
+        "aux_ironpick": false,
+        "natural_score": true,
+        "stonepick_not_regress": true,
+        "iron_not_regress": true,
+        "natural_chain_gain": false
+      },
+      "differences": {
+        "make_stone_pickaxe": 0,
+        "collect_iron": 0,
+        "make_iron_pickaxe": 0
+      },
+      "requires_independent_confirmation": true
+    },
+    "explore": {
+      "passed": false,
+      "checks": {
+        "aux_ironpick": false,
+        "natural_score": true,
+        "stonepick_not_regress": true,
+        "iron_not_regress": true,
+        "natural_chain_gain": false
+      },
+      "differences": {
+        "make_stone_pickaxe": 0,
+        "collect_iron": 0,
+        "make_iron_pickaxe": 0
+      },
+      "requires_independent_confirmation": true
+    }
+  },
+  "cost": {
+    "control": {
+      "actions": 10000,
+      "physical_actions": 10061,
+      "reexecuted_actions": 61,
+      "new_updates": 20000,
+      "physical_new_unlocks": {
+        "make_stone_sword": 2,
+        "eat_cow": 6,
+        "collect_sapling": 68,
+        "place_plant": 64,
+        "wake_up": 77,
+        "place_stone": 65,
+        "make_wood_sword": 57,
+        "make_stone_pickaxe": 1,
+        "collect_coal": 4,
+        "collect_drink": 31,
+        "place_furnace": 25,
+        "defeat_zombie": 1
+      },
+      "random_overrides": 0,
+      "preparation_actions": 794,
+      "cumulative_updates": 1219429
+    },
+    "explore": {
+      "actions": 10000,
+      "physical_actions": 10000,
+      "reexecuted_actions": 0,
+      "new_updates": 20000,
+      "physical_new_unlocks": {
+        "make_stone_sword": 11,
+        "collect_sapling": 66,
+        "wake_up": 79,
+        "place_plant": 63,
+        "eat_cow": 11,
+        "make_wood_sword": 50,
+        "place_stone": 68,
+        "collect_drink": 30,
+        "place_furnace": 8,
+        "make_stone_pickaxe": 11,
+        "make_iron_pickaxe": 3,
+        "defeat_zombie": 1,
+        "make_iron_sword": 1,
+        "collect_iron": 1,
+        "collect_coal": 1
+      },
+      "random_overrides": 1299,
+      "preparation_actions": 803,
+      "cumulative_updates": 1219429
+    }
+  },
+  "preflight_actions": 400,
+  "recovery_diagnostic_actions": 256,
+  "independent_confirmation_pending": false,
+  "large_training_authorized_by_this_script": false,
+  "limitations": "Single pretrained source; development screening, not multi-seed method evidence."
+}
