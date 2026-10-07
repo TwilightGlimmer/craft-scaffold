@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "source_step": 607500,
+  "results": [
+    {
+      "device_condition": "original_gpu",
+      "exit": 0,
+      "seconds": 35.809816122055054,
+      "peak_rss_bytes": 5925703680,
+      "physical_actions": 128,
+      "final_step": 607628,
+      "cumulative_updates": 1214685,
+      "agent_sha256": "be018159880e6b5b63853de1258670ef9939c8b1f76b609e8c4ec46b1a646744"
+    },
+    {
+      "device_condition": "second_same_model_gpu",
+      "exit": 0,
+      "seconds": 40.86396789550781,
+      "peak_rss_bytes": 8655335424,
+      "physical_actions": 128,
+      "final_step": 607628,
+      "cumulative_updates": 1214685,
+      "agent_sha256": "be018159880e6b5b63853de1258670ef9939c8b1f76b609e8c4ec46b1a646744"
+    }
+  ],
+  "additional_physical_actions": 256,
+  "identical_final_agent_hash": true,
+  "conclusion": "The checkpoint can resume beyond the previous stalled step on both tested GPUs. Original stall was not reproduced; root cause remains unproven.",
+  "original_pilot_complete": false
+}
