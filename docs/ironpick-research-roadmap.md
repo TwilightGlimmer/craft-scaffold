@@ -148,3 +148,19 @@ show it did not yet produce a reliable standalone policy. Repeated production
 after an existing unlock is not counted as another new achievement.
 CPU reconstruction cost across both arms is 20,001 actions including the failed
 one-step alignment check; this is distinct from training interaction cost.
+
+### Frozen CR-inspired exploration follow-up
+
+A single 10k-action candidate starts from the same complete baseline600k,
+using the unchanged exploration-probe environment, native rewards, behavior
+exploration, source replay, and evaluation. Only replay selection/model-loss
+feedback changes. The run has a separate 45-minute hard budget, including a
+16-action continuous/resumed preflight, then the same 90 evaluation episodes.
+
+Parameters use c=10000, beta=0.7, alpha=0.7, epsilon=0.01. Explicit adaptations
+remain: sequence-mean aggregation, initial_loss=1 instead of the official
+separate initial priority, duplicate-loss averaging, and newly initialized
+visit counts/sampling RNG for the inherited uniform replay. It is a CR-inspired
+port, not exact reproduction. No hyperparameter sweep or automatic long-run
+promotion is permitted. Original screening gates are unchanged.
+See results/curiosity-exploration-protocol.json.

@@ -1,0 +1,35 @@
+{
+  "version": "curiosity-exploration-v1",
+  "source": "natural-seed23/600000",
+  "new_actions": 10000,
+  "wall_seconds": 2700,
+  "preflight_actions": 16,
+  "replay_capacity": 100000,
+  "curiosity": {
+    "c": 10000,
+    "beta": 0.7,
+    "alpha": 0.7,
+    "epsilon": 0.01,
+    "initial_loss": 1,
+    "seed": 39755
+  },
+  "intervention": "CR-inspired sequence-mean replay with scaled per-step world-model loss; same explore behavior as exploration-probe-v1",
+  "unchanged": [
+    "full source optimizer/replay/runtime",
+    "native all22+health rewards",
+    "2stone/1iron blocks cap128",
+    "stone3wood3stone training",
+    "first32 probability0.5 uniform17 action exploration",
+    "30stone+30iron+30natural evaluation namespace39721 policy39723 without override"
+  ],
+  "adaptations": [
+    "Sequence mean rather than official endpoint-key priority",
+    "Initial priority computed from initial_loss1 rather than separate official1e5",
+    "Duplicate losses averaged",
+    "All migrated visit counts initialized0; new explicitly seeded replay RNG",
+    "Source prefetched batches retained"
+  ],
+  "gate": "Original screening gate unchanged; iron24/30, naturalScore>=90%source, stone/iron losses<=2/30, natural chain one gain>=3/30, then independent30natural",
+  "purpose": "Does prioritizing encountered experience improve learning beyond exploration alone?",
+  "no_automatic_large_training": true
+}
