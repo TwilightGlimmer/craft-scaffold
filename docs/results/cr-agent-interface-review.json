@@ -1,0 +1,8 @@
+{
+  "agent_sha256": "adce8e4274bc098c218bf9a20fd3327545f0ad7d850b5fe328597382e91b5269",
+  "world_model_losses_shape": "batch,time",
+  "public_train_output_drops_auxiliary_losses": true,
+  "priority_hook_commented": true,
+  "requires_versioned_agent_patch": true,
+  "training_changed": false
+}
