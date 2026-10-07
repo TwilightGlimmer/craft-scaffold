@@ -74,3 +74,5 @@ id_ed25519*
 !/scripts/skill_starts.py
 
 !/scripts/bounded_exploration.py
+
+!/scripts/legacy_native_state.py

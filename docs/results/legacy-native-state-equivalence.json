@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "source_step": 600000,
+  "source_runtime_sha256": "f3e59891746a209cd532af7233b8c6a8ad602e327eb1b64b2f95099b2433268d",
+  "legacy_module_not_imported": true,
+  "class_source_identical": true,
+  "post_snapshot_actions": 100,
+  "comparison": "pixels rewards done inventory achievements",
+  "source_unchanged": true,
+  "scope": "Environment snapshot compatibility only; full model continuation integration still required."
+}

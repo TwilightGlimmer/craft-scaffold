@@ -60,3 +60,10 @@ scripts/bounded_exploration.py 将行为随机探索独立成不读取奖励或�
 四项CPU测试覆盖与运行时原始逻辑一致、连续/恢复一致、终局及32步后不覆盖、恢复时拒绝配置变更。
 调用方仍必须把返回动作同步到环境、回放和模型上一动作记忆；组件本身不替代这项集成验收。现有运行时未改用本模块。
 测试：python -m unittest discover -s tests -p test_bounded_exploration.py。
+
+## 旧600k环境状态兼容
+
+scripts/legacy_native_state.py 可以读取可信的旧自然环境快照，把旧模块的同义环境类映射到公开类，无需导入服务器专用模块。
+已核验类定义一致、600k动作计数和终局标志保留，以及后续随机动作的画面、奖励、终止、库存和成就一致。
+[测试证据](results/legacy-native-state-equivalence.json)。源检查点未修改。
+此功能只处理环境状态读取，尚未接入完整训练入口；不能据此声称已经验证跨机器模型续训。pickle仅可用于可信检查点。
