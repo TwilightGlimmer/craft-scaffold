@@ -1,0 +1,114 @@
+{
+  "passed": true,
+  "checkpoint_sha256": "11f405f70c7b70fc27e5a974f64b46a4f6a1a9657ed5990db9910e6b3cdc13ac",
+  "alignment": "Outcome observation paired with same retained-index WAL event; action labels would require previous replay entry. Single sequential environment, no duplicate physical steps verified.",
+  "replay_sequences": 100000,
+  "sampler_draws": 160000,
+  "nonzero_count_steps": 100029,
+  "priority_max_formula_error": 0.0,
+  "by_training_age_bin": {
+    "0_other": {
+      "steps": 1000,
+      "mean_replay_count": 81.731,
+      "min_count": 41,
+      "max_count": 120
+    },
+    "1_other": {
+      "steps": 1000,
+      "mean_replay_count": 75.339,
+      "min_count": 49,
+      "max_count": 126
+    },
+    "2_other": {
+      "steps": 999,
+      "mean_replay_count": 77.41941941941941,
+      "min_count": 40,
+      "max_count": 115
+    },
+    "2_target_success": {
+      "steps": 1,
+      "mean_replay_count": 80.0,
+      "min_count": 80,
+      "max_count": 80
+    },
+    "3_other": {
+      "steps": 995,
+      "mean_replay_count": 85.00804020100503,
+      "min_count": 47,
+      "max_count": 125
+    },
+    "3_target_success": {
+      "steps": 5,
+      "mean_replay_count": 81.4,
+      "min_count": 66,
+      "max_count": 101
+    },
+    "4_other": {
+      "steps": 1000,
+      "mean_replay_count": 69.387,
+      "min_count": 37,
+      "max_count": 113
+    },
+    "5_other": {
+      "steps": 998,
+      "mean_replay_count": 64.61022044088176,
+      "min_count": 36,
+      "max_count": 91
+    },
+    "5_target_success": {
+      "steps": 2,
+      "mean_replay_count": 63.5,
+      "min_count": 58,
+      "max_count": 69
+    },
+    "6_other": {
+      "steps": 999,
+      "mean_replay_count": 53.474474474474476,
+      "min_count": 33,
+      "max_count": 89
+    },
+    "6_target_success": {
+      "steps": 1,
+      "mean_replay_count": 66.0,
+      "min_count": 66,
+      "max_count": 66
+    },
+    "7_other": {
+      "steps": 998,
+      "mean_replay_count": 45.42585170340681,
+      "min_count": 27,
+      "max_count": 67
+    },
+    "7_target_success": {
+      "steps": 2,
+      "mean_replay_count": 42.5,
+      "min_count": 38,
+      "max_count": 47
+    },
+    "8_other": {
+      "steps": 999,
+      "mean_replay_count": 34.187187187187185,
+      "min_count": 18,
+      "max_count": 52
+    },
+    "8_target_success": {
+      "steps": 1,
+      "mean_replay_count": 32.0,
+      "min_count": 32,
+      "max_count": 32
+    },
+    "9_other": {
+      "steps": 999,
+      "mean_replay_count": 22.96896896896897,
+      "min_count": 0,
+      "max_count": 35
+    },
+    "9_target_success": {
+      "steps": 1,
+      "mean_replay_count": 21.0,
+      "min_count": 21,
+      "max_count": 21
+    }
+  },
+  "limitation": "Counts include context/report draws. Age-binned observational summary; replay counts do not establish causality or policy improvement."
+}

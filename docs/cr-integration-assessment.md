@@ -144,3 +144,23 @@ branches. Total GPU environment actions: 16; CPU branch actions: 68.
 This enables a bounded efficacy experiment, not a claim of better skill learning.
 Engineering parameters remain distinct from an efficacy protocol.
 See results/cr-gpu-preflight.json.
+
+
+## First matched efficacy probe: completed, not promoted
+
+The selected natural seed23 600k checkpoint was continued for 10,000 actions with the same auxiliary scene mix and bounded random exploration as the completed exploration arm. The intervention was CR-inspired replay and per-step world-model loss feedback. All 90 matched evaluation episodes ran without random action overrides. Source/checkpoint hashes, 20,000 new updates, 100,000 inherited replay sequences and physical-action accounting passed audit; the candidate needed no reexecution.
+
+| Model | Natural Crafter Score (30 episodes) | Prepared stone pickaxe | Prepared iron pickaxe |
+|---|---:|---:|---:|
+| Source 600k | 11.761 | 1/30 | 0/30 |
+| Uniform control 610k | 12.230 | 0/30 | 0/30 |
+| Uniform + bounded exploration 610k | 11.061 | 0/30 | 0/30 |
+| CR-inspired + same exploration 610k | 12.744 | 0/30 | 0/30 |
+
+The CR arm experienced 11 new stone-pickaxe and 2 iron-pickaxe unlocks during training, including exploration overrides. These are not autonomous evaluation successes. Natural stone-pickaxe, iron and iron-pickaxe success remained zero. The frozen efficacy gate failed; no independent confirmation or 1m promotion was triggered.
+
+Replay feedback was active: 160,000 sequence draws and exact agreement with the frozen priority formula. Success-outcome observations were replayed, but their counts did not consistently exceed other observations in the same 1,000-action age bins. This is descriptive evidence, not a causal comparison with uniform replay: sequence context, different trajectories and sample age matter. CR does not explicitly prioritize success. These results do not establish whether world-model prediction, critic values or actor optimization is the remaining bottleneck.
+
+Next research decision: diagnose predictions and policy probabilities on preserved feasible/success trajectories before spending on another long run. Do not alter the completed protocol or reinterpret the higher aggregate natural score as solving tool acquisition. This is one selected source and one short adaptation trial, not a general disproof of Curious Replay.
+
+Evidence: [paired audit](results/cr-exploration-matched-audit.json), [all 22 achievements](results/cr-exploration-matched-outcomes.csv), [replay feedback](results/cr-exploration-feedback-audit.json).
