@@ -53,9 +53,27 @@ def main():
     config.save(elements.Path(str(log/'config.yaml')))
     env=ContinuationCrafter(protocol)
     upstream.make_env=lambda config,index:ContinuationCrafter(protocol)
-    agent=upstream.make_agent(config)
-    replay=ExactReplay(length=config.consec_train*config.batch_length+config.replay_context,
+    replay_kind=protocol.get("replay_kind","uniform")
+    if replay_kind not in ("uniform","curiosity"):
+        raise ValueError("Unknown replay kind")
+    replay_kwargs=dict(length=config.consec_train*config.batch_length+config.replay_context,
         capacity=int(config.replay.size),chunksize=config.replay.chunksize,seed=protocol["seed"])
+    if replay_kind=="curiosity":
+        from curiosity_agent import CuriousAgent
+        from curiosity_replay import CuriosityReplay
+        from dreamerv3 import agent as agent_module
+        replay=CuriosityReplay(**replay_kwargs,curiosity=protocol["curiosity"])
+        original_agent=agent_module.Agent
+        try:
+            agent_module.Agent=CuriousAgent
+            agent=upstream.make_agent(config)
+        finally:
+            agent_module.Agent=original_agent
+    else:
+        if "curiosity" in protocol:
+            raise ValueError("Curiosity settings supplied for uniform replay")
+        agent=upstream.make_agent(config)
+        replay=ExactReplay(**replay_kwargs)
     stream=iter(upstream.make_stream(config,replay,'train'))
     driver=embodied.Driver([lambda:env],parallel=False)
     driver.reset(agent.init_policy)
@@ -68,7 +86,20 @@ def main():
     if cp.latest():
         cp.load()
     else:
-        cp.load(str(original))
+        migration_report={}
+        if replay_kind=="curiosity":
+            if protocol.get("source_replay_kind")!="uniform":
+                raise ValueError("Initial CR migration requires explicit uniform source")
+            class InitialReplayMigration:
+                def load(self,data):
+                    migration_report.update(replay.migrate_uniform(data))
+            cp.replay=InitialReplayMigration()
+        try:
+            cp.load(str(original))
+        finally:
+            cp.replay=replay
+        if migration_report:
+            (log/'replay-migration.json').write_text(json.dumps(migration_report,indent=2))
         assert int(counter)==protocol['source_step'] and len(replay)==int(config.replay.size) and env._env.done
         (log/'initialization.json').write_text(json.dumps(dict(source=str(original),step=int(counter),replay_size=len(replay),updates=int(agent.n_updates),mode='full replay/runtime/optimizer restore')))
 

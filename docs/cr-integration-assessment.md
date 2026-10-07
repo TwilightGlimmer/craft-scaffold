@@ -86,3 +86,18 @@ losses, and absence of gradients through priorities. They do not instantiate and
 train a full restored Dreamer agent. The subclass still needs full checkpoint
 loading, actual GPU optimizer-update and replay-feedback verification before
 enabling it in any experiment. Existing entry points remain unchanged.
+
+### Opt-in experimental continuation path
+
+The experimental continuation entry accepts replay_kind=curiosity only with
+explicit curiosity parameters and source_replay_kind=uniform. Without this field,
+the original uniform path is retained. Initial migration preserves the source
+replay, optimizer, runtime, and any already-prefetched training stream batches;
+only subsequent sampler draws use new CR priorities. A replay-migration.json
+ledger records newly initialized count/loss/RNG state. Subsequent checkpoints
+restore the exact CR selector instead of migrating again.
+
+This entry has passed syntax/import checks only for this integration. It must not
+be used for a long experiment until a bounded GPU test confirms loading the
+600k checkpoint, finite per-step priorities, actual replay feedback, and exact
+split-run restoration. No ongoing frozen experiment uses this new path.
