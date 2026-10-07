@@ -83,3 +83,5 @@ id_ed25519*
 !/scripts/continuation_train.py
 
 !/scripts/continuation_evaluate.py
+
+!/scripts/curiosity_selector.py
