@@ -63,3 +63,21 @@ control最后一段超过900秒进程上限，栈停在JAX训练输出传回主�
 恢复诊断：同一607500检查点在原GPU及另一同型号空卡各继续128步，最终607628模型哈希一致，均越过上次607561停滞位置。
 该检查点并未表现为不可恢复；短测不能证明根因、彻底修复或长训练稳定。额外256动作单列，原试探仍未完成。
 [恢复诊断证据](results/exploration-recovery-diagnostic.json)。未启动1m。
+
+### Audited control continuation (600k to 610k)
+
+The control arm completed 10,000 retained interactions and 90 evaluation episodes.
+On 30 paired natural scenarios, Crafter Score changed from 11.7612 to 12.2298.
+Prepared stone-pickaxe success changed from 1/30 to 0/30; iron-pickaxe remained
+0/30. This does not establish targeted skill improvement.
+
+The cost ledger records 10,061 physical training actions, including 61 replayed
+after interruption, 794 retained scene-preparation actions, 400 preflight actions,
+and 256 separate recovery-diagnostic actions. All 20,000 new training updates were
+verified. See results/exploration-control-completed.json.
+
+The previously unrun exploration arm has a separate, explicitly versioned
+30-minute completion budget, retaining the original 10k interaction budget,
+behavior settings, evaluation seeds, and screening criteria. The original
+deadline was not extended. No 1m training or CR effectiveness claim follows from
+the control result.
