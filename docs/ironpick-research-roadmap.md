@@ -52,3 +52,10 @@
 [恢复验收证据](results/exploration-probe-preflight.json)。预检通过只证明工程恢复一致，不证明探索策略有效。
 
 [行为探索实现与复现边界](exploration-probe-implementation.md)：公开核心介入代码，并明确当前尚非新方案的一键复现入口。
+
+## 本轮试探中断
+
+control最后一段超过900秒进程上限，栈停在JAX训练输出传回主机；根因尚未证实，不归因于算法。
+完整状态保留到607500，实际7561新增交互中61步未保留；预检400动作另计。explore未开始，两组最终配对评测未完成。
+因此没有有效效果比较，也不能宣布探索或CR无效。原截止不延长，不启动1m；先做有界、版本化的恢复停滞诊断。
+[中断审计](results/exploration-probe-incomplete.json)保留全部失败成本。

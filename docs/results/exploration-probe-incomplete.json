@@ -1,0 +1,27 @@
+{
+  "state": "incomplete",
+  "reason": "Final control segment exceeded its 900-second cap while waiting for JAX training outputs; exact device/runtime cause not proven.",
+  "control_retained_steps": 7500,
+  "control_physical_begin": 7561,
+  "control_physical_end": 7561,
+  "control_new_unlocks": {
+    "make_stone_sword": 2,
+    "eat_cow": 4,
+    "collect_sapling": 54,
+    "place_plant": 50,
+    "wake_up": 58,
+    "place_stone": 49,
+    "make_wood_sword": 43,
+    "make_stone_pickaxe": 1,
+    "collect_coal": 3,
+    "collect_drink": 24,
+    "place_furnace": 17,
+    "defeat_zombie": 1
+  },
+  "explore_started": false,
+  "preflight_actions": 400,
+  "source_evaluation_episodes": 90,
+  "paired_evaluation_complete": false,
+  "efficacy_conclusion": "No valid control-versus-exploration conclusion.",
+  "next_action": "Diagnose the blocked post-restore update with a separately versioned bounded test; do not extend the failed trial deadline or start 1m."
+}
