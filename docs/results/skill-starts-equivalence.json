@@ -1,0 +1,22 @@
+{
+  "passed": true,
+  "cases": 72,
+  "seeds": [
+    7,
+    23
+  ],
+  "rotations": 4,
+  "skills": [
+    "natural",
+    "woodpick",
+    "stone",
+    "coal",
+    "stonepick",
+    "furnace",
+    "iron",
+    "ironpick",
+    "diamond"
+  ],
+  "actions_per_case": 10,
+  "scope": "CPU equivalence to frozen v5 prepare with reward filtering disabled; not model efficacy or checkpoint portability."
+}

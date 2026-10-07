@@ -45,3 +45,11 @@
 公开仓库现有可执行入口仍覆盖旧版三组课程协议。本文代码片段用于审阅实际介入位置，并非已移植完成的新方案一键入口。
 新试探依赖运行时v5场景、完整600k状态和审计器；验证选定方案后须一并移植并执行恢复与评测一致性测试。
 [协议](results/exploration-probe-protocol.json)、[恢复证据](results/exploration-probe-preflight.json)、[验收修订](results/exploration-probe-audit-v2.json)与[研究路线](ironpick-research-roadmap.md)应联合阅读。
+
+## 已移植的场景模块
+
+scripts/skill_starts.py 提供 prepare_native(env, skill, rotation)，覆盖八种技能与自然出生，使用公开的 StableCrafterEnv。
+该模块保留原生全部成就奖励，前置准备动作仅用于构造合法初始历史，不进入智能体回放。
+此模块不加载模型、不启动训练，不代表完整新训练入口已移植；旧版课程入口保持原样。
+CPU检查：python -m unittest discover -s tests -p test_skill_starts.py。
+与冻结运行时的72种起点及后续随机动作进行等价检查，结果见 [场景等价证据](results/skill-starts-equivalence.json)。

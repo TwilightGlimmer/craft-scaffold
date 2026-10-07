@@ -70,3 +70,5 @@ id_ed25519*
 /docs/results/*
 !/docs/results/*.json
 !/docs/results/*.csv
+
+!/scripts/skill_starts.py
