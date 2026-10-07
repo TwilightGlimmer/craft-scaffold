@@ -138,3 +138,13 @@ successful experiences into a learned policy. The CR integration remains an
 engineering prototype. Its first GPU launch failed on a missing import path
 before training; a separately versioned entry fix retains the original preflight
 deadline. This software failure is not a negative CR learning result.
+
+The exploration arm also passed full 10k CPU action replay against stored
+images/rewards/termination/achievements. It had 528 feasible stone-pickaxe
+opportunity steps and 12 feasible target commands, with 11 new unlocks;
+iron pickaxe had 83 feasible steps and 3 feasible commands, with 3 new unlocks.
+This confirms increased effective exploration, while the final 0/30 evaluations
+show it did not yet produce a reliable standalone policy. Repeated production
+after an existing unlock is not counted as another new achievement.
+CPU reconstruction cost across both arms is 20,001 actions including the failed
+one-step alignment check; this is distinct from training interaction cost.
