@@ -53,3 +53,10 @@ scripts/skill_starts.py 提供 prepare_native(env, skill, rotation)，覆盖八�
 此模块不加载模型、不启动训练，不代表完整新训练入口已移植；旧版课程入口保持原样。
 CPU检查：python -m unittest discover -s tests -p test_skill_starts.py。
 与冻结运行时的72种起点及后续随机动作进行等价检查，结果见 [场景等价证据](results/skill-starts-equivalence.json)。
+
+## 已移植的探索随机流组件
+
+scripts/bounded_exploration.py 将行为随机探索独立成不读取奖励或任务标签的组件，保存并恢复随机流、覆盖次数和协议参数。
+四项CPU测试覆盖与运行时原始逻辑一致、连续/恢复一致、终局及32步后不覆盖、恢复时拒绝配置变更。
+调用方仍必须把返回动作同步到环境、回放和模型上一动作记忆；组件本身不替代这项集成验收。现有运行时未改用本模块。
+测试：python -m unittest discover -s tests -p test_bounded_exploration.py。

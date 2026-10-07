@@ -72,3 +72,5 @@ id_ed25519*
 !/docs/results/*.csv
 
 !/scripts/skill_starts.py
+
+!/scripts/bounded_exploration.py
