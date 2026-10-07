@@ -87,3 +87,5 @@ id_ed25519*
 !/scripts/curiosity_selector.py
 
 !scripts/curiosity_replay.py
+
+!scripts/curiosity_agent.py

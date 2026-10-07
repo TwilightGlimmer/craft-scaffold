@@ -71,3 +71,18 @@ prototype. Callers must stop insertion/sampling before checkpointing or migratio
 This is not yet connected to per-step world-model losses or a GPU training run.
 Passing CPU tests does not establish learning improvement or end-to-end training
 recovery equivalence. Only trusted local pickle checkpoints are supported.
+
+### Experimental model-loss hook
+
+curiosity_agent.py adds an opt-in Agent subclass returning post-replay-context
+step IDs with a per-step priority. Priority is the scaled sum of dynamics,
+representation, reward, continuation and reconstruction losses. Policy/value
+losses are excluded and the priority is stop-gradient. This aggregation is an
+explicit local CR-inspired choice, not a claim of exact original implementation
+equivalence. The host selector rejects nonfinite priorities.
+
+Four CPU tests cover loss selection, post-context shape mismatch, missing model
+losses, and absence of gradients through priorities. They do not instantiate and
+train a full restored Dreamer agent. The subclass still needs full checkpoint
+loading, actual GPU optimizer-update and replay-feedback verification before
+enabling it in any experiment. Existing entry points remain unchanged.
