@@ -1,0 +1,73 @@
+{
+  "checkpoint_sha256": "4e862ea2d81dd872c302b92f4c66bf3f94ac201a1e78a061b46d3dfa1be55e28",
+  "retained_training_actions": 10000,
+  "groups": {
+    "stonepick": {
+      "actions": {
+        "move_up": 435,
+        "do": 1993,
+        "move_down": 965,
+        "move_left": 1042,
+        "make_stone_sword": 7,
+        "place_plant": 145,
+        "make_stone_pickaxe": 163,
+        "sleep": 115,
+        "noop": 277,
+        "place_table": 85,
+        "make_wood_pickaxe": 221,
+        "move_right": 658,
+        "make_wood_sword": 194,
+        "place_furnace": 210,
+        "make_iron_pickaxe": 2,
+        "place_stone": 253
+      },
+      "transitions": 6765,
+      "positive_reward_steps": 320,
+      "new_unlocks": {
+        "make_stone_sword": 2,
+        "eat_cow": 6,
+        "collect_sapling": 46,
+        "place_plant": 43,
+        "wake_up": 52,
+        "make_stone_pickaxe": 1,
+        "place_stone": 44,
+        "collect_coal": 4,
+        "make_wood_sword": 40,
+        "collect_drink": 19,
+        "place_furnace": 24
+      }
+    },
+    "ironpick": {
+      "actions": {
+        "do": 1014,
+        "make_wood_pickaxe": 95,
+        "move_down": 406,
+        "place_table": 50,
+        "move_left": 574,
+        "noop": 141,
+        "move_up": 165,
+        "place_stone": 73,
+        "move_right": 219,
+        "sleep": 49,
+        "make_wood_sword": 164,
+        "make_stone_pickaxe": 77,
+        "place_furnace": 130,
+        "place_plant": 75,
+        "make_stone_sword": 2,
+        "make_iron_pickaxe": 1
+      },
+      "transitions": 3235,
+      "positive_reward_steps": 143,
+      "new_unlocks": {
+        "place_stone": 21,
+        "wake_up": 25,
+        "make_wood_sword": 17,
+        "collect_sapling": 22,
+        "collect_drink": 12,
+        "place_plant": 21,
+        "defeat_zombie": 1
+      }
+    }
+  },
+  "limitations": "Actions are from retained replay; scene labels join the final WAL record per retained index. Success counts are observed unlocks, not recipe-conditioned attempt rates. Positive rewards may include health rewards. No exploration-arm result read."
+}

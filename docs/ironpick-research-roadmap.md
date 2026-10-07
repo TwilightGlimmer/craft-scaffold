@@ -81,3 +81,18 @@ The previously unrun exploration arm has a separate, explicitly versioned
 behavior settings, evaluation seeds, and screening criteria. The original
 deadline was not extended. No 1m training or CR effectiveness claim follows from
 the control result.
+
+### Retained control actions identify different skill bottlenecks
+
+The audited 10k retained interactions contain 6,765 stone-pickaxe scene actions
+and 3,235 iron-pickaxe scene actions. The former include 163 stone-pickaxe
+commands but only one new stone-pickaxe unlock. The latter include only one
+iron-pickaxe command and no iron-pickaxe unlock. The source replay's ordered
+chunk chain was checked; the last 10k non-reset transitions were joined to
+the final physical-WAL record for each retained action index.
+
+This supports deficient target-action exploration for iron pickaxe. Stone
+pickaxe requires a further recipe-availability/timing diagnosis: these totals
+do not tell whether its 163 commands occurred while crafting was feasible.
+No claim is made that those commands were all valid opportunities, or that
+CR fixes either bottleneck. Detailed counts: results/exploration-control-actions.json.
