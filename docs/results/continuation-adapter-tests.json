@@ -1,0 +1,12 @@
+{
+  "passed": true,
+  "source_step": 600000,
+  "checks": [
+    "legacy adapter snapshot read",
+    "new adapter save/reload",
+    "environment settings",
+    "exploration RNG",
+    "pixels"
+  ],
+  "gpu_training_verified": false
+}

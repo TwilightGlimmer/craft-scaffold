@@ -74,3 +74,13 @@ scripts/continuation_env.py 显式接收终点、技能比例、动作区间和�
 保存并恢复配置、随机环境状态、计数及当前回合；配置变化拒绝恢复，旧自然模型只允许在回合结束处迁移。
 CPU测试覆盖连续/恢复一致、边界自举、协议改变拒绝、非法比例；另从实际600k环境快照执行两步，确认不受旧400k硬上限影响。
 [检查证据](results/continuation-env-tests.json)。这两步没有策略或优化器更新，正式训练仍需GPU完整恢复验收。
+
+## 实验性完整续训入口
+
+scripts/continuation_train.py 与 continuation_adapter.py 接入完整模型、优化器、ExactReplay和TrainingRuntime恢复。
+运行要求显式 --experimental、--protocol、--target、--logdir、--deadline；没有默认正式方案，当前不建议开始长训练。
+协议必须提供 source_checkpoint、source_config及各自agent/config SHA256、source_step、seed、target、weights、namespace、block_actions、auxiliary_horizon、exploration。
+输出需在 CRAFT_DATA_ROOT 对应模型目录；冻结公开代码及依赖，拒绝变更协议恢复。源agent与完整文件和步数核验在加载之前完成。
+120秒周期保存，保留全部检查点等待评测后审计；物理动作与新解锁单独记录。外部管理器仍须执行GPU占用、显存和进程树内存上限检查。
+[适配器CPU证据](results/continuation-adapter-tests.json)只证明真实600k环境快照读取和新快照恢复，尚未验证GPU学习与分段恢复一致。
+现有试探继续使用冻结运行时，尚未切换到此入口。正式训练必须先完成候选筛选、独立确认以及入口GPU预检；本接口不构成放宽门槛。
