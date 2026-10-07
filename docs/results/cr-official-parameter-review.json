@@ -1,0 +1,31 @@
+{
+  "upstream_commit": "fd4342d95fca671082d9e60bd85a6730ee9e4f4d",
+  "verified_via": "Public raw source viewed through web tool; no claim of downloaded source hash",
+  "official_defaults": {
+    "initial_priority": 100000,
+    "c": 10000,
+    "beta": 0.7,
+    "epsilon": 0.01,
+    "alpha": 0.7,
+    "key_find_priority": 10000000
+  },
+  "sources": {
+    "config": "https://github.com/AutonomousAgentsLab/cr-dv3/blob/fd4342d95fca671082d9e60bd85a6730ee9e4f4d/dreamerv3/configs.yaml",
+    "model_loss": "https://github.com/AutonomousAgentsLab/cr-dv3/blob/fd4342d95fca671082d9e60bd85a6730ee9e4f4d/dreamerv3/agent.py",
+    "replay": "https://github.com/AutonomousAgentsLab/cr-dv3/blob/fd4342d95fca671082d9e60bd85a6730ee9e4f4d/dreamerv3/embodied/replay/base_prioritized_reverb.py"
+  },
+  "local_engineering_parameters_only": {
+    "c": 2,
+    "beta": 0.5,
+    "alpha": 1,
+    "epsilon": 0.01,
+    "initial_loss": 1
+  },
+  "unresolved_before_efficacy": [
+    "Initial priority handling differs from official separate initial_priority",
+    "Local sequence-mean priority differs from official endpoint-key update",
+    "Overlapping duplicate IDs use mean losses locally",
+    "Historical uniform replay has no CR visit counts; migration initializes them",
+    "No inference of equal performance across Dreamer versions"
+  ]
+}

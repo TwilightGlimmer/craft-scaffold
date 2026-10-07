@@ -101,3 +101,22 @@ This entry has passed syntax/import checks only for this integration. It must no
 be used for a long experiment until a bounded GPU test confirms loading the
 600k checkpoint, finite per-step priorities, actual replay feedback, and exact
 split-run restoration. No ongoing frozen experiment uses this new path.
+
+### Official defaults checked before efficacy experiments
+
+The pinned official configuration uses c=10000, beta=0.7, alpha=0.7 and
+epsilon=0.01, plus a separate initial_priority=100000. Our small engineering-test
+values are not the published experimental defaults and must not silently become
+the efficacy protocol. [Configuration](https://github.com/AutonomousAgentsLab/cr-dv3/blob/fd4342d95fca671082d9e60bd85a6730ee9e4f4d/dreamerv3/configs.yaml)
+
+The official agent supplies the scaled per-step world-model loss, excluding its
+separate actor/critic update. This supports our model-loss selection, but does not
+establish equivalence across Dreamer versions.
+[Agent](https://github.com/AutonomousAgentsLab/cr-dv3/blob/fd4342d95fca671082d9e60bd85a6730ee9e4f4d/dreamerv3/agent.py)
+
+The official replay associates sequence keys with ending environment steps and
+assigns a distinct initial priority. Our sequence-mean aggregation and initial
+loss-derived priority differ. These choices, duplicate-step handling and reset
+visit counts on uniform migration must be resolved or explicitly frozen as
+adaptations before interpreting an efficacy test as CR-based evidence.
+[Replay](https://github.com/AutonomousAgentsLab/cr-dv3/blob/fd4342d95fca671082d9e60bd85a6730ee9e4f4d/dreamerv3/embodied/replay/base_prioritized_reverb.py)
