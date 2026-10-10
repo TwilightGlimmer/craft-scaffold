@@ -1,0 +1,75 @@
+{
+  "schema": "ra-hb-v2-postmortem-snapshot-v1",
+  "decision_date": "2026-10-10",
+  "decision": "abandoned_before_target",
+  "target_real_actions": 1000000,
+  "last_observed_real_actions": 315222,
+  "last_complete_checkpoint_actions": 315000,
+  "last_observed_counts": {
+    "natural": 252722,
+    "A_prep": 17500,
+    "A_ready": 15000,
+    "B_prep": 15000,
+    "B_ready": 15000
+  },
+  "natural_evaluation": {
+    "episodes_per_checkpoint": 20,
+    "environment": "independent unmodified natural reset; all-zero initial H; no true H/B policy inputs",
+    "namespace": 97001,
+    "policy_seed": 97003,
+    "checkpoints": [
+      {
+        "actions": 140000,
+        "checkpoint_sha256": "0a4aa0a030acbb67961c7f91f5b6a18869c0dde0df22ba17c573009720438aca",
+        "score": 2.9255634207118257,
+        "make_wood_pickaxe_successes": 0,
+        "make_stone_pickaxe_successes": 0,
+        "make_iron_pickaxe_successes": 0,
+        "place_table_successes": 7
+      },
+      {
+        "actions": 260000,
+        "checkpoint_sha256": "0e93a645933529c72e8375f527c5bd0e10d648aee8abd7efe667aa4c20843c24",
+        "score": 2.532329049911301,
+        "make_wood_pickaxe_successes": 0,
+        "make_stone_pickaxe_successes": 0,
+        "make_iron_pickaxe_successes": 0,
+        "place_table_successes": 9
+      },
+      {
+        "actions": 300000,
+        "checkpoint_sha256": "01ca81bf779017e2bd9d9c76c7044c6294f9a9cbc4f3ca41618f339587c76087",
+        "score": 2.6982210993993765,
+        "make_wood_pickaxe_successes": 0,
+        "make_stone_pickaxe_successes": 0,
+        "make_iron_pickaxe_successes": 0,
+        "place_table_successes": 8
+      }
+    ]
+  },
+  "auxiliary_evaluation_at_300000": {
+    "episodes_per_kind": 10,
+    "A_prep": { "stone_pickaxe_successes": 10, "invalid_makes_per_1000_actions": 84.08862034239678 },
+    "A_ready": { "stone_pickaxe_successes": 10, "invalid_makes_per_1000_actions": 95.85037989479837 },
+    "B_prep": { "iron_pickaxe_successes": 0, "invalid_makes_per_1000_actions": 80.94981111710739 },
+    "B_ready": { "iron_pickaxe_successes": 0, "invalid_makes_per_1000_actions": 72.03389830508475 }
+  },
+  "baseline_reference": {
+    "protocol": "original formal 3x3 natural seed23, 300k actions, 100 natural episodes",
+    "score": 7.805,
+    "paired_with_ra_hb_evaluation": false,
+    "source": "docs/results/formal-300k.json"
+  },
+  "original_machine_artifacts": {
+    "run_directory_suffix": "models/crafter-worldmodel/ra-hb-v2/seed23-r2",
+    "train_log_basename": "ra-hb-v2-train-r2.log",
+    "natural_summary_pattern": "eval-natural-step{actions}-20/summary.json",
+    "aux_summary": "aux-eval-step300000-10/summary.json"
+  },
+  "limitations": [
+    "RA-HB and baseline used different evaluation maps and episode counts",
+    "single RA-HB training seed",
+    "abandoned before 1M actions",
+    "no causal ablation of curriculum, virtual H, and H/B heads"
+  ]
+}
