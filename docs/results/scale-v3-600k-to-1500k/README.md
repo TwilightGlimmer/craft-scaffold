@@ -34,7 +34,7 @@ Selected achievement rates (% of episodes):
 
 The surviving pre-1M audit covers **31 unique checkpoints** (16 branch, 15 source), all evaluated on 100 natural episodes with verified records. The resumed cleanup manifest records 16 remaining path deletions and 6 retained canonical copies. An earlier cleanup had already removed 33 duplicate rolling/eval-pending paths; these match prior retention/checkpoint-cleanup logs and the preserved pre-delete manifest. No evaluation output, episode/action record, training log, or ledger row was deleted.
 
-The retained pre-1M targets are the nearest 800k, 900k, and 1M checkpoints per arm, plus any better global-best checkpoint. Existing 1M–1.5M cleanup manifests retain 100k milestone checkpoints, verified best, and final 1.5M checkpoints. Machine-readable details are in cleanup-audit.json; full path/hash manifests remain in the report root.
+The retained pre-1M targets are the nearest 800k, 900k, and 1M checkpoints per arm, plus any better global-best checkpoint. For 1M–1.5M, exact 100k milestones, the best node (branch 1.3M, source 1.37M), and the official final 1.5M run checkpoints are retained. A final dedup pass removed 10 evaluated duplicate copies and preserved the SHA-verified canonical files. Machine-readable details are in cleanup-audit.json; full path/hash manifests remain in the report root.
 
 ## Files
 
