@@ -1,38 +1,79 @@
 #!/usr/bin/env python3
-"""Regenerate the scale-v3 score curve from the checked-in verified CSV."""
-import argparse,csv
+"""Render the checked-in Scale-v3 score table as a dependency-free SVG."""
+import argparse, csv, html
 from pathlib import Path
-import matplotlib
-matplotlib.use("Agg")
-import matplotlib.pyplot as plt
-ROOT=Path(__file__).resolve().parents[1]
-CSV=ROOT/"docs/results/scale-v3-600k-to-1500k/scores.csv"
-OUT=ROOT/"docs/results/scale-v3-600k-to-1500k/score-curve.svg"
+
+COLORS={'branch':'#2166ac','source':'#d97904'}
+W,H=1050,600
+LEFT,RIGHT,TOP,BOTTOM=92,35,62,92
+X0,X1=600000,1500000
+Y0,Y1=0,30
+
 def main():
- p=argparse.ArgumentParser();p.add_argument("--csv",type=Path,default=CSV);p.add_argument("--output",type=Path,default=OUT);a=p.parse_args()
- with a.csv.open(newline="") as f: rows=list(csv.DictReader(f))
- shared={}; arms={"branch":[],"source":[]}
- for r in rows:
-  st=int(r["checkpoint_step"]);sc=float(r["natural_score"])
-  if r["arm"] in ("shared_baseline","shared_initialization"):shared[st]=sc
-  elif r["arm"] in arms:arms[r["arm"]].append((st,sc))
- assert 600000 in shared and 610000 in shared
- assert min(x for x,_ in arms["branch"])==620000 and min(x for x,_ in arms["source"])==620000
- colors={"branch":"#2563eb","source":"#d97706"}
- fig,ax=plt.subplots(figsize=(10.5,5.6),constrained_layout=True)
- for arm in ("branch","source"):
-  pts=[(600000,shared[600000]),(610000,shared[610000])]+sorted(arms[arm]); chunks=[];chunk=[pts[0]]
-  for point in pts[1:]:
-   if point[0]-chunk[-1][0]>30000:chunks.append(chunk);chunk=[point]
-   else:chunk.append(point)
-  chunks.append(chunk)
-  for i,c in enumerate(chunks):ax.plot([x/1000 for x,_ in c],[y for _,y in c],color=colors[arm],lw=1.8,marker="o",ms=3.5,label=arm.title() if i==0 else None)
-  ax.scatter([610],[shared[610000]],color=colors[arm],marker="s",s=34,zorder=4)
- ax.scatter([600],[shared[600000]],color="#374151",marker="D",s=48,label="Shared 600k baseline",zorder=5)
- ax.axvline(800,color="#9ca3af",lw=1,ls=":");ax.axvline(1000,color="#9ca3af",lw=1,ls=":")
- ax.set_xlim(590,1510);ax.set_xticks([600,700,800,900,1000,1100,1200,1300,1400,1500])
- ax.set_xlabel("Checkpoint step (thousands of environment actions)");ax.set_ylabel("Crafter Score")
- ax.set_title("Scale-v3 natural evaluation (100 episodes per checkpoint)");ax.grid(True,alpha=.22);ax.legend(frameon=False,ncol=3,loc="upper left")
- fig.savefig(a.output,format="svg");plt.close(fig)
- text=a.output.read_text();a.output.write_text("\n".join(line.rstrip() for line in text.splitlines())+"\n")
-if __name__=="__main__":main()
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--csv',default='docs/results/scale-v3-600k-to-1500k/scores.csv')
+    parser.add_argument('--out',default='docs/results/scale-v3-600k-to-1500k/score-curve.svg')
+    args=parser.parse_args()
+    rows=list(csv.DictReader(Path(args.csv).open(newline='')))
+    x=lambda value: LEFT+(float(value)-X0)/(X1-X0)*(W-LEFT-RIGHT)
+    y=lambda value: H-BOTTOM-(float(value)-Y0)/(Y1-Y0)*(H-TOP-BOTTOM)
+    out=['<?xml version="1.0" encoding="UTF-8"?>',
+         f'<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">',
+         '<rect width="100%" height="100%" fill="white"/>',
+         '<style>text{font-family:Arial,Helvetica,sans-serif;fill:#222}.small{font-size:12px}.axis{font-size:14px}.title{font-size:20px;font-weight:600}.subtitle{font-size:12px;fill:#555}</style>',
+         '<text x="525" y="29" text-anchor="middle" class="title">Scale-v3 Crafter natural score</text>',
+         '<text x="525" y="48" text-anchor="middle" class="subtitle">100 episodes per checkpoint; measured scores only</text>']
+    for value in range(0,31,5):
+        yy=y(value)
+        out.append(f'<line x1="{LEFT}" y1="{yy:.2f}" x2="{W-RIGHT}" y2="{yy:.2f}" stroke="#e5e5e5"/>')
+        out.append(f'<text x="{LEFT-12}" y="{yy+4:.2f}" text-anchor="end" class="small">{value}</text>')
+    for value in range(600000,1500001,100000):
+        xx=x(value)
+        out.append(f'<line x1="{xx:.2f}" y1="{TOP}" x2="{xx:.2f}" y2="{H-BOTTOM}" stroke="#eeeeee"/>')
+        out.append(f'<text x="{xx:.2f}" y="{H-BOTTOM+22}" text-anchor="middle" class="small">{value//1000}</text>')
+    out.extend([f'<line x1="{LEFT}" y1="{TOP}" x2="{LEFT}" y2="{H-BOTTOM}" stroke="#333"/>',
+                f'<line x1="{LEFT}" y1="{H-BOTTOM}" x2="{W-RIGHT}" y2="{H-BOTTOM}" stroke="#333"/>',
+                f'<text x="{(LEFT+W-RIGHT)/2}" y="{H-48}" text-anchor="middle" class="axis">Training actions (thousands)</text>',
+                f'<text x="23" y="{(TOP+H-BOTTOM)/2}" text-anchor="middle" class="axis" transform="rotate(-90 23 {(TOP+H-BOTTOM)/2})">Crafter score</text>'])
+    for arm in ['branch','source']:
+        color=COLORS[arm]
+        series_groups=[sorted([r for r in rows if r['arm']==arm and 'gapfill' in r['evaluation_target']],key=lambda r:int(r['checkpoint_step'])),
+                       sorted([r for r in rows if r['arm']==arm and r['evaluation_target']=='continuation_1p5m_each_10k_checkpoint'],key=lambda r:int(r['checkpoint_step']))]
+        for series in series_groups:
+            segment=[]
+            def flush(points):
+                if len(points)>1:
+                    coords=' '.join(f'{x(r["checkpoint_step"]):.2f},{y(r["natural_score"]):.2f}' for r in points)
+                    out.append(f'<polyline points="{coords}" fill="none" stroke="{color}" stroke-width="2" stroke-linejoin="round"/>')
+            for row in series:
+                if segment and int(row['checkpoint_step'])-int(segment[-1]['checkpoint_step'])!=10000:
+                    flush(segment); segment=[]
+                segment.append(row)
+            flush(segment)
+            for row in series:
+                xx,yy=x(row['checkpoint_step']),y(row['natural_score'])
+                title=html.escape(f'{arm} step {int(row["checkpoint_step"]):,}: score {float(row["natural_score"]):.3f}; {row["evaluation_target"]}')
+                out.append(f'<circle cx="{xx:.2f}" cy="{yy:.2f}" r="3.5" fill="{color}" stroke="white" stroke-width="0.7"><title>{title}</title></circle>')
+        for row in [r for r in rows if r['arm']==arm and r['evaluation_target']=='legacy_pre1m_800k_to_1m_backfill']:
+            xx,yy=x(row['checkpoint_step']),y(row['natural_score'])
+            title=html.escape(f'{arm} legacy audit step {int(row["checkpoint_step"]):,}: score {float(row["natural_score"]):.3f}')
+            out.append(f'<circle cx="{xx:.2f}" cy="{yy:.2f}" r="4" fill="white" stroke="{color}" stroke-width="1.5"><title>{title}</title></circle>')
+    base=next(r for r in rows if r['arm']=='shared_baseline' and int(r['checkpoint_step'])==600000)
+    xx,yy=x(600000),y(base['natural_score'])
+    out.append(f'<path d="M {xx:.2f} {yy-6:.2f} L {xx+6:.2f} {yy:.2f} L {xx:.2f} {yy+6:.2f} L {xx-6:.2f} {yy:.2f} Z" fill="#555"><title>Shared baseline 600k: score {float(base["natural_score"]):.3f}</title></path>')
+    legend=[('Branch gap-fill 620k-900k','#2166ac','line'),('Branch 1.0M-1.5M','#2166ac','line'),('Source gap-fill 620k-900k','#d97904','line'),('Source 1.0M-1.5M','#d97904','line'),('Legacy pre-1M audit points','#666','open'),('Shared 600k baseline','#555','diamond')]
+    for index,(label,color,shape) in enumerate(legend):
+        col=index%3; row=index//3; gx=LEFT+col*300; gy=TOP-2+row*20
+        if shape=='line': out.append(f'<line x1="{gx}" y1="{gy}" x2="{gx+24}" y2="{gy}" stroke="{color}" stroke-width="2"/>')
+        elif shape=='open': out.append(f'<circle cx="{gx+12}" cy="{gy}" r="4" fill="white" stroke="{color}" stroke-width="1.5"/>')
+        else: out.append(f'<path d="M {gx+12} {gy-5} L {gx+17} {gy} L {gx+12} {gy+5} L {gx+7} {gy} Z" fill="{color}"/>')
+        out.append(f'<text x="{gx+31}" y="{gy+4}" class="small">{html.escape(label)}</text>')
+    out.append(f'<text x="{LEFT}" y="{H-16}" class="small">No evaluation at 610k. Lines connect adjacent measured 10k checkpoints within each phase; legacy checkpoints are unconnected audit points.</text>')
+    out.append('</svg>')
+    Path(args.out).write_text('\n'.join(out)+'\n')
+    if not any(r['arm']=='shared_baseline' and int(r['checkpoint_step'])==600000 for r in rows): raise SystemExit('shared 600k anchor missing')
+    for arm in ('branch','source'):
+        if not any(r['arm']==arm and 'gapfill' in r['evaluation_target'] for r in rows): raise SystemExit(f'{arm} gap-fill rows missing')
+    print(f'Wrote {args.out} from {len(rows)} rows.')
+
+if __name__=='__main__': main()

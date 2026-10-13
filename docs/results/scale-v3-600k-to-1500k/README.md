@@ -11,7 +11,8 @@ The 600k point is the measured shared baseline (11.87). Both routes start from t
 ## Checkpoint coverage
 
 - 610k–800k: both routes have verified natural evaluations every 10k actions, with 100 episodes per point. The 620k–800k rows were cross-checked against the continuation and gap-fill ledgers; checkpoint hashes and scores agree.
-- 800k–1M: surviving historical checkpoints have irregular actual steps. The figure plots those measured steps; it does not invent missing 10k points.
+- 810k–900k: each route was continued from its own verified 800k checkpoint and evaluated every 10k actions for 100 natural episodes. The 900k results are Branch 19.319 and Source 16.514.
+- 800k–1M: route-specific gap-fill covers 810k–900k; surviving historical checkpoints elsewhere in this interval have irregular actual steps. The figure plots measured steps and does not invent missing points.
 - 1M–1.5M: both routes have verified natural evaluations at 10k-step intervals through the 1.5M endpoint.
 
 The curve has one training seed per route. It documents this paired engineering run and does not establish multi-seed statistical reliability. Long gaps are broken in the figure. Lines between nearby observations are visual guides, not additional evaluated checkpoints.
@@ -24,6 +25,7 @@ The curve has one training seed per route. It documents this paired engineering 
 | Shared initialization 610k | 12.41 | 12.41 |
 | 700k | 14.04 | 14.27 |
 | 800k | 19.52 | 12.17 |
+| 900k | 19.32 | 16.51 |
 | 1.0M | 19.14 | 17.99 |
 | 1.5M | 23.66 | 17.83 |
 
@@ -42,9 +44,9 @@ Stone-pickaxe progress is visible, while iron-pickaxe and diamond collection rem
 
 ## Data and regeneration
 
-- scores.csv — 171 verified rows, including shared start references and all evaluated route checkpoints.
+- scores.csv — 191 verified rows, including shared start references and all evaluated route checkpoints.
 - score-curve.svg — plotted score curve.
-- tools/plot_scale_v3_curve.py — regenerates the SVG from the CSV with the repository-pinned Matplotlib dependency.
+- tools/plot_scale_v3_curve.py — regenerates the SVG from the CSV using only the Python standard library.
 - cleanup-audit.json — checkpoint retention and cleanup audit. Full episode/action records and checkpoint manifests remain in remote experiment reports; model weights are not included in GitHub.
 
 Regenerate the plot from the repository root:
