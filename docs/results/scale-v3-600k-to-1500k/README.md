@@ -4,40 +4,51 @@
 
 ## Evaluation protocol
 
-Every plotted point uses 100 real natural episodes, namespace 241701, policy seed 241703, and the original scale-v3 evaluation protocol. Each entry was validated against checkpoint step and agent SHA-256, completed status, 100 episode records, action log hash, and summary hash. Full episode and action records remain in the remote project outputs; paths are listed in scores.csv.
+Every plotted point is a completed evaluation of 100 real natural episodes with namespace 241701 and policy seed 241703. The CSV records checkpoint step, score, selected achievement rates, agent SHA-256, seeds, evaluation target, and output location. Evaluations were validated against checkpoint step/hash, completed status, episode count, action rows, and summary hashes. Training rewards are not evaluation scores.
 
-The 600k point is the shared baseline checkpoint (bd026df853ee976d780bec13824dc4a21aeaed587673aa3170735d9a128b4443), evaluated using the same 100-episode protocol. Both arms were initialized from the same 610k checkpoint, but there is no standardized evaluation at 610k; the plotted 600k point is a baseline reference, not the measured initialization result.
+The 600k point is the measured shared baseline (11.87). Both routes start from the same complete 610k checkpoint (12.41). The Branch and Source arms use the same DreamerV3/Crafter training and curiosity-replay setup; their training replay banks are separately collected and audited. The policy receives no expert labels or privileged state.
 
-There is a coverage gap from 600k to the first surviving scale-v3 checkpoint: branch 822,987, source 826,855. The plot does not interpolate over this gap. Previously deleted 610k–790k weights cannot be re-evaluated.
+## Checkpoint coverage
+
+- 610k–800k: both routes have verified natural evaluations every 10k actions, with 100 episodes per point. The 620k–800k rows were cross-checked against the continuation and gap-fill ledgers; checkpoint hashes and scores agree.
+- 800k–1M: surviving historical checkpoints have irregular actual steps. The figure plots those measured steps; it does not invent missing 10k points.
+- 1M–1.5M: both routes have verified natural evaluations at 10k-step intervals through the 1.5M endpoint.
+
+The curve has one training seed per route. It documents this paired engineering run and does not establish multi-seed statistical reliability. Long gaps are broken in the figure. Lines between nearby observations are visual guides, not additional evaluated checkpoints.
 
 ## Scores
 
-| Point | Branch score | Source score |
+| Checkpoint | Branch | Source |
 |---|---:|---:|
 | Shared baseline 600k | 11.87 | 11.87 |
+| Shared initialization 610k | 12.41 | 12.41 |
+| 700k | 14.04 | 14.27 |
+| 800k | 19.52 | 12.17 |
 | 1.0M | 19.14 | 17.99 |
 | 1.5M | 23.66 | 17.83 |
 
-Best measured surviving points: branch **24.94** at 1,300,000; source **20.22** at 1,370,000. Local fluctuations should be read cautiously because each score is an estimate over 100 natural episodes.
+Best measured points: Branch 24.94 at 1,300,000; Source 20.22 at 1,370,000. Scores can fluctuate between checkpoints, so interpret them as estimates over 100 natural episodes.
 
-Selected achievement rates (% of episodes):
+### Selected high-level achievements
 
-| Point | Collect iron | Collect coal | Make stone pickaxe | Make iron pickaxe | Collect diamond |
-|---|---:|---:|---:|---:|---:|
-| Shared baseline 600k | 0.0 | 14.0 | 0.0 | 0.0 | 0.0 |
-| Branch 1M | 1.0 | 23.0 | 34.0 | 0.0 | 0.0 |
-| Source 1M | 4.0 | 27.0 | 28.0 | 0.0 | 0.0 |
-| Branch 1.5M | 10.0 | 34.0 | 56.0 | 0.0 | 0.0 |
-| Source 1.5M | 1.0 | 20.0 | 40.0 | 0.0 | 0.0 |
+| Point | Route | Collect iron | Collect coal | Stone pickaxe | Iron pickaxe | Diamond |
+|---|---|---:|---:|---:|---:|---:|
+| 800k | Branch | 4% | 22% | 27% | 0% | 0% |
+| 800k | Source | 0% | 18% | 1% | 0% | 0% |
+| 1.5M | Branch | 10% | 34% | 56% | 0% | 0% |
+| 1.5M | Source | 1% | 20% | 40% | 0% | 0% |
 
-## Historical evaluation and checkpoint cleanup
+Stone-pickaxe progress is visible, while iron-pickaxe and diamond collection remained at zero at these checkpoints.
 
-The surviving pre-1M audit covers **31 unique checkpoints** (16 branch, 15 source), all evaluated on 100 natural episodes with verified records. The resumed cleanup manifest records 16 remaining path deletions and 6 retained canonical copies. An earlier cleanup had already removed 33 duplicate rolling/eval-pending paths; these match prior retention/checkpoint-cleanup logs and the preserved pre-delete manifest. No evaluation output, episode/action record, training log, or ledger row was deleted.
+## Data and regeneration
 
-The retained pre-1M targets are the nearest 800k, 900k, and 1M checkpoints per arm, plus any better global-best checkpoint. For 1M–1.5M, exact 100k milestones, the best node (branch 1.3M, source 1.37M), and the official final 1.5M run checkpoints are retained. A final dedup pass removed 10 evaluated duplicate copies and preserved the SHA-verified canonical files. Machine-readable details are in cleanup-audit.json; full path/hash manifests remain in the report root.
+- scores.csv — 171 verified rows, including shared start references and all evaluated route checkpoints.
+- score-curve.svg — plotted score curve.
+- tools/plot_scale_v3_curve.py — regenerates the SVG from the CSV with the repository-pinned Matplotlib dependency.
+- cleanup-audit.json — checkpoint retention and cleanup audit. Full episode/action records and checkpoint manifests remain in remote experiment reports; model weights are not included in GitHub.
 
-## Files
+Regenerate the plot from the repository root:
 
-- scores.csv — checkpoint scores, selected skill rates, hashes, seeds, and relative evaluation output paths.
-- score-curve.svg — the figure.
-- cleanup-audit.json — checkpoint cleanup and prior deletion reconciliation.
+~~~bash
+python tools/plot_scale_v3_curve.py
+~~~
