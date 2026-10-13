@@ -50,8 +50,9 @@ export CRAFT_DATA_ROOT=/absolute/path/to/crafter-artifacts
 Choose the Source template for the matched arm. The first segment command is:
 
 ~~~bash
+DEADLINE=$(python3 -c 'import time; print(int(time.time()) + 86400)')
 ./python.sh scripts/student_replay_train.py \
-  --experimental --deadline UNIX_EPOCH_DEADLINE \
+  --experimental --deadline "$DEADLINE" \
   --target 1000000 \
   --protocol "$CRAFT_DATA_ROOT/protocols/branch-610k-to-1m.json" \
   --logdir "$CRAFT_DATA_ROOT/runs/scale-v3/branch-610k-to-1m"
