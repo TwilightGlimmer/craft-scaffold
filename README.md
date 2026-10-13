@@ -1,6 +1,8 @@
 # CraftScaffold｜从练习到独立生存
 
-> **最新状态（2026-10-10）**：从零训练的 RA-HB v2 在约315k动作处停止，半小时监控和自动恢复已关闭。300k 独立自然评测 Score 2.698（20回合），木镐、石镐、铁镐均为0/20；同预算原始自然 seed23 baseline 的正式 Score 为7.805（100回合，评测集不同）。A辅助石镐场景虽成功，但没有迁移到自然出生；B铁镐场景失败。详见 [RA-HB技术路线与失败记录](docs/ra-hb-v2-postmortem.md)及[下一轮技术路线提案](docs/next-route-action-guided-dreamer.md)。新路线尚未实现或启动训练。下文的旧3×3和其他方案均为各自的历史协议，不能当作 RA-HB 的正向结果。
+> **最新结果（2026-10-13）**：Crafter self-branch scale-v3 的 Branch 与 Source 两臂均已完成 1.5M 动作训练，并完成 100 局自然场景评测。共同 600k baseline Score 为 11.87；Branch 从 1M 的 19.14 到 1.5M 的 23.66，最高测得 24.94（1.3M）；Source 从 17.99 到 17.83，最高 20.22（1.37M）。Branch 1.5M 石镐成功率 56%，Source 40%，但两者铁镐均为 0%。610k 初始化点没有标准化评测，且 600k 至约 823k/827k 的早期权重已不存在，因此图上保留测量空档、不插值。两臂各一个训练种子，结果是有希望的单配对证据，不是跨种子因果结论。
+>
+> 路线动机、实现差异、失败记录与证据边界见[技术路线迭代与结果](docs/technical-route-iterations.md)；[600k–1.5M 分数曲线](docs/results/scale-v3-600k-to-1500k/score-curve.svg)、[逐节点 CSV](docs/results/scale-v3-600k-to-1500k/scores.csv)和[清理审计](docs/results/scale-v3-600k-to-1500k/cleanup-audit.json)可复核完整数据。RA-HB v2 是已停止的独立失败路线，详见[复盘](docs/ra-hb-v2-postmortem.md)，不能与 self-branch 分数混为一组。
 
 **基于DreamerV3 + Crafter的强化学习课程项目：在带帮助的场景中练习，再检验智能体能否在正常世界里独立生存和制作工具。**
 
