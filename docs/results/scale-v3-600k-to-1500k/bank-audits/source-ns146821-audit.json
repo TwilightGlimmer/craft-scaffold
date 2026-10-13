@@ -1,0 +1,93 @@
+{
+  "namespace": 146821,
+  "unique_source_maps": 7,
+  "matched_branch_count": 14,
+  "unique_transitions": 1716,
+  "repeated_transitions": 3394,
+  "rows": [
+    {
+      "episode": 0,
+      "seed": 2163878398,
+      "bank_file": "ns146821-ep0-source.npz",
+      "bank_sha256": "9674e87a9303e46003510f67de88f4591792c749560e56f1489ae644b4fc3a14",
+      "actions": 239,
+      "transitions": 240,
+      "stone_step": 83,
+      "matched_branch_copies": 4,
+      "raw_sha256": "3fe30f9088d58f5c55bd03683f8f755128d04dcddd78a5e75c2f248536b643f9",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 36,
+      "seed": 2488811279,
+      "bank_file": "ns146821-ep36-source.npz",
+      "bank_sha256": "b948f765d3174b20af37e44e1af07e0ca07b0426bc5dbf7041a0369660d60155",
+      "actions": 260,
+      "transitions": 261,
+      "stone_step": 138,
+      "matched_branch_copies": 1,
+      "raw_sha256": "8d6b99863ac5c0b1c7939597797868d4a0f73435f078431c2f6d19b427e4369b",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 62,
+      "seed": 2729027536,
+      "bank_file": "ns146821-ep62-source.npz",
+      "bank_sha256": "6eba919f075787cabe77e2f81a4404b38af1150f30ad6d8a0ad2c90490c2cf07",
+      "actions": 278,
+      "transitions": 279,
+      "stone_step": 178,
+      "matched_branch_copies": 2,
+      "raw_sha256": "3f44dcb76a7a929aee2632caa2590f50b85fa34fe3979053ab22c631e434a43f",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 72,
+      "seed": 1064138320,
+      "bank_file": "ns146821-ep72-source.npz",
+      "bank_sha256": "a596ba93a4ebf075424f254408c812920a1397cb3ecff023051f3c352fe5b2c4",
+      "actions": 204,
+      "transitions": 205,
+      "stone_step": 142,
+      "matched_branch_copies": 3,
+      "raw_sha256": "a6826c859a3db99f0f07b4e15706047185ed14fce34943faef9edcfe45f26647",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 90,
+      "seed": 110196947,
+      "bank_file": "ns146821-ep90-source.npz",
+      "bank_sha256": "62bbcd21e276feea5e0bbde13b0f2adbdd8514dcb5a8a138f306b6aaaeeff6a4",
+      "actions": 268,
+      "transitions": 269,
+      "stone_step": 112,
+      "matched_branch_copies": 2,
+      "raw_sha256": "6afb5772f739857507447bfc028a6d9203ac9912616ff6e77078229ed4e6a230",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 92,
+      "seed": 1923041698,
+      "bank_file": "ns146821-ep92-source.npz",
+      "bank_sha256": "8dd6229145f8e4e543c35584d23e2dcbb3602b1fcba093f767e548b30fb83b9e",
+      "actions": 259,
+      "transitions": 260,
+      "stone_step": 156,
+      "matched_branch_copies": 1,
+      "raw_sha256": "ce8d492a936fd348b7955cb17b79a14accaedb3df17d2009f376005be428ee7d",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 94,
+      "seed": 2968189764,
+      "bank_file": "ns146821-ep94-source.npz",
+      "bank_sha256": "ac5957405d7f77b535bed6b5e528957fb87dbcbce5f9d8b835b1b3733d49792d",
+      "actions": 201,
+      "transitions": 202,
+      "stone_step": 149,
+      "matched_branch_copies": 1,
+      "raw_sha256": "5f4593cb3aefabbf38d7d37d5aeec3b609cf26643f2d084ae58ea6a56b843df6",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    }
+  ]
+}

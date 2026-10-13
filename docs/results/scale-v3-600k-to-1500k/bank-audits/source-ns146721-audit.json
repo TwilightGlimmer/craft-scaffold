@@ -1,0 +1,69 @@
+{
+  "namespace": 146721,
+  "unique_source_maps": 5,
+  "matched_branch_count": 12,
+  "unique_transitions": 1138,
+  "repeated_transitions": 2606,
+  "rows": [
+    {
+      "episode": 10,
+      "seed": 3476852889,
+      "bank_file": "ns146721-ep10-source.npz",
+      "bank_sha256": "fe8552128e522073a81fc857776e71565b468f7e1211b6ffed12589cac8b5f41",
+      "actions": 185,
+      "transitions": 186,
+      "stone_step": 168,
+      "matched_branch_copies": 3,
+      "raw_sha256": "43a0d7fef99b145d6d6b95229718a4d73dc5e8063bd5415b9ea1adf2e237834c",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 47,
+      "seed": 1463158071,
+      "bank_file": "ns146721-ep47-source.npz",
+      "bank_sha256": "abfe464426278787f487012bdcb9b94efa8b2058c1a4305bc86d6e95859a0db0",
+      "actions": 257,
+      "transitions": 258,
+      "stone_step": 157,
+      "matched_branch_copies": 4,
+      "raw_sha256": "1b9e6e4faf2d8cc3dad50cd5be1f5fb61b4216926439942b6340c703db4c7e2b",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 70,
+      "seed": 2624361188,
+      "bank_file": "ns146721-ep70-source.npz",
+      "bank_sha256": "3cf2bb2f0581bc59bbf90abf6a2ae9a7911ded1012a6deb7ddc03cc79f05a637",
+      "actions": 160,
+      "transitions": 161,
+      "stone_step": 74,
+      "matched_branch_copies": 3,
+      "raw_sha256": "79fffb184293ec81419e110b63984a55585ee72da24d5a3077c2eb4815fb7eca",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 79,
+      "seed": 918785001,
+      "bank_file": "ns146721-ep79-source.npz",
+      "bank_sha256": "508e97956adc49391fc5db37d14f974dbcd4052a742c4137e2e5a28d9dac266f",
+      "actions": 270,
+      "transitions": 271,
+      "stone_step": 235,
+      "matched_branch_copies": 1,
+      "raw_sha256": "69ca0a30e0f7760db29bd13f18cfa9ed9c63f26c1edaf95bcab75b9cb95792f5",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    },
+    {
+      "episode": 92,
+      "seed": 1554353410,
+      "bank_file": "ns146721-ep92-source.npz",
+      "bank_sha256": "d80ddd5ab1e7f26cd504c36fcef430a280f263fe7c8b9aa46a844d69291cfe9b",
+      "actions": 261,
+      "transitions": 262,
+      "stone_step": 152,
+      "matched_branch_copies": 1,
+      "raw_sha256": "84911f18e1db83d4691ec7826152ffebbe57fe9e95e79ab320353770ee5d99ce",
+      "latent_cache": "frozen CR610k policy state, forced executed actions"
+    }
+  ]
+}

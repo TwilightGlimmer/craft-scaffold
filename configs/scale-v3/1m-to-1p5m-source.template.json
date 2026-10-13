@@ -1,0 +1,64 @@
+{
+  "auxiliary_horizon": 128,
+  "bank": {
+    "audit_sha256": {
+      "${REPO_ROOT}/docs/results/scale-v3-600k-to-1500k/bank-audits/source-ns146721-audit.json": "46a3c7ff59e13f5682fbfb814181845fbc05ed8c63d17539fd94f732079ed140",
+      "${REPO_ROOT}/docs/results/scale-v3-600k-to-1500k/bank-audits/source-ns146821-audit.json": "860bc1a7ab27e65ac07034fc1d2dbb4d8a89244705f502c7e1b50d0d82e8d840"
+    },
+    "audits": [
+      "${REPO_ROOT}/docs/results/scale-v3-600k-to-1500k/bank-audits/source-ns146721-audit.json",
+      "${REPO_ROOT}/docs/results/scale-v3-600k-to-1500k/bank-audits/source-ns146821-audit.json"
+    ],
+    "directory": "${CRAFT_DATA_ROOT}/diagnostics/cr-planning-v1/self-branch-latent-bank-v1/source-bank",
+    "expected_episodes": 26,
+    "expected_transitions": 6000,
+    "kind": "source"
+  },
+  "block_actions": 2500,
+  "continuation": {
+    "created_epoch": 1791742242.0780501,
+    "parent_protocol": "${REPO_ROOT}/configs/scale-v3/610k-to-1m-source.template.json",
+    "parent_target": 1000000,
+    "preserved_settings": [
+      "seed",
+      "namespace",
+      "weights",
+      "block_actions",
+      "auxiliary_horizon",
+      "exploration",
+      "replay_kind",
+      "curiosity",
+      "bank"
+    ]
+  },
+  "curiosity": {
+    "alpha": 0.7,
+    "beta": 0.7,
+    "c": 10000,
+    "epsilon": 0.01,
+    "initial_loss": 1,
+    "seed": 39755
+  },
+  "exploration": {
+    "action_count": 17,
+    "early_steps": 32,
+    "enabled": false,
+    "probability": 0.5,
+    "seed": 241503
+  },
+  "namespace": 241501,
+  "replay_kind": "curiosity",
+  "seed": 23,
+  "source_agent_actions": 613390,
+  "source_agent_sha256": "9b8c85fc50d5f9e8ef77b33bd033dce8ff6fd26443e79b4487694ec2c3781d59",
+  "source_checkpoint": "${CRAFT_DATA_ROOT}/models/scale-v3-starts/source/step-1000000",
+  "source_config": "${REPO_ROOT}/configs/scale-v3/cr-planning-repro-v1.yaml",
+  "source_config_sha256": "4814d78aae4f23efd20e61541347a229ceb887816f79180f0d73953ba66b6ee6",
+  "source_replay_kind": "curiosity",
+  "source_step": 1000000,
+  "target": 1500000,
+  "version": "self-branch-student-scale-v3-1p5m",
+  "weights": {
+    "natural": 1.0
+  }
+}

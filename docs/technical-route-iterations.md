@@ -60,7 +60,7 @@ RA-ACH 曾设想把成就是否已完成、是否仍可获奖等状态显式作�
 - **Branch**：从冻结 610k 策略的成功石镐轨迹中，保留不同分支的完整成功序列。审计覆盖两个地图命名空间，共 26 个完整序列、约 5,881 个转移。成功序列来自受控的分支／执行动作构造和原生环境重放；这不是专家示范数据，也不是最终策略评测成功。
 - **Source**：从相同冻结策略在对应地图上取得的源轨迹中，按 Branch 的分支覆盖量做匹配重复，形成约 26 个序列、6,000 个转移。两个 bank 的数据来源和转移重复结构不同；匹配规模旨在让比较聚焦于“多分支覆盖”与“匹配源轨迹重放”的差异。
 
-两臂都使用 CR 回放机制；对照不是“CR 对无 CR”，而是“多分支成功轨迹 bank 对匹配源轨迹 bank”。实验协议和 bank 审计见 [branch protocol](../scripts/scale-v3/student-branch-protocol.json)、[source protocol](../scripts/scale-v3/student-source-protocol.json) 及 [scale-v3 评测表](results/scale-v3-600k-to-1500k/README.md)。
+两臂都使用 CR 回放机制；对照不是“CR 对无 CR”，而是“多分支成功轨迹 bank 对匹配源轨迹 bank”。实验协议和 bank 审计见 [610k–1M Branch protocol template](../configs/scale-v3/610k-to-1m-branch.template.json)、[610k–1M Source protocol template](../configs/scale-v3/610k-to-1m-source.template.json) 及 [scale-v3 评测表](results/scale-v3-600k-to-1500k/README.md)。
 
 #### 自然评测结果
 

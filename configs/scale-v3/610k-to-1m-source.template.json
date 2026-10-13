@@ -1,0 +1,48 @@
+{
+  "version": "self-branch-student-scale-v3",
+  "source_checkpoint": "${CRAFT_DATA_ROOT}/models/crafter-worldmodel/cr-planning-repro-v1/ckpt/20261010T143927F455104",
+  "source_agent_sha256": "11f405f70c7b70fc27e5a974f64b46a4f6a1a9657ed5990db9910e6b3cdc13ac",
+  "source_config": "${REPO_ROOT}/configs/scale-v3/cr-planning-repro-v1.yaml",
+  "source_config_sha256": "4814d78aae4f23efd20e61541347a229ceb887816f79180f0d73953ba66b6ee6",
+  "source_step": 610000,
+  "target": 1000000,
+  "seed": 23,
+  "namespace": 241501,
+  "weights": {
+    "natural": 1.0
+  },
+  "block_actions": 2500,
+  "auxiliary_horizon": 128,
+  "exploration": {
+    "action_count": 17,
+    "probability": 0.5,
+    "seed": 241503,
+    "enabled": false,
+    "early_steps": 32
+  },
+  "replay_kind": "curiosity",
+  "source_replay_kind": "curiosity",
+  "curiosity": {
+    "c": 10000,
+    "beta": 0.7,
+    "alpha": 0.7,
+    "epsilon": 0.01,
+    "initial_loss": 1,
+    "seed": 39755
+  },
+  "source_agent_actions": 613390,
+  "bank": {
+    "kind": "source",
+    "directory": "${CRAFT_DATA_ROOT}/diagnostics/cr-planning-v1/self-branch-latent-bank-v1/source-bank",
+    "audits": [
+      "${REPO_ROOT}/docs/results/scale-v3-600k-to-1500k/bank-audits/source-ns146721-audit.json",
+      "${REPO_ROOT}/docs/results/scale-v3-600k-to-1500k/bank-audits/source-ns146821-audit.json"
+    ],
+    "audit_sha256": {
+      "${REPO_ROOT}/docs/results/scale-v3-600k-to-1500k/bank-audits/source-ns146721-audit.json": "46a3c7ff59e13f5682fbfb814181845fbc05ed8c63d17539fd94f732079ed140",
+      "${REPO_ROOT}/docs/results/scale-v3-600k-to-1500k/bank-audits/source-ns146821-audit.json": "860bc1a7ab27e65ac07034fc1d2dbb4d8a89244705f502c7e1b50d0d82e8d840"
+    },
+    "expected_episodes": 26,
+    "expected_transitions": 6000
+  }
+}

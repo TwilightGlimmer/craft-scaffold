@@ -1,0 +1,50 @@
+{
+  "schema": "scale-v3-artifacts-v1",
+  "weights_in_repository": false,
+  "source_config": {
+    "path": "configs/scale-v3/cr-planning-repro-v1.yaml",
+    "sha256": "4814d78aae4f23efd20e61541347a229ceb887816f79180f0d73953ba66b6ee6"
+  },
+  "checkpoints": [
+    {
+      "role": "shared_610k_start",
+      "data_root_path": "models/crafter-worldmodel/cr-planning-repro-v1/ckpt/20261010T143927F455104",
+      "step": 610000,
+      "agent_sha256": "11f405f70c7b70fc27e5a974f64b46a4f6a1a9657ed5990db9910e6b3cdc13ac",
+      "needed_for": "610k-to-1M segment; complete agent/replay/runtime/step/done checkpoint required"
+    },
+    {
+      "role": "branch_1M_start",
+      "data_root_path": "models/scale-v3-starts/branch/step-1000000",
+      "step": 1000000,
+      "agent_sha256": "d266b5cebd84e5f3c5c25730569ddee1d715962d4ee293700f8fea91bf14f9b4",
+      "needed_for": "Branch 1M-to-1.5M segment"
+    },
+    {
+      "role": "source_1M_start",
+      "data_root_path": "models/scale-v3-starts/source/step-1000000",
+      "step": 1000000,
+      "agent_sha256": "9b8c85fc50d9f5e8ef77b33bd033dce8ff6fd26443e79b4487694ec2c3781d59",
+      "needed_for": "Source 1M-to-1.5M segment"
+    }
+  ],
+  "replay_banks": {
+    "branch": {
+      "data_root_path": "diagnostics/cr-planning-v1/self-branch-latent-bank-v1/branch-bank",
+      "sequences": 26,
+      "transitions": 5881,
+      "per_file_sha256": "docs/results/scale-v3-600k-to-1500k/bank-audits/branch-*-audit.json"
+    },
+    "source": {
+      "data_root_path": "diagnostics/cr-planning-v1/self-branch-latent-bank-v1/source-bank",
+      "sequences": 26,
+      "transitions": 6000,
+      "per_file_sha256": "docs/results/scale-v3-600k-to-1500k/bank-audits/source-*-audit.json"
+    }
+  },
+  "evaluation": {
+    "episodes_per_checkpoint": 100,
+    "namespace": 241701,
+    "policy_seed": 241703
+  }
+}

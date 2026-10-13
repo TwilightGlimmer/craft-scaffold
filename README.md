@@ -37,6 +37,8 @@ scale-v3 对 1.01M–1.5M 每个 10k 节点各做 100 局自然评测；存活�
 
 ## 复现入口
 
+当前分支的 scale-v3 专项说明见[复现与制品清单](docs/scale-v3-reproduction.md)。权重与 latent replay bank 不进入 GitHub；在外部制品补齐前，代码、协议和分析可复现，但历史数值曲线不能仅凭 GitHub 克隆重建。
+
 需要 Linux / Python 3.11；Windows 用户请使用 WSL2。CPU 安装与基础检查：
 
 ```bash

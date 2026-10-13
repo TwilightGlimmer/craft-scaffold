@@ -89,3 +89,14 @@ id_ed25519*
 !scripts/curiosity_replay.py
 
 !scripts/curiosity_agent.py
+
+# Public scale-v3 reproduction sources and protocol templates.
+!/scripts/student_replay_train.py
+!/configs/scale-v3/
+!/configs/scale-v3/*.yaml
+!/configs/scale-v3/*.json
+!/docs/results/scale-v3-600k-to-1500k/bank-audits/
+!/docs/results/scale-v3-600k-to-1500k/bank-audits/*.json
+!/docs/results/scale-v3-600k-to-1500k/
+!/docs/results/scale-v3-600k-to-1500k/bank-audits/
+!/docs/results/scale-v3-600k-to-1500k/bank-audits/*.json
