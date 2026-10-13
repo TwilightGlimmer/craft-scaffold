@@ -42,211 +42,174 @@
 <line x1="92" y1="508" x2="1015" y2="508" stroke="#333"/>
 <text x="553.5" y="552" text-anchor="middle" class="axis">Training actions (thousands)</text>
 <text x="23" y="285.0" text-anchor="middle" class="axis" transform="rotate(-90 23 285.0)">Crafter score</text>
-<polyline points="112.51,303.89 122.77,313.26 133.02,328.86 143.28,287.38 153.53,278.24 163.79,316.34 174.04,318.05 184.30,294.88 194.56,299.31 204.81,286.42 215.07,295.17 225.32,276.74 235.58,281.30 245.83,267.89 256.09,256.60 266.34,267.24 276.60,252.34 286.86,212.80 297.11,217.84 307.37,237.55 317.62,261.22 327.88,194.36 338.13,229.67 348.39,216.48 358.64,219.02 368.90,215.01 379.16,229.34 389.41,218.55 399.67,220.79" fill="none" stroke="#2166ac" stroke-width="2" stroke-linejoin="round"/>
-<circle cx="112.51" cy="303.89" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 620,000: score 13.729; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="122.77" cy="313.26" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 630,000: score 13.099; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="133.02" cy="328.86" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 640,000: score 12.050; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="143.28" cy="287.38" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 650,000: score 14.840; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="153.53" cy="278.24" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 660,000: score 15.455; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="163.79" cy="316.34" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 670,000: score 12.892; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="174.04" cy="318.05" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 680,000: score 12.777; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="184.30" cy="294.88" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 690,000: score 14.336; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="194.56" cy="299.31" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 700,000: score 14.037; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="204.81" cy="286.42" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 710,000: score 14.904; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="215.07" cy="295.17" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 720,000: score 14.316; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="225.32" cy="276.74" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 730,000: score 15.555; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="235.58" cy="281.30" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 740,000: score 15.249; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="245.83" cy="267.89" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 750,000: score 16.151; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="256.09" cy="256.60" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 760,000: score 16.910; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="266.34" cy="267.24" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 770,000: score 16.195; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="276.60" cy="252.34" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 780,000: score 17.197; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="286.86" cy="212.80" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 790,000: score 19.856; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="297.11" cy="217.84" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 800,000: score 19.517; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="307.37" cy="237.55" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 810,000: score 18.192; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="317.62" cy="261.22" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 820,000: score 16.600; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="327.88" cy="194.36" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 830,000: score 21.097; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="338.13" cy="229.67" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 840,000: score 18.722; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="348.39" cy="216.48" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 850,000: score 19.609; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="358.64" cy="219.02" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 860,000: score 19.438; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="368.90" cy="215.01" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 870,000: score 19.708; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="379.16" cy="229.34" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 880,000: score 18.744; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="389.41" cy="218.55" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 890,000: score 19.470; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="399.67" cy="220.79" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 900,000: score 19.319; scale_v3_gapfill_800k_to_900k</title></circle>
-<polyline points="512.48,188.50 522.73,194.04 532.99,181.32 543.24,202.48 553.50,208.18 563.76,212.78 574.01,233.30 584.27,186.51 594.52,199.81 604.78,191.92 615.03,189.43 625.29,179.44 635.54,166.08 645.80,171.16 656.06,176.83 666.31,207.00 676.57,169.58 686.82,179.30 697.08,164.17 707.33,150.38 717.59,171.20 727.84,156.50 738.10,159.78 748.36,149.05 758.61,147.32 768.87,159.21 779.12,168.04 789.38,167.55 799.63,166.63 809.89,137.25 820.14,169.17 830.40,152.19 840.66,155.62 850.91,145.38 861.17,137.88 871.42,181.47 881.68,149.59 891.93,191.38 902.19,159.88 912.44,173.32 922.70,164.14 932.96,174.79 943.21,160.45 953.47,166.75 963.72,175.64 973.98,169.85 984.23,167.93 994.49,148.53 1004.74,145.78 1015.00,156.22" fill="none" stroke="#2166ac" stroke-width="2" stroke-linejoin="round"/>
-<circle cx="512.48" cy="188.50" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,010,000: score 21.491; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="522.73" cy="194.04" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,020,000: score 21.119; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="532.99" cy="181.32" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,030,000: score 21.974; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="543.24" cy="202.48" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,040,000: score 20.551; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="553.50" cy="208.18" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,050,000: score 20.167; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="563.76" cy="212.78" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,060,000: score 19.858; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="574.01" cy="233.30" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,070,000: score 18.478; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="584.27" cy="186.51" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,080,000: score 21.625; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="594.52" cy="199.81" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,090,000: score 20.730; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="604.78" cy="191.92" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,100,000: score 21.261; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="615.03" cy="189.43" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,110,000: score 21.429; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="625.29" cy="179.44" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,120,000: score 22.101; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="635.54" cy="166.08" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,130,000: score 22.999; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="645.80" cy="171.16" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,140,000: score 22.658; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="656.06" cy="176.83" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,150,000: score 22.276; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="666.31" cy="207.00" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,160,000: score 20.247; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="676.57" cy="169.58" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,170,000: score 22.764; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="686.82" cy="179.30" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,180,000: score 22.110; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="697.08" cy="164.17" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,190,000: score 23.128; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="707.33" cy="150.38" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,200,000: score 24.055; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="717.59" cy="171.20" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,210,000: score 22.655; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="727.84" cy="156.50" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,220,000: score 23.643; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="738.10" cy="159.78" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,230,000: score 23.423; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="748.36" cy="149.05" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,240,000: score 24.145; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="758.61" cy="147.32" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,250,000: score 24.261; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="768.87" cy="159.21" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,260,000: score 23.461; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="779.12" cy="168.04" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,270,000: score 22.868; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="789.38" cy="167.55" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,280,000: score 22.900; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="799.63" cy="166.63" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,290,000: score 22.962; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="809.89" cy="137.25" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,300,000: score 24.938; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="820.14" cy="169.17" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,310,000: score 22.791; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="830.40" cy="152.19" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,320,000: score 23.933; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="840.66" cy="155.62" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,330,000: score 23.703; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="850.91" cy="145.38" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,340,000: score 24.392; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="861.17" cy="137.88" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,350,000: score 24.896; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="871.42" cy="181.47" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,360,000: score 21.964; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="881.68" cy="149.59" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,370,000: score 24.109; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="891.93" cy="191.38" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,380,000: score 21.298; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="902.19" cy="159.88" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,390,000: score 23.416; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="912.44" cy="173.32" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,400,000: score 22.512; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="922.70" cy="164.14" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,410,000: score 23.130; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="932.96" cy="174.79" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,420,000: score 22.414; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="943.21" cy="160.45" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,430,000: score 23.378; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="953.47" cy="166.75" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,440,000: score 22.954; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="963.72" cy="175.64" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,450,000: score 22.356; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="973.98" cy="169.85" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,460,000: score 22.746; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="984.23" cy="167.93" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,470,000: score 22.875; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="994.49" cy="148.53" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,480,000: score 24.180; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="1004.74" cy="145.78" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,490,000: score 24.364; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="1015.00" cy="156.22" r="3.5" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,500,000: score 23.662; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="320.69" cy="223.26" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 822,987: score 19.153</title></circle>
-<circle cx="335.76" cy="244.84" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 837,690: score 17.701</title></circle>
-<circle cx="376.56" cy="217.69" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 877,472: score 19.527</title></circle>
-<circle cx="382.81" cy="239.74" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 883,566: score 18.044</title></circle>
-<circle cx="387.72" cy="209.06" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 888,355: score 20.108</title></circle>
-<circle cx="392.30" cy="222.42" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 892,818: score 19.209</title></circle>
-<circle cx="398.39" cy="200.03" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 898,754: score 20.715</title></circle>
-<circle cx="406.04" cy="259.11" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 906,210: score 16.742</title></circle>
-<circle cx="414.56" cy="253.23" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 914,527: score 17.137</title></circle>
-<circle cx="437.87" cy="215.83" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 937,249: score 19.653</title></circle>
-<circle cx="443.74" cy="189.98" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 942,979: score 21.391</title></circle>
-<circle cx="463.97" cy="231.58" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 962,704: score 18.593</title></circle>
-<circle cx="476.78" cy="207.01" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 975,192: score 20.246</title></circle>
-<circle cx="483.47" cy="188.74" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 981,716: score 21.475</title></circle>
-<circle cx="497.24" cy="183.77" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 995,140: score 21.809</title></circle>
-<circle cx="502.22" cy="223.39" r="4" fill="white" stroke="#2166ac" stroke-width="1.5"><title>branch legacy audit step 1,000,000: score 19.144</title></circle>
-<polyline points="112.51,313.30 122.77,319.72 133.02,328.87 143.28,317.46 153.53,316.31 163.79,323.19 174.04,332.56 184.30,308.55 194.56,295.89 204.81,299.84 215.07,305.43 225.32,299.96 235.58,317.75 245.83,313.13 256.09,307.24 266.34,323.61 276.60,312.15 286.86,319.66 297.11,327.13 307.37,303.12 317.62,274.48 327.88,277.48 338.13,301.81 348.39,286.68 358.64,285.77 368.90,286.12 379.16,276.21 389.41,264.83 399.67,262.49" fill="none" stroke="#d97904" stroke-width="2" stroke-linejoin="round"/>
-<circle cx="112.51" cy="313.30" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 620,000: score 13.096; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="122.77" cy="319.72" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 630,000: score 12.665; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="133.02" cy="328.87" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 640,000: score 12.049; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="143.28" cy="317.46" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 650,000: score 12.817; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="153.53" cy="316.31" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 660,000: score 12.894; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="163.79" cy="323.19" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 670,000: score 12.431; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="174.04" cy="332.56" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 680,000: score 11.801; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="184.30" cy="308.55" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 690,000: score 13.416; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="194.56" cy="295.89" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 700,000: score 14.267; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="204.81" cy="299.84" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 710,000: score 14.001; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="215.07" cy="305.43" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 720,000: score 13.626; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="225.32" cy="299.96" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 730,000: score 13.994; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="235.58" cy="317.75" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 740,000: score 12.797; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="245.83" cy="313.13" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 750,000: score 13.108; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="256.09" cy="307.24" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 760,000: score 13.504; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="266.34" cy="323.61" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 770,000: score 12.403; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="276.60" cy="312.15" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 780,000: score 13.174; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="286.86" cy="319.66" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 790,000: score 12.668; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="297.11" cy="327.13" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 800,000: score 12.166; scale_v3_gapfill_610k_to_800k</title></circle>
-<circle cx="307.37" cy="303.12" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 810,000: score 13.781; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="317.62" cy="274.48" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 820,000: score 15.708; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="327.88" cy="277.48" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 830,000: score 15.506; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="338.13" cy="301.81" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 840,000: score 13.869; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="348.39" cy="286.68" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 850,000: score 14.887; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="358.64" cy="285.77" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 860,000: score 14.948; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="368.90" cy="286.12" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 870,000: score 14.925; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="379.16" cy="276.21" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 880,000: score 15.591; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="389.41" cy="264.83" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 890,000: score 16.357; scale_v3_gapfill_800k_to_900k</title></circle>
-<circle cx="399.67" cy="262.49" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 900,000: score 16.514; scale_v3_gapfill_800k_to_900k</title></circle>
-<polyline points="512.48,266.23 522.73,232.04 532.99,267.67 543.24,252.67 553.50,232.30 563.76,240.29 574.01,249.58 584.27,252.89 594.52,248.04 604.78,240.70 615.03,252.00 625.29,237.30 635.54,263.65 645.80,241.08 656.06,235.14 666.31,259.00 676.57,264.97 686.82,224.19 697.08,240.23 707.33,243.71 717.59,234.93 727.84,227.22 738.10,242.03 748.36,226.40 758.61,230.51 768.87,228.53 779.12,268.78 789.38,236.63 799.63,236.25 809.89,255.96 820.14,242.20 830.40,247.97 840.66,232.93 850.91,241.17 861.17,253.43 871.42,217.46 881.68,207.34 891.93,226.70 902.19,234.83 912.44,240.25 922.70,227.64 932.96,235.50 943.21,252.73 953.47,246.53 963.72,226.19 973.98,243.93 984.23,227.13 994.49,215.34 1004.74,221.89 1015.00,242.93" fill="none" stroke="#d97904" stroke-width="2" stroke-linejoin="round"/>
-<circle cx="512.48" cy="266.23" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,010,000: score 16.263; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="522.73" cy="232.04" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,020,000: score 18.562; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="532.99" cy="267.67" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,030,000: score 16.166; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="543.24" cy="252.67" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,040,000: score 17.175; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="553.50" cy="232.30" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,050,000: score 18.545; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="563.76" cy="240.29" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,060,000: score 18.007; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="574.01" cy="249.58" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,070,000: score 17.382; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="584.27" cy="252.89" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,080,000: score 17.160; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="594.52" cy="248.04" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,090,000: score 17.486; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="604.78" cy="240.70" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,100,000: score 17.980; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="615.03" cy="252.00" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,110,000: score 17.220; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="625.29" cy="237.30" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,120,000: score 18.209; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="635.54" cy="263.65" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,130,000: score 16.436; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="645.80" cy="241.08" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,140,000: score 17.954; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="656.06" cy="235.14" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,150,000: score 18.354; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="666.31" cy="259.00" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,160,000: score 16.749; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="676.57" cy="264.97" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,170,000: score 16.347; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="686.82" cy="224.19" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,180,000: score 19.090; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="697.08" cy="240.23" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,190,000: score 18.012; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="707.33" cy="243.71" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,200,000: score 17.778; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="717.59" cy="234.93" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,210,000: score 18.368; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="727.84" cy="227.22" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,220,000: score 18.887; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="738.10" cy="242.03" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,230,000: score 17.890; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="748.36" cy="226.40" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,240,000: score 18.942; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="758.61" cy="230.51" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,250,000: score 18.666; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="768.87" cy="228.53" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,260,000: score 18.798; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="779.12" cy="268.78" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,270,000: score 16.091; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="789.38" cy="236.63" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,280,000: score 18.254; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="799.63" cy="236.25" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,290,000: score 18.279; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="809.89" cy="255.96" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,300,000: score 16.954; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="820.14" cy="242.20" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,310,000: score 17.879; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="830.40" cy="247.97" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,320,000: score 17.491; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="840.66" cy="232.93" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,330,000: score 18.502; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="850.91" cy="241.17" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,340,000: score 17.948; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="861.17" cy="253.43" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,350,000: score 17.124; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="871.42" cy="217.46" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,360,000: score 19.543; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="881.68" cy="207.34" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,370,000: score 20.223; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="891.93" cy="226.70" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,380,000: score 18.922; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="902.19" cy="234.83" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,390,000: score 18.374; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="912.44" cy="240.25" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,400,000: score 18.010; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="922.70" cy="227.64" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,410,000: score 18.858; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="932.96" cy="235.50" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,420,000: score 18.330; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="943.21" cy="252.73" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,430,000: score 17.170; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="953.47" cy="246.53" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,440,000: score 17.587; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="963.72" cy="226.19" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,450,000: score 18.956; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="973.98" cy="243.93" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,460,000: score 17.763; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="984.23" cy="227.13" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,470,000: score 18.892; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="994.49" cy="215.34" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,480,000: score 19.686; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="1004.74" cy="221.89" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,490,000: score 19.245; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="1015.00" cy="242.93" r="3.5" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,500,000: score 17.830; continuation_1p5m_each_10k_checkpoint</title></circle>
-<circle cx="324.65" cy="282.98" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 826,855: score 15.136</title></circle>
-<circle cx="381.80" cy="289.48" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 882,579: score 14.699</title></circle>
-<circle cx="387.98" cy="267.76" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 888,603: score 16.160</title></circle>
-<circle cx="392.82" cy="279.84" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 893,322: score 15.347</title></circle>
-<circle cx="397.25" cy="262.56" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 897,643: score 16.509</title></circle>
-<circle cx="403.31" cy="268.62" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 903,553: score 16.102</title></circle>
-<circle cx="410.97" cy="264.83" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 911,021: score 16.357</title></circle>
-<circle cx="419.48" cy="267.02" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 919,315: score 16.209</title></circle>
-<circle cx="442.82" cy="266.31" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 942,079: score 16.257</title></circle>
-<circle cx="448.52" cy="277.48" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 947,637: score 15.506</title></circle>
-<circle cx="464.19" cy="265.17" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 962,913: score 16.334</title></circle>
-<circle cx="485.58" cy="239.25" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 983,772: score 18.078</title></circle>
-<circle cx="492.42" cy="249.05" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 990,439: score 17.418</title></circle>
-<circle cx="501.42" cy="269.52" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 999,222: score 16.041</title></circle>
-<circle cx="502.22" cy="240.57" r="4" fill="white" stroke="#d97904" stroke-width="1.5"><title>source legacy audit step 1,000,000: score 17.988</title></circle>
+<polyline points="92.00,331.55 102.26,323.51 112.51,303.89 122.77,313.26 133.02,328.86 143.28,287.38 153.53,278.24 163.79,316.34 174.04,318.05 184.30,294.88 194.56,299.31 204.81,286.42 215.07,295.17 225.32,276.74 235.58,281.30 245.83,267.89 256.09,256.60 266.34,267.24 276.60,252.34 286.86,212.80 297.11,217.84 307.37,237.55 317.62,261.22 327.88,194.36 338.13,229.67 348.39,216.48 358.64,219.02 368.90,215.01 379.16,229.34 389.41,218.55 399.67,220.79 502.22,223.39 512.48,188.50 522.73,194.04 532.99,181.32 543.24,202.48 553.50,208.18 563.76,212.78 574.01,233.30 584.27,186.51 594.52,199.81 604.78,191.92 615.03,189.43 625.29,179.44 635.54,166.08 645.80,171.16 656.06,176.83 666.31,207.00 676.57,169.58 686.82,179.30 697.08,164.17 707.33,150.38 717.59,171.20 727.84,156.50 738.10,159.78 748.36,149.05 758.61,147.32 768.87,159.21 779.12,168.04 789.38,167.55 799.63,166.63 809.89,137.25 820.14,169.17 830.40,152.19 840.66,155.62 850.91,145.38 861.17,137.88 871.42,181.47 881.68,149.59 891.93,191.38 902.19,159.88 912.44,173.32 922.70,164.14 932.96,174.79 943.21,160.45 953.47,166.75 963.72,175.64 973.98,169.85 984.23,167.93 994.49,148.53 1004.74,145.78 1015.00,156.22" fill="none" stroke="#2166ac" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="112.51" cy="303.89" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 620,000: score 13.729; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="122.77" cy="313.26" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 630,000: score 13.099; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="133.02" cy="328.86" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 640,000: score 12.050; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="143.28" cy="287.38" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 650,000: score 14.840; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="153.53" cy="278.24" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 660,000: score 15.455; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="163.79" cy="316.34" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 670,000: score 12.892; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="174.04" cy="318.05" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 680,000: score 12.777; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="184.30" cy="294.88" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 690,000: score 14.336; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="194.56" cy="299.31" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 700,000: score 14.037; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="204.81" cy="286.42" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 710,000: score 14.904; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="215.07" cy="295.17" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 720,000: score 14.316; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="225.32" cy="276.74" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 730,000: score 15.555; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="235.58" cy="281.30" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 740,000: score 15.249; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="245.83" cy="267.89" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 750,000: score 16.151; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="256.09" cy="256.60" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 760,000: score 16.910; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="266.34" cy="267.24" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 770,000: score 16.195; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="276.60" cy="252.34" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 780,000: score 17.197; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="286.86" cy="212.80" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 790,000: score 19.856; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="297.11" cy="217.84" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 800,000: score 19.517; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="307.37" cy="237.55" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 810,000: score 18.192; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="317.62" cy="261.22" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 820,000: score 16.600; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="327.88" cy="194.36" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 830,000: score 21.097; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="338.13" cy="229.67" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 840,000: score 18.722; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="348.39" cy="216.48" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 850,000: score 19.609; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="358.64" cy="219.02" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 860,000: score 19.438; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="368.90" cy="215.01" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 870,000: score 19.708; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="379.16" cy="229.34" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 880,000: score 18.744; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="389.41" cy="218.55" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 890,000: score 19.470; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="399.67" cy="220.79" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 900,000: score 19.319; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="502.22" cy="223.39" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,000,000: score 19.144; legacy_pre1m_800k_to_1m_backfill</title></circle>
+<circle cx="512.48" cy="188.50" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,010,000: score 21.491; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="522.73" cy="194.04" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,020,000: score 21.119; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="532.99" cy="181.32" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,030,000: score 21.974; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="543.24" cy="202.48" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,040,000: score 20.551; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="553.50" cy="208.18" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,050,000: score 20.167; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="563.76" cy="212.78" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,060,000: score 19.858; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="574.01" cy="233.30" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,070,000: score 18.478; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="584.27" cy="186.51" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,080,000: score 21.625; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="594.52" cy="199.81" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,090,000: score 20.730; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="604.78" cy="191.92" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,100,000: score 21.261; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="615.03" cy="189.43" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,110,000: score 21.429; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="625.29" cy="179.44" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,120,000: score 22.101; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="635.54" cy="166.08" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,130,000: score 22.999; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="645.80" cy="171.16" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,140,000: score 22.658; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="656.06" cy="176.83" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,150,000: score 22.276; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="666.31" cy="207.00" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,160,000: score 20.247; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="676.57" cy="169.58" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,170,000: score 22.764; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="686.82" cy="179.30" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,180,000: score 22.110; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="697.08" cy="164.17" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,190,000: score 23.128; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="707.33" cy="150.38" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,200,000: score 24.055; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="717.59" cy="171.20" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,210,000: score 22.655; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="727.84" cy="156.50" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,220,000: score 23.643; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="738.10" cy="159.78" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,230,000: score 23.423; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="748.36" cy="149.05" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,240,000: score 24.145; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="758.61" cy="147.32" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,250,000: score 24.261; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="768.87" cy="159.21" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,260,000: score 23.461; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="779.12" cy="168.04" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,270,000: score 22.868; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="789.38" cy="167.55" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,280,000: score 22.900; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="799.63" cy="166.63" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,290,000: score 22.962; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="809.89" cy="137.25" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,300,000: score 24.938; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="820.14" cy="169.17" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,310,000: score 22.791; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="830.40" cy="152.19" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,320,000: score 23.933; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="840.66" cy="155.62" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,330,000: score 23.703; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="850.91" cy="145.38" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,340,000: score 24.392; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="861.17" cy="137.88" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,350,000: score 24.896; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="871.42" cy="181.47" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,360,000: score 21.964; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="881.68" cy="149.59" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,370,000: score 24.109; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="891.93" cy="191.38" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,380,000: score 21.298; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="902.19" cy="159.88" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,390,000: score 23.416; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="912.44" cy="173.32" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,400,000: score 22.512; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="922.70" cy="164.14" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,410,000: score 23.130; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="932.96" cy="174.79" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,420,000: score 22.414; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="943.21" cy="160.45" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,430,000: score 23.378; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="953.47" cy="166.75" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,440,000: score 22.954; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="963.72" cy="175.64" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,450,000: score 22.356; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="973.98" cy="169.85" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,460,000: score 22.746; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="984.23" cy="167.93" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,470,000: score 22.875; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="994.49" cy="148.53" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,480,000: score 24.180; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="1004.74" cy="145.78" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,490,000: score 24.364; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="1015.00" cy="156.22" r="3" fill="#2166ac" stroke="white" stroke-width="0.7"><title>branch step 1,500,000: score 23.662; continuation_1p5m_each_10k_checkpoint</title></circle>
+<polyline points="92.00,331.55 102.26,323.51 112.51,313.30 122.77,319.72 133.02,328.87 143.28,317.46 153.53,316.31 163.79,323.19 174.04,332.56 184.30,308.55 194.56,295.89 204.81,299.84 215.07,305.43 225.32,299.96 235.58,317.75 245.83,313.13 256.09,307.24 266.34,323.61 276.60,312.15 286.86,319.66 297.11,327.13 307.37,303.12 317.62,274.48 327.88,277.48 338.13,301.81 348.39,286.68 358.64,285.77 368.90,286.12 379.16,276.21 389.41,264.83 399.67,262.49 502.22,240.57 512.48,266.23 522.73,232.04 532.99,267.67 543.24,252.67 553.50,232.30 563.76,240.29 574.01,249.58 584.27,252.89 594.52,248.04 604.78,240.70 615.03,252.00 625.29,237.30 635.54,263.65 645.80,241.08 656.06,235.14 666.31,259.00 676.57,264.97 686.82,224.19 697.08,240.23 707.33,243.71 717.59,234.93 727.84,227.22 738.10,242.03 748.36,226.40 758.61,230.51 768.87,228.53 779.12,268.78 789.38,236.63 799.63,236.25 809.89,255.96 820.14,242.20 830.40,247.97 840.66,232.93 850.91,241.17 861.17,253.43 871.42,217.46 881.68,207.34 891.93,226.70 902.19,234.83 912.44,240.25 922.70,227.64 932.96,235.50 943.21,252.73 953.47,246.53 963.72,226.19 973.98,243.93 984.23,227.13 994.49,215.34 1004.74,221.89 1015.00,242.93" fill="none" stroke="#d97904" stroke-width="2.5" stroke-linejoin="round"/>
+<circle cx="112.51" cy="313.30" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 620,000: score 13.096; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="122.77" cy="319.72" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 630,000: score 12.665; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="133.02" cy="328.87" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 640,000: score 12.049; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="143.28" cy="317.46" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 650,000: score 12.817; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="153.53" cy="316.31" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 660,000: score 12.894; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="163.79" cy="323.19" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 670,000: score 12.431; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="174.04" cy="332.56" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 680,000: score 11.801; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="184.30" cy="308.55" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 690,000: score 13.416; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="194.56" cy="295.89" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 700,000: score 14.267; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="204.81" cy="299.84" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 710,000: score 14.001; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="215.07" cy="305.43" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 720,000: score 13.626; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="225.32" cy="299.96" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 730,000: score 13.994; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="235.58" cy="317.75" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 740,000: score 12.797; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="245.83" cy="313.13" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 750,000: score 13.108; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="256.09" cy="307.24" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 760,000: score 13.504; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="266.34" cy="323.61" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 770,000: score 12.403; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="276.60" cy="312.15" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 780,000: score 13.174; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="286.86" cy="319.66" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 790,000: score 12.668; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="297.11" cy="327.13" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 800,000: score 12.166; scale_v3_gapfill_610k_to_800k</title></circle>
+<circle cx="307.37" cy="303.12" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 810,000: score 13.781; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="317.62" cy="274.48" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 820,000: score 15.708; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="327.88" cy="277.48" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 830,000: score 15.506; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="338.13" cy="301.81" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 840,000: score 13.869; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="348.39" cy="286.68" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 850,000: score 14.887; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="358.64" cy="285.77" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 860,000: score 14.948; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="368.90" cy="286.12" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 870,000: score 14.925; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="379.16" cy="276.21" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 880,000: score 15.591; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="389.41" cy="264.83" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 890,000: score 16.357; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="399.67" cy="262.49" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 900,000: score 16.514; scale_v3_gapfill_800k_to_900k</title></circle>
+<circle cx="502.22" cy="240.57" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,000,000: score 17.988; legacy_pre1m_800k_to_1m_backfill</title></circle>
+<circle cx="512.48" cy="266.23" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,010,000: score 16.263; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="522.73" cy="232.04" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,020,000: score 18.562; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="532.99" cy="267.67" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,030,000: score 16.166; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="543.24" cy="252.67" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,040,000: score 17.175; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="553.50" cy="232.30" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,050,000: score 18.545; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="563.76" cy="240.29" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,060,000: score 18.007; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="574.01" cy="249.58" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,070,000: score 17.382; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="584.27" cy="252.89" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,080,000: score 17.160; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="594.52" cy="248.04" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,090,000: score 17.486; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="604.78" cy="240.70" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,100,000: score 17.980; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="615.03" cy="252.00" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,110,000: score 17.220; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="625.29" cy="237.30" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,120,000: score 18.209; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="635.54" cy="263.65" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,130,000: score 16.436; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="645.80" cy="241.08" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,140,000: score 17.954; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="656.06" cy="235.14" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,150,000: score 18.354; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="666.31" cy="259.00" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,160,000: score 16.749; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="676.57" cy="264.97" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,170,000: score 16.347; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="686.82" cy="224.19" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,180,000: score 19.090; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="697.08" cy="240.23" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,190,000: score 18.012; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="707.33" cy="243.71" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,200,000: score 17.778; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="717.59" cy="234.93" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,210,000: score 18.368; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="727.84" cy="227.22" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,220,000: score 18.887; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="738.10" cy="242.03" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,230,000: score 17.890; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="748.36" cy="226.40" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,240,000: score 18.942; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="758.61" cy="230.51" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,250,000: score 18.666; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="768.87" cy="228.53" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,260,000: score 18.798; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="779.12" cy="268.78" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,270,000: score 16.091; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="789.38" cy="236.63" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,280,000: score 18.254; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="799.63" cy="236.25" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,290,000: score 18.279; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="809.89" cy="255.96" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,300,000: score 16.954; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="820.14" cy="242.20" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,310,000: score 17.879; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="830.40" cy="247.97" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,320,000: score 17.491; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="840.66" cy="232.93" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,330,000: score 18.502; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="850.91" cy="241.17" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,340,000: score 17.948; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="861.17" cy="253.43" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,350,000: score 17.124; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="871.42" cy="217.46" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,360,000: score 19.543; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="881.68" cy="207.34" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,370,000: score 20.223; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="891.93" cy="226.70" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,380,000: score 18.922; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="902.19" cy="234.83" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,390,000: score 18.374; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="912.44" cy="240.25" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,400,000: score 18.010; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="922.70" cy="227.64" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,410,000: score 18.858; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="932.96" cy="235.50" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,420,000: score 18.330; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="943.21" cy="252.73" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,430,000: score 17.170; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="953.47" cy="246.53" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,440,000: score 17.587; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="963.72" cy="226.19" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,450,000: score 18.956; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="973.98" cy="243.93" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,460,000: score 17.763; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="984.23" cy="227.13" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,470,000: score 18.892; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="994.49" cy="215.34" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,480,000: score 19.686; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="1004.74" cy="221.89" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,490,000: score 19.245; continuation_1p5m_each_10k_checkpoint</title></circle>
+<circle cx="1015.00" cy="242.93" r="3" fill="#d97904" stroke="white" stroke-width="0.7"><title>source step 1,500,000: score 17.830; continuation_1p5m_each_10k_checkpoint</title></circle>
 <path d="M 92.00 325.55 L 98.00 331.55 L 92.00 337.55 L 86.00 331.55 Z" fill="#555"><title>Shared baseline 600k: score 11.869</title></path>
 <line x1="92" y1="60" x2="116" y2="60" stroke="#2166ac" stroke-width="2"/>
-<text x="123" y="64" class="small">Branch gap-fill 620k-900k</text>
-<line x1="392" y1="60" x2="416" y2="60" stroke="#2166ac" stroke-width="2"/>
-<text x="423" y="64" class="small">Branch 1.0M-1.5M</text>
-<line x1="692" y1="60" x2="716" y2="60" stroke="#d97904" stroke-width="2"/>
-<text x="723" y="64" class="small">Source gap-fill 620k-900k</text>
-<line x1="92" y1="80" x2="116" y2="80" stroke="#d97904" stroke-width="2"/>
-<text x="123" y="84" class="small">Source 1.0M-1.5M</text>
-<circle cx="404" cy="80" r="4" fill="white" stroke="#666" stroke-width="1.5"/>
-<text x="423" y="84" class="small">Legacy pre-1M audit points</text>
-<path d="M 704 75 L 709 80 L 704 85 L 699 80 Z" fill="#555"/>
-<text x="723" y="84" class="small">Shared 600k baseline</text>
-<text x="92" y="584" class="small">No evaluation at 610k. Lines connect adjacent measured 10k checkpoints within each phase; legacy checkpoints are unconnected audit points.</text>
+<text x="123" y="64" class="small">Branch measured evaluations</text>
+<line x1="392" y1="60" x2="416" y2="60" stroke="#d97904" stroke-width="2"/>
+<text x="423" y="64" class="small">Source measured evaluations</text>
+<path d="M 704 55 L 709 60 L 704 65 L 699 60 Z" fill="#555"/>
+<text x="723" y="64" class="small">Shared 600k baseline</text>
+<text x="92" y="584" class="small">Measured checkpoints only; the 900k–1.0M bridge is connected. Sparse pre-1M audit rows remain in CSV but are omitted here.</text>
 </svg>

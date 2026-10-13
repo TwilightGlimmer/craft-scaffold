@@ -35,45 +35,50 @@ def main():
                 f'<line x1="{LEFT}" y1="{H-BOTTOM}" x2="{W-RIGHT}" y2="{H-BOTTOM}" stroke="#333"/>',
                 f'<text x="{(LEFT+W-RIGHT)/2}" y="{H-48}" text-anchor="middle" class="axis">Training actions (thousands)</text>',
                 f'<text x="23" y="{(TOP+H-BOTTOM)/2}" text-anchor="middle" class="axis" transform="rotate(-90 23 {(TOP+H-BOTTOM)/2})">Crafter score</text>'])
+    main_targets={'scale_v3_gapfill_610k_to_800k','scale_v3_gapfill_800k_to_900k','continuation_1p5m_each_10k_checkpoint'}
+    shared=[r for r in rows if r['arm'] in ('shared_baseline','shared_initialization')]
     for arm in ['branch','source']:
         color=COLORS[arm]
-        series_groups=[sorted([r for r in rows if r['arm']==arm and 'gapfill' in r['evaluation_target']],key=lambda r:int(r['checkpoint_step'])),
-                       sorted([r for r in rows if r['arm']==arm and r['evaluation_target']=='continuation_1p5m_each_10k_checkpoint'],key=lambda r:int(r['checkpoint_step']))]
-        for series in series_groups:
-            segment=[]
-            def flush(points):
-                if len(points)>1:
-                    coords=' '.join(f'{x(r["checkpoint_step"]):.2f},{y(r["natural_score"]):.2f}' for r in points)
-                    out.append(f'<polyline points="{coords}" fill="none" stroke="{color}" stroke-width="2" stroke-linejoin="round"/>')
-            for row in series:
-                if segment and int(row['checkpoint_step'])-int(segment[-1]['checkpoint_step'])!=10000:
-                    flush(segment); segment=[]
-                segment.append(row)
-            flush(segment)
-            for row in series:
-                xx,yy=x(row['checkpoint_step']),y(row['natural_score'])
-                title=html.escape(f'{arm} step {int(row["checkpoint_step"]):,}: score {float(row["natural_score"]):.3f}; {row["evaluation_target"]}')
-                out.append(f'<circle cx="{xx:.2f}" cy="{yy:.2f}" r="3.5" fill="{color}" stroke="white" stroke-width="0.7"><title>{title}</title></circle>')
-        for row in [r for r in rows if r['arm']==arm and r['evaluation_target']=='legacy_pre1m_800k_to_1m_backfill']:
+        series=sorted(
+            [r for r in rows if r['arm']==arm and (
+                r['evaluation_target'] in main_targets
+                or (r['evaluation_target']=='legacy_pre1m_800k_to_1m_backfill' and int(r['checkpoint_step'])==1000000)
+            )] + shared,
+            key=lambda r:int(r['checkpoint_step']))
+        segment=[]
+        def flush(points):
+            if len(points)>1:
+                coords=' '.join(f'{x(r["checkpoint_step"]):.2f},{y(r["natural_score"]):.2f}' for r in points)
+                out.append(f'<polyline points="{coords}" fill="none" stroke="{color}" stroke-width="2.5" stroke-linejoin="round"/>')
+        for row in series:
+            step=int(row['checkpoint_step'])
+            if segment and step-int(segment[-1]['checkpoint_step'])>100000:
+                flush(segment); segment=[]
+            segment.append(row)
+        flush(segment)
+        for row in series:
+            if row['arm'] in ('shared_baseline','shared_initialization'):
+                continue
             xx,yy=x(row['checkpoint_step']),y(row['natural_score'])
-            title=html.escape(f'{arm} legacy audit step {int(row["checkpoint_step"]):,}: score {float(row["natural_score"]):.3f}')
-            out.append(f'<circle cx="{xx:.2f}" cy="{yy:.2f}" r="4" fill="white" stroke="{color}" stroke-width="1.5"><title>{title}</title></circle>')
+            title=html.escape(f'{arm} step {int(row["checkpoint_step"]):,}: score {float(row["natural_score"]):.3f}; {row["evaluation_target"]}')
+            out.append(f'<circle cx="{xx:.2f}" cy="{yy:.2f}" r="3" fill="{color}" stroke="white" stroke-width="0.7"><title>{title}</title></circle>')
     base=next(r for r in rows if r['arm']=='shared_baseline' and int(r['checkpoint_step'])==600000)
     xx,yy=x(600000),y(base['natural_score'])
     out.append(f'<path d="M {xx:.2f} {yy-6:.2f} L {xx+6:.2f} {yy:.2f} L {xx:.2f} {yy+6:.2f} L {xx-6:.2f} {yy:.2f} Z" fill="#555"><title>Shared baseline 600k: score {float(base["natural_score"]):.3f}</title></path>')
-    legend=[('Branch gap-fill 620k-900k','#2166ac','line'),('Branch 1.0M-1.5M','#2166ac','line'),('Source gap-fill 620k-900k','#d97904','line'),('Source 1.0M-1.5M','#d97904','line'),('Legacy pre-1M audit points','#666','open'),('Shared 600k baseline','#555','diamond')]
+    legend=[('Branch measured evaluations','#2166ac','line'),('Source measured evaluations','#d97904','line'),('Shared 600k baseline','#555','diamond')]
     for index,(label,color,shape) in enumerate(legend):
         col=index%3; row=index//3; gx=LEFT+col*300; gy=TOP-2+row*20
         if shape=='line': out.append(f'<line x1="{gx}" y1="{gy}" x2="{gx+24}" y2="{gy}" stroke="{color}" stroke-width="2"/>')
         elif shape=='open': out.append(f'<circle cx="{gx+12}" cy="{gy}" r="4" fill="white" stroke="{color}" stroke-width="1.5"/>')
         else: out.append(f'<path d="M {gx+12} {gy-5} L {gx+17} {gy} L {gx+12} {gy+5} L {gx+7} {gy} Z" fill="{color}"/>')
         out.append(f'<text x="{gx+31}" y="{gy+4}" class="small">{html.escape(label)}</text>')
-    out.append(f'<text x="{LEFT}" y="{H-16}" class="small">No evaluation at 610k. Lines connect adjacent measured 10k checkpoints within each phase; legacy checkpoints are unconnected audit points.</text>')
+    out.append(f'<text x="{LEFT}" y="{H-16}" class="small">Measured checkpoints only; the 900k–1.0M bridge is connected. Sparse pre-1M audit rows remain in CSV but are omitted here.</text>')
     out.append('</svg>')
     Path(args.out).write_text('\n'.join(out)+'\n')
     if not any(r['arm']=='shared_baseline' and int(r['checkpoint_step'])==600000 for r in rows): raise SystemExit('shared 600k anchor missing')
     for arm in ('branch','source'):
         if not any(r['arm']==arm and 'gapfill' in r['evaluation_target'] for r in rows): raise SystemExit(f'{arm} gap-fill rows missing')
+        if not any(r['arm']==arm and int(r['checkpoint_step'])==1000000 for r in rows): raise SystemExit(f'{arm} 1M continuation anchor missing')
     print(f'Wrote {args.out} from {len(rows)} rows.')
 
 if __name__=='__main__': main()

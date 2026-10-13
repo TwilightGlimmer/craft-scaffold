@@ -15,7 +15,7 @@ The 600k point is the measured shared baseline (11.87). Both routes start from t
 - 800k–1M: route-specific gap-fill covers 810k–900k; surviving historical checkpoints elsewhere in this interval have irregular actual steps. The figure plots measured steps and does not invent missing points.
 - 1M–1.5M: both routes have verified natural evaluations at 10k-step intervals through the 1.5M endpoint.
 
-The curve has one training seed per route. It documents this paired engineering run and does not establish multi-seed statistical reliability. Long gaps are broken in the figure. Lines between nearby observations are visual guides, not additional evaluated checkpoints.
+The curve has one training seed per route. It documents this paired engineering run and does not establish multi-seed statistical reliability. The chart omits the irregular pre-1M audit markers to keep the main trajectories readable; those verified rows remain in the CSV. A line between 900k and 1.0M connects two measured endpoints across a 100k interval and does not imply intermediate evaluations.
 
 ## Scores
 
