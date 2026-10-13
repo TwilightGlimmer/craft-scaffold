@@ -76,7 +76,7 @@ RA-ACH 曾设想把成就是否已完成、是否仍可获奖等状态显式作�
 
 Branch 在 1M→1.5M 的端点 Score 增加约 **4.52**；Source 变化约 **-0.16**。两个臂的最佳已测 Score 都高于终点：Branch 为 **24.94（1.3M）**，Source 为 **20.22（1.37M）**。这表示 checkpoint 评测会波动，单看最新点或训练回报会误读效果。完整 10k 曲线、分数、成就率、checkpoint agent 哈希与评测目录见 [scores.csv](results/scale-v3-600k-to-1500k/scores.csv) 和 [score-curve.svg](results/scale-v3-600k-to-1500k/score-curve.svg)。
 
-**测量空档**：两臂均从 610k 初始化，但 610k 没有同协议自然评测。610k 至首个幸存的可测节点约 823k（Branch）／827k（Source）之间，早期 checkpoint 已删除，无法补测；曲线如实留白，没有插值。1.5M 前的每个已留存节点有 100 局自然评测。Pre-1M 目前有 31 个幸存 checkpoint 完成 100 局补测。
+**共同起点与测量空档**：两臂从同一个 610k 完整检查点恢复。该检查点现已按相同自然评测协议补测 100 局，Score 为 **12.4096**（共享 baseline 600k 为 11.8690）。610k 至首个幸存节点约 823k（Branch）／827k（Source）之间的早期权重已删除，无法补测；曲线如实留白、不插值。1.01M–1.5M 每臂各有 50 个 100 局节点，另有 31 个幸存 pre-1M 节点完成补测。
 
 #### 对 scale-v3 的解释边界
 
