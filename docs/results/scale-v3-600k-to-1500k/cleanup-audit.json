@@ -1,0 +1,499 @@
+{
+  "completed_1m_to_1p5m_dedup": {
+    "deleted_duplicate_paths": 10,
+    "deletions": [
+      {
+        "agent_sha256": "d266b5cebd84e5f3c5c25730569ddee1d715962d4ee293700f8fea91bf14f9b4",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-remote100-branch-1000000-20261011T170000Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "d266b5cebd84e5f3c5c25730569ddee1d715962d4ee293700f8fea91bf14f9b4",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "ff618dddec1f9f53056d7c19b4d17ab3711e636c55971d35853580a6f9bf33d7",
+            "size": 2391765826
+          },
+          "runtime.pkl": {
+            "sha256": "84877d5eff4ea7ff06c697e33a96159e929f3ff1fa21f77b2f5c422647284c44",
+            "size": 73612385
+          },
+          "step.pkl": {
+            "sha256": "bcf29902c07a85825ae3582d72bb04a34bab33389070fe8191c00b5467fa5a19",
+            "size": 17
+          }
+        },
+        "path_tail": "milestones/1100000/branch/step-1000000",
+        "reason": "duplicate archived copy of 1M milestone",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3/branch/ckpt/20261012T003740F358328",
+        "score": 19.143851924151235,
+        "step": 1000000
+      },
+      {
+        "agent_sha256": "9b8c85fc50d5f9e8ef77b33bd033dce8ff6fd26443e79b4487694ec2c3781d59",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-remote100-source-1000000-20261011T160457Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "9b8c85fc50d5f9e8ef77b33bd033dce8ff6fd26443e79b4487694ec2c3781d59",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "2081b154d23fe40db550bc9bab55b9201dcba4772d168d35de9c01e829047a23",
+            "size": 2391763630
+          },
+          "runtime.pkl": {
+            "sha256": "eb5838371a6b22ba16a159228237d5e56d63662a21f0da766d23075fa8041ba5",
+            "size": 73615365
+          },
+          "step.pkl": {
+            "sha256": "bcf29902c07a85825ae3582d72bb04a34bab33389070fe8191c00b5467fa5a19",
+            "size": 17
+          }
+        },
+        "path_tail": "milestones/1100000/source/step-1000000",
+        "reason": "duplicate archived copy of 1M milestone",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3-source/source/ckpt/20261011T235018F191559",
+        "score": 17.98846069716026,
+        "step": 1000000
+      },
+      {
+        "agent_sha256": "d266b5cebd84e5f3c5c25730569ddee1d715962d4ee293700f8fea91bf14f9b4",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-remote100-branch-1000000-20261011T170000Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "d266b5cebd84e5f3c5c25730569ddee1d715962d4ee293700f8fea91bf14f9b4",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "ff618dddec1f9f53056d7c19b4d17ab3711e636c55971d35853580a6f9bf33d7",
+            "size": 2391765826
+          },
+          "runtime.pkl": {
+            "sha256": "84877d5eff4ea7ff06c697e33a96159e929f3ff1fa21f77b2f5c422647284c44",
+            "size": 73612385
+          },
+          "step.pkl": {
+            "sha256": "bcf29902c07a85825ae3582d72bb04a34bab33389070fe8191c00b5467fa5a19",
+            "size": 17
+          }
+        },
+        "path_tail": "milestones/1200000/branch/step-1000000",
+        "reason": "duplicate archived copy of 1M milestone",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3/branch/ckpt/20261012T003740F358328",
+        "score": 19.143851924151235,
+        "step": 1000000
+      },
+      {
+        "agent_sha256": "4d070e81ad1e06296333f9bafa7fdcd06f4a18b4583fb77b1f7b57fb656cc6e0",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-1p5m-remote100-branch-1500000-20261012T152540Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "4d070e81ad1e06296333f9bafa7fdcd06f4a18b4583fb77b1f7b57fb656cc6e0",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "6b23b005279b51d625845dfbcfffef2b22e528a2ed24c41abadd0ad4c44d6dbe",
+            "size": 2414867674
+          },
+          "runtime.pkl": {
+            "sha256": "c5d8d3d41b3d6bf2ebfcc34dcfe43918742716a19ea0b0ee3663289aaf50f8cb",
+            "size": 73619122
+          },
+          "step.pkl": {
+            "sha256": "8e2ebfee30bebddf08d754c851fac405a252a57aad46db38b0b93039179d781d",
+            "size": 17
+          }
+        },
+        "path_tail": "milestones/1300000/branch/step-1500000",
+        "reason": "duplicate copy of final 1.5M node under wrong milestone bucket",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3-15m/branch/ckpt/20261012T232520F187237",
+        "score": 23.662044274964025,
+        "step": 1500000
+      },
+      {
+        "agent_sha256": "4d070e81ad1e06296333f9bafa7fdcd06f4a18b4583fb77b1f7b57fb656cc6e0",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-1p5m-remote100-branch-1500000-20261012T152540Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "4d070e81ad1e06296333f9bafa7fdcd06f4a18b4583fb77b1f7b57fb656cc6e0",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "6b23b005279b51d625845dfbcfffef2b22e528a2ed24c41abadd0ad4c44d6dbe",
+            "size": 2414867674
+          },
+          "runtime.pkl": {
+            "sha256": "c5d8d3d41b3d6bf2ebfcc34dcfe43918742716a19ea0b0ee3663289aaf50f8cb",
+            "size": 73619122
+          },
+          "step.pkl": {
+            "sha256": "8e2ebfee30bebddf08d754c851fac405a252a57aad46db38b0b93039179d781d",
+            "size": 17
+          }
+        },
+        "path_tail": "milestones/1400000/branch/step-1500000",
+        "reason": "duplicate copy of final 1.5M node under wrong milestone bucket",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3-15m/branch/ckpt/20261012T232520F187237",
+        "score": 23.662044274964025,
+        "step": 1500000
+      },
+      {
+        "agent_sha256": "4728b2d35d91e09b16fb7cf3a938ddfa2c6d1df6d5d93537ee9b89ba3e716cf6",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-1p5m-remote100-source-1370000-20261012T015451Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "4728b2d35d91e09b16fb7cf3a938ddfa2c6d1df6d5d93537ee9b89ba3e716cf6",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "4f2a84e1d079abfab795689d2263fdcec380d10c1b00d63eef89f9615e27f73f",
+            "size": 2391763745
+          },
+          "runtime.pkl": {
+            "sha256": "da1979b14225c53353b6c56a4a358817956e33875fb0c7334f7263443f51e0c0",
+            "size": 73614599
+          },
+          "step.pkl": {
+            "sha256": "4c8b9802b1bb16d958cae6b77c97759debce6f1b93d5eddfc5dbd91de54a86d4",
+            "size": 17
+          }
+        },
+        "path_tail": "milestones/1200000/source/step-1370000",
+        "reason": "duplicate copy of verified global-best source node",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3-1p5m/rolling-checkpoints/source/step-1370000",
+        "score": 20.223447096631233,
+        "step": 1370000
+      },
+      {
+        "agent_sha256": "4728b2d35d91e09b16fb7cf3a938ddfa2c6d1df6d5d93537ee9b89ba3e716cf6",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-1p5m-remote100-source-1370000-20261012T015451Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "4728b2d35d91e09b16fb7cf3a938ddfa2c6d1df6d5d93537ee9b89ba3e716cf6",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "4f2a84e1d079abfab795689d2263fdcec380d10c1b00d63eef89f9615e27f73f",
+            "size": 2391763745
+          },
+          "runtime.pkl": {
+            "sha256": "da1979b14225c53353b6c56a4a358817956e33875fb0c7334f7263443f51e0c0",
+            "size": 73614599
+          },
+          "step.pkl": {
+            "sha256": "4c8b9802b1bb16d958cae6b77c97759debce6f1b93d5eddfc5dbd91de54a86d4",
+            "size": 17
+          }
+        },
+        "path_tail": "milestones/1300000/source/step-1370000",
+        "reason": "duplicate copy of verified global-best source node",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3-1p5m/rolling-checkpoints/source/step-1370000",
+        "score": 20.223447096631233,
+        "step": 1370000
+      },
+      {
+        "agent_sha256": "4728b2d35d91e09b16fb7cf3a938ddfa2c6d1df6d5d93537ee9b89ba3e716cf6",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-1p5m-remote100-source-1370000-20261012T015451Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "4728b2d35d91e09b16fb7cf3a938ddfa2c6d1df6d5d93537ee9b89ba3e716cf6",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "4f2a84e1d079abfab795689d2263fdcec380d10c1b00d63eef89f9615e27f73f",
+            "size": 2391763745
+          },
+          "runtime.pkl": {
+            "sha256": "da1979b14225c53353b6c56a4a358817956e33875fb0c7334f7263443f51e0c0",
+            "size": 73614599
+          },
+          "step.pkl": {
+            "sha256": "4c8b9802b1bb16d958cae6b77c97759debce6f1b93d5eddfc5dbd91de54a86d4",
+            "size": 17
+          }
+        },
+        "path_tail": "milestones/1400000/source/step-1370000",
+        "reason": "duplicate copy of verified global-best source node",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3-1p5m/rolling-checkpoints/source/step-1370000",
+        "score": 20.223447096631233,
+        "step": 1370000
+      },
+      {
+        "agent_sha256": "4728b2d35d91e09b16fb7cf3a938ddfa2c6d1df6d5d93537ee9b89ba3e716cf6",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-1p5m-remote100-source-1370000-20261012T015451Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "4728b2d35d91e09b16fb7cf3a938ddfa2c6d1df6d5d93537ee9b89ba3e716cf6",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "4f2a84e1d079abfab795689d2263fdcec380d10c1b00d63eef89f9615e27f73f",
+            "size": 2391763745
+          },
+          "runtime.pkl": {
+            "sha256": "da1979b14225c53353b6c56a4a358817956e33875fb0c7334f7263443f51e0c0",
+            "size": 73614599
+          },
+          "step.pkl": {
+            "sha256": "4c8b9802b1bb16d958cae6b77c97759debce6f1b93d5eddfc5dbd91de54a86d4",
+            "size": 17
+          }
+        },
+        "path_tail": "milestones/1500000/source/step-1370000",
+        "reason": "duplicate copy of verified global-best source node",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3-1p5m/rolling-checkpoints/source/step-1370000",
+        "score": 20.223447096631233,
+        "step": 1370000
+      },
+      {
+        "agent_sha256": "4d070e81ad1e06296333f9bafa7fdcd06f4a18b4583fb77b1f7b57fb656cc6e0",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-1p5m-remote100-branch-1500000-20261012T152540Z/evaluation",
+        "file_hashes": {
+          "agent.pkl": {
+            "sha256": "4d070e81ad1e06296333f9bafa7fdcd06f4a18b4583fb77b1f7b57fb656cc6e0",
+            "size": 129412737
+          },
+          "done": {
+            "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0
+          },
+          "replay.pkl": {
+            "sha256": "6b23b005279b51d625845dfbcfffef2b22e528a2ed24c41abadd0ad4c44d6dbe",
+            "size": 2414867674
+          },
+          "runtime.pkl": {
+            "sha256": "c5d8d3d41b3d6bf2ebfcc34dcfe43918742716a19ea0b0ee3663289aaf50f8cb",
+            "size": 73619122
+          },
+          "step.pkl": {
+            "sha256": "8e2ebfee30bebddf08d754c851fac405a252a57aad46db38b0b93039179d781d",
+            "size": 17
+          }
+        },
+        "path_tail": "self-branch-student-v4-scale-v3-1p5m/rolling-checkpoints/branch/step-1500000",
+        "reason": "duplicate rolling copy of final 1.5M checkpoint",
+        "retained_canonical_path_tail": "self-branch-student-v4-scale-v3-15m/branch/ckpt/20261012T232520F187237",
+        "score": 23.662044274964025,
+        "step": 1500000
+      }
+    ],
+    "evaluation_outputs_actions_logs_and_ledger_preserved": true,
+    "manifest": "milestone-dedup-cleanup.json in remote report root",
+    "retained_best_nodes": "branch 1.3M (overlaps exact milestone); source 1.37M",
+    "retained_exact_100k_milestones": "1.1M, 1.2M, 1.3M, 1.4M, and 1.5M per arm",
+    "retained_official_1p5m_run_checkpoints": 2
+  },
+  "evaluation_outputs_actions_logs_and_ledger_preserved": true,
+  "note": "All prior absent paths matched an earlier cleanup log. One source 897643 retention entry lacked original per-file hashes; its canonical 900k copy remains and is SHA-verified. The detailed reconciliation and original preflight manifest remain in the remote report root.",
+  "pre1m_branch": 16,
+  "pre1m_source": 15,
+  "pre1m_unique_100episode_evaluations": 31,
+  "previous_deletion_logs_reconciled": {
+    "checkpoint_cleanup_log": 16,
+    "retention_log": 17
+  },
+  "previously_absent_paths": 33,
+  "resumed_cleanup": {
+    "deleted": [
+      {
+        "agent_sha256": "e1fcfd6b1321138e954f9e8c91962a1f07c5757b23c9e2e0301d5aebde8ee285",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-source-983772-20261012T184650Z/evaluation",
+        "score": 18.07759533392269,
+        "step": 983772
+      },
+      {
+        "agent_sha256": "9b8c85fc50d5f9e8ef77b33bd033dce8ff6fd26443e79b4487694ec2c3781d59",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-remote100-source-1000000-20261011T160457Z/evaluation",
+        "score": 17.98846069716026,
+        "step": 1000000
+      },
+      {
+        "agent_sha256": "48501b665b31417b8720ebc5bdb6597f0377e620bb51e76eb8483336509d6b8d",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-source-990439-20261012T185115Z/evaluation",
+        "score": 17.417987493490156,
+        "step": 990439
+      },
+      {
+        "agent_sha256": "bf068a13cf66e2bd73fc738361fc78f4ff21fd5e91014740b5353e32ca5e44ba",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-source-999222-20261012T185546Z/evaluation",
+        "score": 16.041099448042505,
+        "step": 999222
+      },
+      {
+        "agent_sha256": "d266b5cebd84e5f3c5c25730569ddee1d715962d4ee293700f8fea91bf14f9b4",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-remote100-branch-1000000-20261011T170000Z/evaluation",
+        "score": 19.143851924151235,
+        "step": 1000000
+      },
+      {
+        "agent_sha256": "1a468419be7ae125c22ddda62b59529c7748e5e87712bb9f976d4a04a9183f98",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-natural100-source-826855-bestconfirm-20261011f/evaluation",
+        "score": 15.135689827269289,
+        "step": 826855
+      },
+      {
+        "agent_sha256": "8fa759ef9fba3b8c169ff272ebc73cbcff6bb0df5d8ad8fd248f186d7f6f2acd",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-branch-822987-20261012T162214Z/evaluation",
+        "score": 19.15267672732582,
+        "step": 822987
+      },
+      {
+        "agent_sha256": "5f9e4be23a67153efa91e733df2a3d302a1c7c1e38a8b68b0776929cfd749e6d",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-source-882579-20261012T180555Z/evaluation",
+        "score": 14.698796137670957,
+        "step": 882579
+      },
+      {
+        "agent_sha256": "1d6837f296d64d59f54e0785f97e06c342e76047aed9c5ff202cd125f966166c",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-natural100-source-888603-890k-20261011e/evaluation",
+        "score": 16.159508260620356,
+        "step": 888603
+      },
+      {
+        "agent_sha256": "926919468b72f7860a4f540ef0d224fd157f4820ca5f26a99a49187b6ee1e980",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-source-919315-20261012T182844Z/evaluation",
+        "score": 16.209488196197967,
+        "step": 919315
+      },
+      {
+        "agent_sha256": "02ea8380c0a55a94b1fd8ae08bc3af7ae6e4c70033d8e9c2f3617f5d3d26b0de",
+        "arm": "source",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-source-893322-20261012T181024Z/evaluation",
+        "score": 15.347275769967986,
+        "step": 893322
+      },
+      {
+        "agent_sha256": "db3f705c78678dc56c1b50531ad31d9ee1209e1d600efbd89276ca72177e28f7",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-branch-877472-20261012T171110Z/evaluation",
+        "score": 19.527267996881612,
+        "step": 877472
+      },
+      {
+        "agent_sha256": "8d89bec72c46840a0e2f8bca659f8daf4da9f262fd0b25abd827b414bed4893b",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-branch-837690-20261012T163924Z/evaluation",
+        "score": 17.70125575704225,
+        "step": 837690
+      },
+      {
+        "agent_sha256": "0d7fd8a15ed3cf86ab24a8680d7385c6e6c381e1284a2af4a2cbc163ebb53b0b",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-natural100-branch-888355-890k-20261011e/evaluation",
+        "score": 20.10809411166749,
+        "step": 888355
+      },
+      {
+        "agent_sha256": "070944b065da84781d636ff05c5ab814debba020201eeeb270e42cb89ff082d0",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-branch-883566-20261012T171542Z/evaluation",
+        "score": 18.044193450898934,
+        "step": 883566
+      },
+      {
+        "agent_sha256": "d8ec813edf752ccd3b809ae6ae8bbd81ede077a6dea031ef6f70f37e4f3a2a58",
+        "arm": "branch",
+        "evaluation_record_path": "outputs/reports/scale-v3-legacy100-branch-914527-20261012T173354Z/evaluation",
+        "score": 17.13671144852093,
+        "step": 914527
+      }
+    ],
+    "deleted_paths": 16,
+    "retained": [
+      {
+        "agent_sha256": "8fa759ef9fba3b8c169ff272ebc73cbcff6bb0df5d8ad8fd248f186d7f6f2acd",
+        "arm": "branch",
+        "step": 822987,
+        "tag": 800000
+      },
+      {
+        "agent_sha256": "b84d93fd21c6631ba4a2c1bf09c2ff535320b901f46b1051258d92ed31065889",
+        "arm": "branch",
+        "step": 898754,
+        "tag": 900000
+      },
+      {
+        "agent_sha256": "d266b5cebd84e5f3c5c25730569ddee1d715962d4ee293700f8fea91bf14f9b4",
+        "arm": "branch",
+        "step": 1000000,
+        "tag": 1000000
+      },
+      {
+        "agent_sha256": "1a468419be7ae125c22ddda62b59529c7748e5e87712bb9f976d4a04a9183f98",
+        "arm": "source",
+        "step": 826855,
+        "tag": 800000
+      },
+      {
+        "agent_sha256": "2685e3e57d6890e166cac3ab2dd10cd33947056721f3261d1b0d5f5f4b48ca1b",
+        "arm": "source",
+        "step": 897643,
+        "tag": 900000
+      },
+      {
+        "agent_sha256": "9b8c85fc50d5f9e8ef77b33bd033dce8ff6fd26443e79b4487694ec2c3781d59",
+        "arm": "source",
+        "step": 1000000,
+        "tag": 1000000
+      }
+    ],
+    "retained_canonical_copies": 6,
+    "surviving_groups": 18
+  }
+}
