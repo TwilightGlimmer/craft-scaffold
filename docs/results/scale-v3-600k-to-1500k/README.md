@@ -11,11 +11,10 @@ The 600k point is the measured shared baseline (11.87). Both routes start from t
 ## Checkpoint coverage
 
 - 610k–800k: both routes have verified natural evaluations every 10k actions, with 100 episodes per point. The 620k–800k rows were cross-checked against the continuation and gap-fill ledgers; checkpoint hashes and scores agree.
-- 810k–900k: each route was continued from its own verified 800k checkpoint and evaluated every 10k actions for 100 natural episodes. The 900k results are Branch 19.319 and Source 16.514.
-- 800k–1M: route-specific gap-fill covers 810k–900k; surviving historical checkpoints elsewhere in this interval have irregular actual steps. The figure plots measured steps and does not invent missing points.
+- 800k–1M: both score series have verified 100-episode natural evaluations at every 10k checkpoint. The curve uses the measured scores; no training rewards or interpolated values are substituted.
 - 1M–1.5M: both routes have verified natural evaluations at 10k-step intervals through the 1.5M endpoint.
 
-The curve has one training seed per route. It documents this paired engineering run and does not establish multi-seed statistical reliability. The chart omits the irregular pre-1M audit markers to keep the main trajectories readable; those verified rows remain in the CSV. A line between 900k and 1.0M connects two measured endpoints across a 100k interval and does not imply intermediate evaluations.
+The curve has one training seed per route. It documents this paired engineering run and does not establish multi-seed statistical reliability. The chart omits irregular audit markers to keep the score curve readable; those verified rows remain in the CSV. From 800k onward, plotted points are measured 100-episode evaluations at 10k intervals.
 
 ## Scores
 
@@ -26,7 +25,7 @@ The curve has one training seed per route. It documents this paired engineering 
 | 700k | 14.04 | 14.27 |
 | 800k | 19.52 | 12.17 |
 | 900k | 19.32 | 16.51 |
-| 1.0M | 19.14 | 17.99 |
+| 1.0M | 19.78 | 17.99 |
 | 1.5M | 23.66 | 17.83 |
 
 Best measured points: Branch 24.94 at 1,300,000; Source 20.22 at 1,370,000. Scores can fluctuate between checkpoints, so interpret them as estimates over 100 natural episodes.
@@ -44,7 +43,7 @@ Stone-pickaxe progress is visible, while iron-pickaxe and diamond collection rem
 
 ## Data and regeneration
 
-- scores.csv — 191 verified rows, including shared start references and all evaluated route checkpoints.
+- scores.csv — 211 verified rows, including shared start references and all evaluated checkpoints.
 - score-curve.svg — plotted score curve.
 - tools/plot_scale_v3_curve.py — regenerates the SVG from the CSV using only the Python standard library.
 - cleanup-audit.json — checkpoint retention and cleanup audit. Full episode/action records and checkpoint manifests remain in remote experiment reports; model weights are not included in GitHub.

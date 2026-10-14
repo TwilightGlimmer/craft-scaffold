@@ -2,7 +2,7 @@
 
 > **当前结果（2026-10-13）**：Crafter self-branch scale-v3 的 Branch 和 Source 两臂均完成 1.5M 动作训练及 100 局自然评测。共同 600k baseline Score 为 **11.87**，实际共同恢复的 610k 检查点补测为 **12.41**；1.5M 时 Branch **23.66**、Source **17.83**。已测峰值分别为 Branch **24.94（1.3M）**、Source **20.22（1.37M）**。石镐成功率在 1.5M 为 **56% / 40%**；两臂铁镐均为 **0%**。每臂目前只有一个训练种子，结论是有希望的配对结果，仍需复验。
 
-![scale-v3：Branch 与 Source 自共同 baseline 起的自然场景 Score](docs/results/scale-v3-600k-to-1500k/score-curve.svg)
+![Scale-v3 自然场景评测分数曲线（600k–1.5M）](docs/results/scale-v3-600k-to-1500k/score-curve.svg)
 
 [查看逐检查点数据 CSV](docs/results/scale-v3-600k-to-1500k/scores.csv) · [评测与清理审计](docs/results/scale-v3-600k-to-1500k/cleanup-audit.json) · [技术路线与证据边界](docs/technical-route-iterations.md)
 

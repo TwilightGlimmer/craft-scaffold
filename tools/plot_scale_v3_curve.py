@@ -35,14 +35,13 @@ def main():
                 f'<line x1="{LEFT}" y1="{H-BOTTOM}" x2="{W-RIGHT}" y2="{H-BOTTOM}" stroke="#333"/>',
                 f'<text x="{(LEFT+W-RIGHT)/2}" y="{H-48}" text-anchor="middle" class="axis">Training actions (thousands)</text>',
                 f'<text x="23" y="{(TOP+H-BOTTOM)/2}" text-anchor="middle" class="axis" transform="rotate(-90 23 {(TOP+H-BOTTOM)/2})">Crafter score</text>'])
-    main_targets={'scale_v3_gapfill_610k_to_800k','scale_v3_gapfill_800k_to_900k','continuation_1p5m_each_10k_checkpoint'}
+    main_targets={'scale_v3_gapfill_610k_to_800k','scale_v3_gapfill_800k_to_900k','scale_v3_gapfill_900k_to_1m','continuation_1p5m_each_10k_checkpoint'}
     shared=[r for r in rows if r['arm'] in ('shared_baseline','shared_initialization')]
     for arm in ['branch','source']:
         color=COLORS[arm]
         series=sorted(
             [r for r in rows if r['arm']==arm and (
                 r['evaluation_target'] in main_targets
-                or (r['evaluation_target']=='legacy_pre1m_800k_to_1m_backfill' and int(r['checkpoint_step'])==1000000)
             )] + shared,
             key=lambda r:int(r['checkpoint_step']))
         segment=[]
@@ -72,7 +71,7 @@ def main():
         elif shape=='open': out.append(f'<circle cx="{gx+12}" cy="{gy}" r="4" fill="white" stroke="{color}" stroke-width="1.5"/>')
         else: out.append(f'<path d="M {gx+12} {gy-5} L {gx+17} {gy} L {gx+12} {gy+5} L {gx+7} {gy} Z" fill="{color}"/>')
         out.append(f'<text x="{gx+31}" y="{gy+4}" class="small">{html.escape(label)}</text>')
-    out.append(f'<text x="{LEFT}" y="{H-16}" class="small">Measured checkpoints only; the 900k–1.0M bridge is connected. Sparse pre-1M audit rows remain in CSV but are omitted here.</text>')
+    out.append(f'<text x="{LEFT}" y="{H-16}" class="small">Measured checkpoints only; the 800k–1.5M score curve is shown at evaluated steps. Sparse audit rows remain in CSV.</text>')
     out.append('</svg>')
     Path(args.out).write_text('\n'.join(out)+'\n')
     if not any(r['arm']=='shared_baseline' and int(r['checkpoint_step'])==600000 for r in rows): raise SystemExit('shared 600k anchor missing')
