@@ -1,7 +1,7 @@
 """Read-only scan of staged Git blobs. Run through python.sh before publishing."""
 import hashlib,pathlib,re,subprocess,sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-# Only the three manifest-verified teaching episodes are allowed as binary media.
+# Only the three evidence-verified teaching episodes are allowed as binary media.
 APPROVED_MEDIA={
  'docs/course-report/project-materials/videos/baseline-full-episode.mp4':('bb5968803ad8e433d070ba70ec6dec15db75715536e612cbe80ff394726aa8d4',10*1024*1024),
  'docs/course-report/project-materials/videos/branch-full-episode.mp4':('492b2326f263c97a416c173c0aaf488ed4c0644049bc870c549349c5cff75ccd',10*1024*1024),

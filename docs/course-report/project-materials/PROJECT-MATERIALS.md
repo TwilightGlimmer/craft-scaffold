@@ -36,9 +36,7 @@
 
 ## 演示素材
 
-`videos/` 中为 baseline、Branch、Source 各一段完整 MP4。其 checkpoint、episode、seed、episode 成就数、100 局均分、逐步动作重放校验状态和 SHA256 见 `videos/video-manifest.json`。三条视频对应完整自然 episode；单局成就数不等于 checkpoint 的 100 局成功率。完整视频还保存在共享服务器：
-
-共享项目根目录下的 `outputs/reports/scale-v3-course-report-demo/group-report-package/videos/`。
+`videos/` 中为 baseline、Branch、Source 各一段完整 MP4。其 checkpoint、episode、seed、episode 成就数、100 局均分、逐步动作重放校验状态和 SHA256 见 `EVIDENCE.md`。三条视频对应完整自然 episode；单局成就数不等于 checkpoint 的 100 局成功率。三段 MP4 本体已直接放入 GitHub 仓库的 videos/ 目录，组员无需访问共享服务器。
 
 ## 实验结论的边界
 
@@ -49,4 +47,4 @@
 
 ## 证据定位
 
-`EVIDENCE.md` 给出结果来源、评测验证边界及附件哈希；`videos/video-manifest.json` 给出三段 MP4 的逐条来源。项目脚本与训练配置在仓库 `scripts/`、`configs/` 及 `docs/results/scale-v3-600k-to-1500k/`。
+`EVIDENCE.md` 给出结果来源、评测验证边界及附件哈希；`EVIDENCE.md` 给出三段 MP4 的逐条来源。项目脚本与训练配置在仓库 `scripts/`、`configs/` 及 `docs/results/scale-v3-600k-to-1500k/`。
