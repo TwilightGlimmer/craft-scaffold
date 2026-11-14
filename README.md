@@ -6,9 +6,9 @@
 
 ## 表现最佳的单局演示
 
-[![Branch 1.56M Episode 37：石镐制作过程](docs/assets/scale-v3-course-stone-pickaxe-frame.png)](docs/assets/scale-v3-best-branch-episode.mp4)
+[![Branch 1.56M Episode 37：石镐制作过程](docs/assets/scale-v3-course-stone-pickaxe-frame.png)](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/3a9a1b92bf33f0895bd4390dfe12f6fdc54d93be/docs/assets/scale-v3-best-branch-episode.mp4)
 
-[▶ 打开或下载完整 MP4](docs/assets/scale-v3-best-branch-episode.mp4)
+[▶ 打开或下载完整 MP4](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/3a9a1b92bf33f0895bd4390dfe12f6fdc54d93be/docs/assets/scale-v3-best-branch-episode.mp4)
 
 Branch 1.56M 检查点的 100 局自然评测均分为 **26.12**；上方视频是其中 Episode 37，225 步解锁 **17/22** 项成就，并已按动作记录确定性重放核验。单局表现不等于 100 局平均成功率。
 
