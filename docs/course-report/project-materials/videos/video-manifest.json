@@ -78,7 +78,8 @@
       "video_bytes": 3769455,
       "fps": 8,
       "video_frames": 257,
-      "video_duration_seconds": 32.12
+      "video_duration_seconds": 32.12,
+      "github_asset": "docs/assets/scale-v3-best-branch-episode.mp4"
     },
     {
       "label": "source",

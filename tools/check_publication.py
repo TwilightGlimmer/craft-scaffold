@@ -1,6 +1,8 @@
 """Read-only scan of staged Git blobs. Run through python.sh before publishing."""
-import pathlib,re,subprocess,sys
+import hashlib,pathlib,re,subprocess,sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
+# One manifest-verified teaching demo is intentionally shared in the repository.
+APPROVED_MEDIA={'docs/assets/scale-v3-best-branch-episode.mp4':('492b2326f263c97a416c173c0aaf488ed4c0644049bc870c549349c5cff75ccd',10*1024*1024)}
 def git(*args):
     return subprocess.check_output(['git','-C',str(ROOT),*args])
 entries=git('ls-files','--stage','-z').decode().split('\0')
@@ -20,7 +22,13 @@ for entry in filter(None,entries):
     count+=1
     if mode not in ('100644','100755'):issues.append((name,'symlink or gitlink'));continue
     data=git('cat-file','blob',oid);total+=len(data)
-    if len(data)>2*1024*1024:issues.append((name,'larger than 2 MiB'))
+    approved_media=APPROVED_MEDIA.get(name)
+    if len(data)>2*1024*1024 and not approved_media:issues.append((name,'larger than 2 MiB'))
+    if approved_media:
+        expected_hash,max_bytes=approved_media
+        if len(data)>max_bytes:issues.append((name,'approved media exceeds 10 MiB'))
+        if data[4:8]!=b'ftyp':issues.append((name,'invalid MP4 container'))
+        if hashlib.sha256(data).hexdigest()!=expected_hash:issues.append((name,'approved media SHA256 mismatch'))
     try:text=data.decode('utf-8')
     except UnicodeDecodeError:
         if name.startswith('docs/assets/') and name.endswith('.png') and data.startswith(b'\x89PNG\r\n\x1a\n'):
@@ -30,6 +38,8 @@ for entry in filter(None,entries):
                 im=Image.open(io.BytesIO(data)); im.verify()
             except Exception:
                 issues.append((name,'invalid PNG illustration'))
+        elif approved_media and data[4:8]==b'ftyp':
+            pass
         else:
             issues.append((name,'unapproved binary file'))
         continue
@@ -39,7 +49,7 @@ for entry in filter(None,entries):
     parts=pathlib.PurePosixPath(name).parts
     if any(x in {'cache','logs','tmp','.deps','.bootstrap','.versions','.diagnostics','.ssh','models','checkpoints','__pycache__'} for x in parts):
         issues.append((name,'runtime/private directory'))
-    if pathlib.PurePosixPath(name).suffix.lower() in {'.pkl','.pt','.pth','.pem','.key','.mp4','.gif','.npz'}:
+    if pathlib.PurePosixPath(name).suffix.lower() in {'.pkl','.pt','.pth','.pem','.key','.mp4','.gif','.npz'} and not approved_media:
         issues.append((name,'artifact or credential extension'))
 if not count:issues.append(('<index>','no staged files'))
 print('Scanned %d indexed files; %d bytes; %d findings.'%(count,total,len(issues)))

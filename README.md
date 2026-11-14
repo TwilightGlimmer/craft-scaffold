@@ -4,6 +4,14 @@
 
 ![Scale-v3 自然场景评测分数曲线（600k–1.5M）](docs/results/scale-v3-600k-to-1500k/score-curve.svg)
 
+## 表现最佳的单局演示
+
+[![Branch 1.56M Episode 37：石镐制作过程](docs/assets/scale-v3-course-stone-pickaxe-frame.png)](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/3a9a1b92bf33f0895bd4390dfe12f6fdc54d93be/docs/assets/scale-v3-best-branch-episode.mp4)
+
+[▶ 打开或下载完整 MP4](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/3a9a1b92bf33f0895bd4390dfe12f6fdc54d93be/docs/assets/scale-v3-best-branch-episode.mp4)
+
+Branch 1.56M 检查点的 100 局自然评测均分为 **26.12**；上方视频是其中 Episode 37，225 步解锁 **17/22** 项成就，并已按动作记录确定性重放核验。单局表现不等于 100 局平均成功率。
+
 [查看逐检查点数据 CSV](docs/results/scale-v3-600k-to-1500k/scores.csv) · [评测与清理审计](docs/results/scale-v3-600k-to-1500k/cleanup-audit.json) · [技术路线与证据边界](docs/technical-route-iterations.md)
 
 图中 600k 是共享 baseline 评测锚点，610k 是两臂共同完整起点的独立评测。620k–800k 两臂均有每10k节点的100局自然评测；810k–900k 从各自800k节点续训并每10k评测100局；其余800k–1M仅展示实际保留的不等间距节点；1M–1.5M 为每10k评测。图只展示已验证的真实节点，长缺口断线，不把训练回报或插值当作评测分数。

@@ -21,7 +21,7 @@
 
 选择规则：每条路线先选 600k–1.6M 范围内经 100 局验证的最高平均自然分 checkpoint，再从它的 100 个自然 episode 里选解锁成就类型最多的完整一局；并列时取步数更长的一局。重放逐步核对角色位置、背包、episode 结束状态和最终成就。单局成就数不代表 checkpoint 平均水平。
 
-完整的 checkpoint SHA256、评测文件 SHA256、seed、回放校验说明、帧率和时长见 `videos/video-manifest.json`。MP4 二进制保存在本地交付目录及共享服务器的项目资料包；仓库发布检查不接受视频二进制，因此 GitHub 仓库只保留视频索引与哈希，不通过重命名或拆分绕过检查。
+完整的 checkpoint SHA256、评测文件 SHA256、seed、回放校验说明、帧率和时长见 `videos/video-manifest.json`。Branch 最佳单局 MP4（1.56M checkpoint, Episode 37）已作为唯一受限白名单媒体文件提交到 `docs/assets/scale-v3-best-branch-episode.mp4`；扫描器校验其固定 SHA256、MP4 容器与 10 MiB 上限。baseline 和 Source MP4 继续保存在本地交付目录及共享服务器资料包。
 
 附件 SHA256：
 
@@ -30,7 +30,7 @@
 - `assets/score-curve.png`: `e6168690b5e9346302ad3691c09a1ebf655f9a1700e6e8d6bc95fd6823b3429f`
 - `assets/crafting-actions-audit.csv`: `05c9bb16c1ca8ec3b27191b0fbb34ac2ae526d10733ed235bc65c671ca159825`
 - `../../assets/scale-v3-course-stone-pickaxe-frame.png`: `e8310ab907dd7e71203a1ddbfa3244580066a87dc2a7f5ccd18005d93c3e3cfd`
-- `videos/video-manifest.json`: `1293bbe0657c0a6ba24dae2fe7b4a441e02f97df6c864a9b6f38228c8587a081`
+- `videos/video-manifest.json`: `82b3079b47fb144d0e85355c1367d5781c4c5e54a52d3040a8f63f71ae5ff18d`
 
 ## 结论限制
 

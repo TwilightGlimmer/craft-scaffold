@@ -10,7 +10,7 @@
 - `assets/score-curve.png`：同曲线 PNG。
 - `assets/crafting-actions-audit.csv`：清醒时制作行为审计，含睡眠动作排除和配方未满足定义。
 - `assets/gameplay-stone-pickaxe-frame.png`：Branch 一局解锁石镐的关键帧。
-- `videos/video-manifest.json`：baseline、Branch、Source 三段完整 MP4 的 checkpoint、episode、seed、单局成就数、重放验证和 SHA256。
+- `videos/video-manifest.json`：baseline、Branch、Source 三段完整 MP4 的 checkpoint、episode、seed、单局成就数、重放验证和 SHA256；Branch 最佳演示已随仓库提供。
 - `EVIDENCE.md`：数据边界、解释限制、素材哈希和 MP4 获取位置。
 
 ## 可核对结果摘要
@@ -29,7 +29,7 @@
 
 ## MP4 获取
 
-发布检查不接受视频二进制，仓库仅保留 MP4 的 manifest 与 SHA256。可播放文件保存在共享服务器目录：
+仓库收录了 Branch 最佳单局 MP4；baseline 与 Source 视频仍保存在共享服务器材料包。完整视频及各自哈希见 `videos/video-manifest.json`。
 
 `outputs/reports/scale-v3-course-report-demo/group-report-package/videos/`
 
