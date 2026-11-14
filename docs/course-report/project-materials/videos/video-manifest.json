@@ -37,7 +37,8 @@
       "video_bytes": 6032148,
       "fps": 8,
       "video_frames": 440,
-      "video_duration_seconds": 55.0
+      "video_duration_seconds": 55.0,
+      "github_asset": "docs/course-report/project-materials/videos/baseline-full-episode.mp4"
     },
     {
       "label": "branch",
@@ -79,7 +80,7 @@
       "fps": 8,
       "video_frames": 257,
       "video_duration_seconds": 32.12,
-      "github_asset": "docs/assets/scale-v3-best-branch-episode.mp4"
+      "github_asset": "docs/course-report/project-materials/videos/branch-full-episode.mp4"
     },
     {
       "label": "source",
@@ -118,7 +119,8 @@
       "video_bytes": 3964440,
       "fps": 8,
       "video_frames": 269,
-      "video_duration_seconds": 33.62
+      "video_duration_seconds": 33.62,
+      "github_asset": "docs/course-report/project-materials/videos/source-full-episode.mp4"
     }
   ]
 }

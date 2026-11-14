@@ -21,7 +21,7 @@
 
 选择规则：每条路线先选 600k–1.6M 范围内经 100 局验证的最高平均自然分 checkpoint，再从它的 100 个自然 episode 里选解锁成就类型最多的完整一局；并列时取步数更长的一局。重放逐步核对角色位置、背包、episode 结束状态和最终成就。单局成就数不代表 checkpoint 平均水平。
 
-完整的 checkpoint SHA256、评测文件 SHA256、seed、回放校验说明、帧率和时长见 `videos/video-manifest.json`。Branch 最佳单局 MP4（1.56M checkpoint, Episode 37）已作为唯一受限白名单媒体文件提交到 `docs/assets/scale-v3-best-branch-episode.mp4`；扫描器校验其固定 SHA256、MP4 容器与 10 MiB 上限。baseline 和 Source MP4 继续保存在本地交付目录及共享服务器资料包。
+三段 MP4 均直接提交在 docs/course-report/project-materials/videos/。扫描器仅对白名单中的这三个文件放行，并逐个校验固定 SHA256、MP4 容器与 10 MiB 上限；其它大型二进制文件仍会被拒绝。
 
 附件 SHA256：
 
