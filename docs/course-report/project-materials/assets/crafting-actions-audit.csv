@@ -1,0 +1,4 @@
+﻿series,source_file,source_sha256_uncompressed,all_craft_attempts,sleeping_attempts_excluded,awake_craft_attempts,awake_recipe_unready,awake_craft_successes,awake_successes_with_duplicate_before,awake_recipe_unready_pct,awake_craft_success_pct,duplicate_before_among_awake_successes_pct
+600k baseline,crafting-actions-baseline600k.jsonl.gz,868259ebd2ee16b70b3c7d9710d32e2af633980ce0998aa077cea832ff59d00b,1622,941,681,492,189,59,72.2467,27.7533,31.2169
+Branch 1.6M,gameplay-actions-1600000.jsonl,7f99d082d4998329183c58b9c61900c7ce534617c0961094a1fb4664ec980713,1764,1001,763,328,435,166,42.9882,57.0118,38.1609
+Source 1.6M,crafting-actions-source1600k.jsonl.gz,3d0a6a35aa90cd801bb19513beb65789e467a9361292ebee1f5a6537c906258a,1827,1180,647,291,356,126,44.9768,55.0232,35.3933
