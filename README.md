@@ -6,11 +6,11 @@
 
 ## 表现最佳的单局演示
 
-[![Branch 1.56M Episode 37：石镐制作过程](docs/assets/scale-v3-course-stone-pickaxe-frame.png)](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/docs/personal-course-report-20261114/docs/course-report/project-materials/videos/branch-full-episode.mp4)
+[![Branch 1.56M Episode 37：石镐制作过程](docs/assets/scale-v3-course-stone-pickaxe-frame.png)](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/338eb70a9a9c4f6cd2e31cd279bc06f42ab5ba40/docs/course-report/project-materials/videos/branch-full-episode.mp4)
 
-- [下载 baseline 完整演示（600k，Episode 71，13/22 项成就）](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/docs/personal-course-report-20261114/docs/course-report/project-materials/videos/baseline-full-episode.mp4)
-- [下载 Branch 完整演示（1.56M，Episode 37，17/22 项成就）](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/docs/personal-course-report-20261114/docs/course-report/project-materials/videos/branch-full-episode.mp4)
-- [下载 Source 完整演示（1.37M，Episode 14，15/22 项成就）](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/docs/personal-course-report-20261114/docs/course-report/project-materials/videos/source-full-episode.mp4)
+- [下载 baseline 完整演示（600k，Episode 71，13/22 项成就）](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/338eb70a9a9c4f6cd2e31cd279bc06f42ab5ba40/docs/course-report/project-materials/videos/baseline-full-episode.mp4)
+- [下载 Branch 完整演示（1.56M，Episode 37，17/22 项成就）](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/338eb70a9a9c4f6cd2e31cd279bc06f42ab5ba40/docs/course-report/project-materials/videos/branch-full-episode.mp4)
+- [下载 Source 完整演示（1.37M，Episode 14，15/22 项成就）](https://raw.githubusercontent.com/TwilightGlimmer/craft-scaffold/338eb70a9a9c4f6cd2e31cd279bc06f42ab5ba40/docs/course-report/project-materials/videos/source-full-episode.mp4)
 
 三段视频均为各自 100 局自然评测中按既定规则选出的单局完整回放，并经动作记录确定性重放核验。单局成就数不等于 100 局平均成功率；checkpoint、episode、seed 和视频 SHA256 见视频清单。
 
