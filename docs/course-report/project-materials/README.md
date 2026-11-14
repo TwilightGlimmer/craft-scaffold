@@ -10,7 +10,7 @@
 - `assets/score-curve.png`：同曲线 PNG。
 - `assets/crafting-actions-audit.csv`：清醒时制作行为审计，含睡眠动作排除和配方未满足定义。
 - `assets/gameplay-stone-pickaxe-frame.png`：Branch 一局解锁石镐的关键帧。
-- `videos/video-manifest.json`：baseline、Branch、Source 三段完整 MP4 的 checkpoint、episode、seed、单局成就数、重放验证和 SHA256；Branch 最佳演示已随仓库提供。
+- videos/: 三段完整 MP4。EVIDENCE.md 以可读方式记录来源、评测上下文和文件 SHA256。
 - `EVIDENCE.md`：数据边界、解释限制、素材哈希和 MP4 获取位置。
 
 ## 可核对结果摘要
@@ -29,11 +29,7 @@
 
 ## MP4 获取
 
-仓库收录了 Branch 最佳单局 MP4；baseline 与 Source 视频仍保存在共享服务器材料包。完整视频及各自哈希见 `videos/video-manifest.json`。
-
-`outputs/reports/scale-v3-course-report-demo/group-report-package/videos/`
-
-本地交付包也附有三段 MP4。请先按 `videos/video-manifest.json` 核对文件哈希，再用于课堂报告或 PPT。
+GitHub 仓库的 videos/ 目录直接包含 baseline、Branch、Source 三段完整 MP4，队友可从 GitHub 打开或下载，无需连接服务器。EVIDENCE.md 记录路线、checkpoint、episode、评测分数、单局成就、重放核验、文件信息和 SHA256；下载后可据此校验完整性。
 
 ## 报告写作使用
 

@@ -1,8 +1,12 @@
 """Read-only scan of staged Git blobs. Run through python.sh before publishing."""
 import hashlib,pathlib,re,subprocess,sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
-# One manifest-verified teaching demo is intentionally shared in the repository.
-APPROVED_MEDIA={'docs/assets/scale-v3-best-branch-episode.mp4':('492b2326f263c97a416c173c0aaf488ed4c0644049bc870c549349c5cff75ccd',10*1024*1024)}
+# Only the three evidence-verified teaching episodes are allowed as binary media.
+APPROVED_MEDIA={
+ 'docs/course-report/project-materials/videos/baseline-full-episode.mp4':('bb5968803ad8e433d070ba70ec6dec15db75715536e612cbe80ff394726aa8d4',10*1024*1024),
+ 'docs/course-report/project-materials/videos/branch-full-episode.mp4':('492b2326f263c97a416c173c0aaf488ed4c0644049bc870c549349c5cff75ccd',10*1024*1024),
+ 'docs/course-report/project-materials/videos/source-full-episode.mp4':('feececa4b6f2eadc89b7b5a2810eabe940fb384609755e74303cc22fdfa6e0dd',10*1024*1024),
+}
 def git(*args):
     return subprocess.check_output(['git','-C',str(ROOT),*args])
 entries=git('ls-files','--stage','-z').decode().split('\0')

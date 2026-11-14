@@ -1,6 +1,6 @@
 # 数据与演示材料核验记录
 
-本包区分 100 局 checkpoint 评测与单局 MP4 演示。所有分数、视频信息和哈希应以此处列出的逐点 CSV 与 manifest 为准；这份文件仅描述来源和限制，不构成报告正文。
+本包区分 100 局 checkpoint 评测与单局 MP4 演示。所有分数、视频信息和哈希应以此处列出的逐点 CSV 与下方核验记录为准；这份文件仅描述来源和限制，不构成报告正文。
 
 ## 曲线和表格数据
 
@@ -11,26 +11,38 @@
 - 清醒制作审计：`assets/crafting-actions-audit.csv`。
 - 评测口径：每个显示节点为 100 局自然场景评测，namespace/policy seed 与 SHA256 字段见 CSV；训练 reward 不等于自然 Score。
 
-## 三段完整 MP4
+## 视频来源与完整性校验
 
-| 文件 | checkpoint | Episode | 本局成就数 | 100 局平均 Score | SHA256 |
-|---|---:|---:|---:|---:|---|
-| `videos/baseline-full-episode.mp4` | 600k baseline | 71 | 13/22 | 11.8689691 | `bb5968803ad8e433d070ba70ec6dec15db75715536e612cbe80ff394726aa8d4` |
-| `videos/branch-full-episode.mp4` | Branch 1.56M | 37 | 17/22 | 26.1207934 | `492b2326f263c97a416c173c0aaf488ed4c0644049bc870c549349c5cff75ccd` |
-| `videos/source-full-episode.mp4` | Source 1.37M | 14 | 15/22 | 20.2234471 | `feececa4b6f2eadc89b7b5a2810eabe940fb384609755e74303cc22fdfa6e0dd` |
+### Baseline — checkpoint 600,000
 
-选择规则：每条路线先选 600k–1.6M 范围内经 100 局验证的最高平均自然分 checkpoint，再从它的 100 个自然 episode 里选解锁成就类型最多的完整一局；并列时取步数更长的一局。重放逐步核对角色位置、背包、episode 结束状态和最终成就。单局成就数不代表 checkpoint 平均水平。
+- checkpoint SHA256：bd026df853ee976d780bec13824dc4a21aeaed587673aa3170735d9a128b4443
+- 100 局自然评测均分：11.86896906
+- 演示局：Episode 71；环境 seed 412844997；408 步；解锁 13/22：collect_drink, collect_sapling, collect_stone, collect_wood, defeat_zombie, eat_cow, make_wood_pickaxe, make_wood_sword, place_furnace, place_plant, place_stone, place_table, wake_up
+- 重放校验：exact logged action count, positions, inventories, terminal state and final achievements matched during deterministic replay
+- 视频文件：baseline-full-episode.mp4；6032148 bytes；8 fps；440 帧；时长 55.0 秒
+- 视频 SHA256：bb5968803ad8e433d070ba70ec6dec15db75715536e612cbe80ff394726aa8d4
+- episode/actions/summary 评测记录 SHA256：7ec20f29eeb9003723e2ae8c6740d6014c9770b0d7454e9e47aa152b6256ec5a / 868259ebd2ee16b70b3c7d9710d32e2af633980ce0998aa077cea832ff59d00b / 4da7737a5394324357fce289f3d18a739e61e2ba1e8606a3bc5943a7845cb6f5
 
-完整的 checkpoint SHA256、评测文件 SHA256、seed、回放校验说明、帧率和时长见 `videos/video-manifest.json`。Branch 最佳单局 MP4（1.56M checkpoint, Episode 37）已作为唯一受限白名单媒体文件提交到 `docs/assets/scale-v3-best-branch-episode.mp4`；扫描器校验其固定 SHA256、MP4 容器与 10 MiB 上限。baseline 和 Source MP4 继续保存在本地交付目录及共享服务器资料包。
+### Branch — checkpoint 1,560,000
 
-附件 SHA256：
+- checkpoint SHA256：feac446c4fa92ba00ef38fd064951cd102b6cc64b779b1cc275980e2a0032943
+- 100 局自然评测均分：26.12079344
+- 演示局：Episode 37；环境 seed 4176110122；225 步；解锁 17/22：collect_coal, collect_drink, collect_iron, collect_sapling, collect_stone, collect_wood, defeat_zombie, eat_cow, make_stone_pickaxe, make_stone_sword, make_wood_pickaxe, make_wood_sword, place_furnace, place_plant, place_stone, place_table, wake_up
+- 重放校验：exact logged action count, positions, inventories, terminal state and final achievements matched during deterministic replay
+- 视频文件：branch-full-episode.mp4；3769455 bytes；8 fps；257 帧；时长 32.12 秒
+- 视频 SHA256：492b2326f263c97a416c173c0aaf488ed4c0644049bc870c549349c5cff75ccd
+- episode/actions/summary 评测记录 SHA256：d23af879beff40e04062efa2f8a1b206e14112ed56a6ef13d759a0de78217ce8 / 235ade4759d93aa105b69afd35b8352682f015ced2a08b3f58bde1ecac8676d4 / 806d6d955e4b6ee1531a7a30edec9887e49d71327218ec48ccb15dda96cef2c9
 
-- `assets/scores-full.csv`: `c90fe4405439cc09d316194ac87d790226413ca7a56e2a06d7f540aa8dca057a`
-- `assets/score-curve-600k-1600k.svg`: `1b2c405e96c6b9b9e18b23f4f654f195276b384da1877948d5e454f843a9dddc`
-- `assets/score-curve.png`: `e6168690b5e9346302ad3691c09a1ebf655f9a1700e6e8d6bc95fd6823b3429f`
-- `assets/crafting-actions-audit.csv`: `05c9bb16c1ca8ec3b27191b0fbb34ac2ae526d10733ed235bc65c671ca159825`
-- `../../assets/scale-v3-course-stone-pickaxe-frame.png`: `e8310ab907dd7e71203a1ddbfa3244580066a87dc2a7f5ccd18005d93c3e3cfd`
-- `videos/video-manifest.json`: `82b3079b47fb144d0e85355c1367d5781c4c5e54a52d3040a8f63f71ae5ff18d`
+### Source — checkpoint 1,370,000
+
+- checkpoint SHA256：4728b2d35d91e09b16fb7cf3a938ddfa2c6d1df6d5d93537ee9b89ba3e716cf6
+- 100 局自然评测均分：20.22344710
+- 演示局：Episode 14；环境 seed 3853937150；237 步；解锁 15/22：collect_coal, collect_drink, collect_iron, collect_sapling, collect_stone, collect_wood, defeat_zombie, make_stone_pickaxe, make_wood_pickaxe, make_wood_sword, place_furnace, place_plant, place_stone, place_table, wake_up
+- 重放校验：exact logged action count, positions, inventories, terminal state and final achievements matched during deterministic replay
+- 视频文件：source-full-episode.mp4；3964440 bytes；8 fps；269 帧；时长 33.62 秒
+- 视频 SHA256：feececa4b6f2eadc89b7b5a2810eabe940fb384609755e74303cc22fdfa6e0dd
+- episode/actions/summary 评测记录 SHA256：e547ad179a421561b1124c1e40f95de13697b56edb7d90077baaa7884a7058a3 / b6dacc1356eae20c631416a551dcf9fb1ee1090c589a83a85dac38cebc5e769c / 02f1d4a9d15e3bee61ebffb58d17971f0a121904ee92393b981085c89e2b161c
+
 
 ## 结论限制
 
